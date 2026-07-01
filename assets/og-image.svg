@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f5f57"/>
+      <stop offset="1" stop-color="#0b4a45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- dezente warme Fläche unten -->
+  <rect x="0" y="512" width="1200" height="118" fill="#0a423e"/>
+
+  <!-- Icon: Schild + Erste-Hilfe-Plus -->
+  <g transform="translate(120 150) scale(0.62)">
+    <path d="M256 96 L392 148 V262 C392 350 330 400 256 430 C182 400 120 350 120 262 V148 Z" fill="#f4ede2" opacity="0.14"/>
+    <path d="M256 96 L392 148 V262 C392 350 330 400 256 430 C182 400 120 350 120 262 V148 Z" fill="none" stroke="#f4ede2" stroke-width="14" stroke-linejoin="round" opacity="0.6"/>
+    <g fill="#f7cf9b"><rect x="226" y="176" width="60" height="180" rx="18"/><rect x="166" y="236" width="180" height="60" rx="18"/></g>
+  </g>
+
+  <!-- Text -->
+  <g font-family="'Plus Jakarta Sans','DejaVu Sans',sans-serif" fill="#ffffff">
+    <text x="470" y="250" font-size="86" font-weight="800" letter-spacing="-1">Digitale Ersthilfe</text>
+    <text x="472" y="322" font-size="40" font-weight="600" fill="#d6e8e2">Schnelle Hilfe bei digitaler Gewalt,</text>
+    <text x="472" y="374" font-size="40" font-weight="600" fill="#d6e8e2">Stalking, Hacking und Online-Betrug.</text>
+  </g>
+
+  <!-- Fußzeile -->
+  <g font-family="'Plus Jakarta Sans','DejaVu Sans',sans-serif" fill="#f7cf9b">
+    <text x="120" y="575" font-size="30" font-weight="700">Einfache Anleitungen · zum Vorlesen · barrierefrei</text>
+  </g>
+  <text x="1080" y="575" text-anchor="end" font-family="'DejaVu Sans',sans-serif" font-size="26" fill="#9ec7bf">novumanalytica.com</text>
+</svg>

@@ -76,6 +76,22 @@ haben Dark-Mode- und Hoher-Kontrast-Varianten. Siehe [DESIGN.md](DESIGN.md).
 - Service Worker (`sw.js`) für Offline-Fähigkeit — Cache-first
 - Lokale Variable Fonts mit `font-display: swap`
 
+## Auffindbarkeit (SEO / AEO / LLMs)
+
+Damit Suchmaschinen **und** KI-/Antwort-Systeme die Hilfen finden und Betroffenen zeigen:
+
+- **schema.org / JSON-LD** auf jeder Seite (WebSite, Organization mit Logo, HowTo, Article,
+  FAQPage, MedicalWebPage, ContactPage, CollectionPage/ItemList, **BreadcrumbList**).
+- **`llms.txt`** — kuratierte Inhaltskarte speziell für LLMs (llmstxt.org-Konvention).
+- **`robots.txt`** erlaubt KI-Crawler (GPTBot, ClaudeBot, PerplexityBot, Google-Extended …)
+  ausdrücklich; **`sitemap.xml`** listet alle indexierbaren Seiten.
+- Pro Seite: `<link rel="canonical">`, Open Graph inkl. **OG-Image**, Twitter Cards.
+- **AEO**: Jede Seite startet mit einer 1–2-Satz-Antwort; Leitfäden als HowTo mit klaren Schritten.
+- **Core Web Vitals**: lokale Fonts mit `preload`, optimierte Bilder mit `width`/`height`
+  (kein Layout-Shift), kein render-blockierendes Third-Party-JS.
+
+Kanonische Domain: `https://digitale-ersthilfe.novumanalytica.com`.
+
 ## Lokal starten
 
 Es ist kein Build nötig. Ein beliebiger statischer Server genügt:

@@ -28,27 +28,37 @@ Offene Punkte, nach Priorität. Legende:
 - [ ] **Materialien-Repo** separat auf GitHub **und** Codeberg pushen; Dateiname mit
   führendem Leerzeichen korrigieren (`TLP-CLEAR _Beweissicherung_Leitfaden_Amazon_Echo…pdf`).
 - [ ] **Codeberg- und GitLab-Spiegel** einrichten (Remotes + Sync, siehe CONTRIBUTING.md).
-- [ ] **OG-Image** (`assets/`) für Social-Sharing/Vorschau hinterlegen und in `<meta og:image>` verlinken.
-- [ ] **sitemap.xml** und **robots.txt** ergänzen (SEO/AEO).
+
+## 🟠 P2 — Video-Diffusion (YouTube & Social)
+
+- [ ] 👤 **Erklärvideos auf YouTube** (und später PeerTube/Vimeo) hochladen — für Reichweite
+  und damit LLMs/Suchmaschinen sie zitieren können. Danach hier einbetten mit
+  **DSGVO-freundlicher „Click-to-Load"-Fassade** (`youtube-nocookie.com`, kein Laden vor
+  Klick, lokales Poster). Muster kann ich bauen, sobald Kanal + Video-IDs existieren.
+- [ ] `VideoObject`-Schema je Video um `embedUrl`/`contentUrl` (YouTube) und `duration` ergänzen.
+- [ ] 👤 **Social-Kanäle** (YouTube, ggf. TikTok/Instagram/Mastodon): sobald vorhanden, in
+  Organization-Schema `sameAs` eintragen und im Footer verlinken. Idee für knappe Ressourcen:
+  ein Kurzclip pro Leitfaden vertikal schneiden, plattformübergreifend zweitverwerten.
 
 ## 🟠 P2 — Hosting (Aufgabe 5)
 
-- [ ] **GitHub Pages** aktivieren (Branch `main`, root). Custom Domain vorbereiten.
+- [ ] **GitHub Pages** aktivieren (Branch `main`, root); `CNAME`-Datei für die Produktiv-Domain.
 - [ ] **Codeberg Pages** einrichten.
-- [ ] **Produktiv-Domain** `digitale-ersthilfe.novumanalytica.com`: DNS (CNAME), HTTPS/Zertifikat,
-  `CNAME`-Datei bzw. Pages-Konfiguration. Canonical-URL in schema.org/OG prüfen
-  (aktuell teils `https://digitale-ersthilfe.de` hinterlegt — auf finale Domain vereinheitlichen).
+- [ ] **Produktiv-Domain** `digitale-ersthilfe.novumanalytica.com`: DNS (CNAME), HTTPS/Zertifikat.
+  (Canonical/OG/Sitemap sind bereits konsistent auf diese Domain gesetzt.)
+- [ ] Nach Go-Live **Sitemap in Google Search Console** und Bing Webmaster Tools einreichen.
 
 ## 🟢 P3 — Politur & Technik
 
-- [ ] **Infografiken optimieren** — `assets/images/*.jpg` sind 2752×1536 (~650 KB).
-  Auf sinnvolle Anzeigegröße herunterrechnen und/oder WebP anbieten.
-- [ ] **schema.org `thumbnailUrl`/`contentUrl`** im Phishing-Leitfaden auf finale
-  Domain bzw. lokale Assets umstellen.
-- [ ] Echtes **favicon.ico** (Multi-Size) zusätzlich zu den PNG/SVG-Icons.
-- [ ] **Link-Checker in CI** (intern + extern) gegen tote Links.
-- [ ] Kontrast-/A11y-Audit automatisieren (z. B. axe/Lighthouse in CI), WCAG-AA verifizieren.
-- [ ] Prüfen, ob `latin-ext`-Font-Subset überhaupt gebraucht wird (aktuell nur `latin` geladen).
+- [ ] **Sichtbare Breadcrumb-Leiste** in den Seitenkopf (Schema `BreadcrumbList` ist bereits da;
+  sichtbare Variante fehlt noch — Google mag beides deckungsgleich).
+- [ ] 👤 **FAQ-Abschnitte** auf `leitfaden-stalking` und `leitfaden-account-hack` ergänzen
+  (sichtbar + `FAQPage`-Schema) — stärkster AEO-Hebel; Inhalt redaktionell.
+- [ ] **„Verwandte Leitfäden"**-Verlinkung am Ende jedes Leitfadens (laterales Interlinking).
+- [ ] **Responsive Bilder** (`srcset`/WebP) für die Infografiken; `latin-ext`-Font-Subset prüfen.
+- [ ] `schema.org thumbnailUrl/contentUrl` im Phishing-Leitfaden auf lokale/finale URLs umstellen.
+- [ ] Echtes **favicon.ico** (Multi-Size) zusätzlich zu PNG/SVG.
+- [ ] **CI**: Link-Checker + automatisiertes A11y/Lighthouse-Audit (WCAG-AA, Core Web Vitals).
 
 ---
 
@@ -68,3 +78,13 @@ Offene Punkte, nach Priorität. Legende:
   § 5 DDG, EU-Streitschlichtung/Verbraucherschlichtung ergänzt).
 - BSI/CSN-Formulierung site-weit vereinheitlicht (10 Stellen): CSN-Teilnahme, aber
   nicht Teil des BSI, kein Auftrag, Inhalte/Meinungen nicht vom BSI autorisiert.
+- Kontakt-E-Mail auf `digitale-ersthilfe@novumanalytica.com` umgestellt (thematisch zuordenbar).
+- **SEO/AEO/Auffindbarkeit** (Canonical-Domain: digitale-ersthilfe.novumanalytica.com):
+  - `robots.txt` (KI-Bots wie GPTBot/ClaudeBot/PerplexityBot ausdrücklich erlaubt),
+    `sitemap.xml`, **`llms.txt`** (kuratierte Inhaltskarte für LLMs) angelegt.
+  - `<link rel="canonical">`, Open-Graph inkl. **OG-Image** (1200×630) und Twitter Cards
+    auf allen 11 Seiten; Domain site-weit auf die Produktiv-Domain vereinheitlicht.
+  - `BreadcrumbList`-Schema auf allen Unterseiten; `image` in HowTo/Article ergänzt;
+    Organization um `logo` und `contactPoint` erweitert. Alle 26 JSON-LD-Blöcke valide.
+  - Performance/Core Web Vitals: Font-`preload`, Infografiken von 2752px/~650 KB auf
+    1400px/~300 KB verkleinert, `width`/`height` an Bildern (CLS behoben).
