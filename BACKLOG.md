@@ -57,12 +57,15 @@ Offene Punkte, nach Priorität. Legende:
 
 ## 🟠 P2 — Hosting (Aufgabe 5)
 
-- [x] **GitHub-Action** für Pages-Deployment angelegt (`.github/workflows/deploy-pages.yml`),
-  `CNAME` + `.nojekyll` vorhanden.
-- [ ] 👤 **GitHub Pages aktivieren**: Repo → Settings → Pages → *Source: „GitHub Actions"*
-  (einmalig). Danach deployt jeder Push auf `main` automatisch.
-- [ ] 👤 **DNS setzen**: `digitale-ersthilfe.novumanalytica.com` als CNAME auf
-  `raimurokko.github.io` zeigen lassen; in den Pages-Settings „Enforce HTTPS" aktivieren.
+- [x] **GitHub-Action** für Pages-Deployment angelegt und erfolgreich gelaufen —
+  **Site ist live**: https://raimurokko.github.io/digitale-ersthilfe/
+  (`configure-pages` hat Pages automatisch aktiviert; jeder Push auf `main` deployt).
+- [ ] 👤 **DNS setzen** für die Produktiv-Domain: `digitale-ersthilfe.novumanalytica.com`
+  als CNAME auf `raimurokko.github.io` zeigen lassen. Danach übernimmt GitHub die
+  `CNAME`-Datei aus dem Repo; „Enforce HTTPS" in den Pages-Settings aktivieren.
+  Hinweis: Service-Worker-Cache und Manifest nutzen Root-Pfade (`/…`) — korrekt für
+  die Root-Custom-Domain; auf dem `github.io`-Unterpfad ist nur die PWA/Offline-Schicht
+  eingeschränkt, die Seiten selbst funktionieren.
 - [ ] **Codeberg Pages** einrichten (Spiegel).
 - [ ] Nach Go-Live **Sitemap in Google Search Console** und Bing Webmaster Tools einreichen.
 
