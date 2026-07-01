@@ -1,0 +1,62 @@
+{
+  "name": "Digitale Ersthilfe — Soforthilfe bei digitaler Gewalt",
+  "short_name": "Ersthilfe",
+  "description": "Schnelle Hilfe bei digitaler Gewalt, Stalking, Hacking und Online-Betrug. Einfache Anleitungen für Betroffene.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0f5f57",
+  "background_color": "#faf7f2",
+  "lang": "de",
+  "dir": "ltr",
+  "categories": ["education", "security"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Kontaktstellen",
+      "short_name": "Kontakt",
+      "description": "Wichtige Telefonnummern bei digitaler Gewalt",
+      "url": "/kontaktstellen.html",
+      "icons": []
+    },
+    {
+      "name": "Was ist passiert?",
+      "short_name": "Soforthilfe",
+      "description": "Schnelle Hilfe — Was ist passiert?",
+      "url": "/index.html#triage-frage",
+      "icons": []
+    },
+    {
+      "name": "Phishing-Hilfe",
+      "short_name": "Phishing",
+      "description": "Leitfaden bei Phishing auf Signal und WhatsApp",
+      "url": "/leitfaden-phishing-signal-whatsapp.html",
+      "icons": []
+    }
+  ]
+}

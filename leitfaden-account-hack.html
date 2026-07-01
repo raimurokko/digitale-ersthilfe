@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitfaden: Konto wurde gehackt — was jetzt? — Digitale Ersthilfe</title>
+  <meta name="description" content="Ihr E-Mail-, Social-Media- oder Online-Banking-Konto wurde übernommen? Schritt-für-Schritt-Anleitung: Konto zurückholen, 2FA aktivieren, Schaden begrenzen, Anzeige erstatten.">
+  <meta name="theme-color" content="#0f5f57">
+
+  <meta property="og:title" content="Konto wurde gehackt — was jetzt? — Digitale Ersthilfe">
+  <meta property="og:description" content="Schritt-für-Schritt-Anleitung nach einem Account-Hack.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="de_DE">
+
+  <link rel="manifest" href="manifest.json">
+  <!-- Favicon & App-Icons -->
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Konto wurde gehackt — Schritt für Schritt",
+    "description": "Anleitung nach einer Kontoübernahme: Konto zurückholen, absichern, Schaden begrenzen, Anzeige erstatten.",
+    "inLanguage": "de",
+    "totalTime": "PT30M",
+    "step": [
+      {"@type": "HowToStep", "position": 1, "name": "Konto zurückholen", "text": "Nutzen Sie die Recovery-Funktion des Anbieters. Bei E-Mail-Konten: Passwort-Reset über eine Ersatzadresse oder Telefonnummer. Falls der Zugriff verloren ist: Hilfeseite des Anbieters aufrufen."},
+      {"@type": "HowToStep", "position": 2, "name": "Konto absichern", "text": "Passwort ändern, Zwei-Faktor-Authentifizierung aktivieren, Wiederherstellungs-E-Mails und -Telefonnummern prüfen, unbekannte Geräte abmelden."},
+      {"@type": "HowToStep", "position": 3, "name": "Schaden begrenzen", "text": "Kontakte warnen, Bank bei Finanzschäden informieren, verknüpfte Konten prüfen, gleichen Benutzernamen/Passwort-Kombinationen anderswo ändern."},
+      {"@type": "HowToStep", "position": 4, "name": "Anzeige erstatten", "text": "Online-Wache der Polizei nutzen oder Polizeidienststelle aufsuchen. Screenshots und Zeitpunkt des Vorfalls mitbringen."}
+    ],
+    "author": {"@type": "Organization", "name": "Novum Analytica GmbH"}
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#hauptinhalt">Zum Hauptinhalt springen</a>
+
+  <div class="notfall-banner" role="alert">
+    In akuter Gefahr? Rufen Sie jetzt die <a href="tel:110">Polizei: 110</a> an.
+  </div>
+
+  <header class="kopfzeile">
+    <div class="kopfzeile__inner">
+      <a href="index.html" class="kopfzeile__logo" aria-label="Digitale Ersthilfe — Startseite">Digitale Ersthilfe</a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="kontaktstellen.html">Kontaktstellen</a></li>
+          <li><a href="leitfaeden.html" aria-current="page">Leitfäden</a></li>
+          <li><a href="fachinfo.html">Für Fachkräfte</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+      <button class="menu-button" aria-expanded="false" aria-controls="nav-mobil" aria-label="Menü öffnen">
+        <span class="menu-icon-open" aria-hidden="true">&#9776;</span>
+        <span class="menu-icon-close" aria-hidden="true">&#10005;</span>
+      </button>
+    </div>
+    <nav id="nav-mobil" class="nav-mobil" aria-label="Hauptnavigation mobil">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="kontaktstellen.html">Kontaktstellen</a></li>
+        <li><a href="leitfaeden.html" aria-current="page">Leitfäden</a></li>
+        <li><a href="fachinfo.html">Für Fachkräfte</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="hauptinhalt" class="seiten-container">
+
+    <section class="abschnitt" aria-labelledby="leitfaden-titel">
+      <p><a href="index.html">&larr; Zurück zur Startseite</a></p>
+      <h1 id="leitfaden-titel">Mein Konto wurde gehackt — was jetzt?</h1>
+      <p>
+        <strong>Kurz erklärt:</strong> Wenn Sie sich plötzlich nicht mehr
+        anmelden können oder merkwürdige Aktivitäten sehen, ist Ihr Konto
+        wahrscheinlich übernommen worden. Handeln Sie schnell in 4 Schritten:
+        Konto zurückholen, absichern, Schaden begrenzen, Anzeige erstatten.
+      </p>
+
+      <button class="vorlesen-btn" data-vorlesen="ganzer-leitfaden" aria-pressed="false">
+        &#128264; Gesamten Leitfaden vorlesen
+      </button>
+    </section>
+
+    <div class="fortschritt" role="progressbar" aria-label="Fortschritt im Leitfaden" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4">
+      <div class="fortschritt__segment" data-schritt="1"></div>
+      <div class="fortschritt__segment" data-schritt="2"></div>
+      <div class="fortschritt__segment" data-schritt="3"></div>
+      <div class="fortschritt__segment" data-schritt="4"></div>
+    </div>
+
+    <div class="karte karte--kritisch" role="alert">
+      <p><strong>Erste Hilfe:</strong></p>
+      <ul class="inhaltsliste">
+        <li><strong>Nutzen Sie ein anderes Gerät</strong>, wenn Sie vermuten, dass Ihr Computer oder Smartphone infiziert ist.</li>
+        <li><strong>Ändern Sie Passwörter niemals über Links in E-Mails oder SMS</strong> — rufen Sie die offizielle Webseite manuell auf.</li>
+        <li>Bei <strong>Finanzschäden</strong>: Bank sofort anrufen und Karte sperren (<a href="tel:116116">116 116</a>).</li>
+      </ul>
+    </div>
+
+    <article class="schritt" id="schritt-1" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">01</span><h2 class="schritt__titel">Konto zurückholen</h2></div>
+      <button class="vorlesen-btn" data-vorlesen="schritt-1" aria-pressed="false">&#128264; Diesen Abschnitt vorlesen</button>
+      <p>
+        Versuchen Sie zuerst, Zugang zum Konto wiederzubekommen. Alle großen
+        Anbieter haben dafür eine <strong>„Passwort vergessen"</strong>- oder
+        <strong>„Konto wiederherstellen"</strong>-Funktion.
+      </p>
+      <h3>Hilfeseiten der wichtigsten Anbieter:</h3>
+      <ul class="inhaltsliste">
+        <li><a href="https://support.google.com/accounts/answer/7682439" target="_blank" rel="noopener noreferrer">Google — gehacktes Konto wiederherstellen &#8599;</a></li>
+        <li><a href="https://support.apple.com/de-de/HT204921" target="_blank" rel="noopener noreferrer">Apple — Apple-ID wiederherstellen &#8599;</a></li>
+        <li><a href="https://account.live.com/acsr" target="_blank" rel="noopener noreferrer">Microsoft — Kontowiederherstellung &#8599;</a></li>
+        <li><a href="https://www.facebook.com/hacked" target="_blank" rel="noopener noreferrer">Facebook — gehacktes Konto melden &#8599;</a></li>
+        <li><a href="https://help.instagram.com/149494825257596" target="_blank" rel="noopener noreferrer">Instagram — gehacktes Konto melden &#8599;</a></li>
+      </ul>
+      <div class="karte karte--info">
+        <p>
+          <strong>Tipp:</strong> Beantworten Sie die Wiederherstellungsfragen
+          möglichst vollständig. Geben Sie alte Passwörter an, die Sie einmal
+          hatten — das hilft dem Anbieter, Sie als rechtmäßige:n Inhaber:in
+          zu erkennen.
+        </p>
+      </div>
+    </article>
+
+    <article class="schritt" id="schritt-2" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">02</span><h2 class="schritt__titel">Konto absichern</h2></div>
+      <button class="vorlesen-btn" data-vorlesen="schritt-2" aria-pressed="false">&#128264; Diesen Abschnitt vorlesen</button>
+      <p>Nach der Wiederherstellung gleich absichern, bevor die Angreifer neu reinkommen.</p>
+      <ul class="inhaltsliste">
+        <li><strong>Neues, starkes Passwort:</strong> Mindestens 12 Zeichen, nicht anderswo verwendet. Nutzen Sie einen Passwort-Manager.</li>
+        <li><strong>Zwei-Faktor-Authentifizierung (2FA) aktivieren:</strong> Bevorzugt mit Authenticator-App (z.&nbsp;B. Aegis, 2FAS), nicht per SMS.</li>
+        <li><strong>Wiederherstellungs-E-Mail und -Telefonnummer prüfen:</strong> Angreifer ändern diese oft. Stellen Sie sicher, dass nur Sie Zugriff haben.</li>
+        <li><strong>Aktive Sitzungen abmelden:</strong> In den Einstellungen aller Dienste gibt es „Alle Geräte abmelden".</li>
+        <li><strong>Weiterleitungsregeln in E-Mail prüfen:</strong> Angreifer richten oft heimliche Weiterleitungen ein.</li>
+        <li><strong>Verbundene Apps prüfen:</strong> Unbekannte Dritt-Apps mit Zugriff entfernen.</li>
+      </ul>
+    </article>
+
+    <article class="schritt" id="schritt-3" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">03</span><h2 class="schritt__titel">Schaden begrenzen</h2></div>
+      <button class="vorlesen-btn" data-vorlesen="schritt-3" aria-pressed="false">&#128264; Diesen Abschnitt vorlesen</button>
+      <ul class="inhaltsliste">
+        <li><strong>Kontakte warnen:</strong> Informieren Sie Freunde und Familie — Angreifer schicken oft Betrugsnachrichten in Ihrem Namen.</li>
+        <li><strong>Bank &amp; Karten:</strong> Prüfen Sie Kontoauszüge der letzten Wochen. Bei verdächtigen Abbuchungen: Bank anrufen, Karte sperren (<a href="tel:116116">116 116</a>).</li>
+        <li><strong>Andere Konten prüfen:</strong> Haben Sie dasselbe Passwort noch woanders verwendet? Dort ebenfalls ändern.</li>
+        <li><strong>Datenleck-Check:</strong> Prüfen Sie unter <a href="https://sec.hpi.de/ilc" target="_blank" rel="noopener noreferrer">HPI Identity Leak Checker &#8599;</a> oder <a href="https://haveibeenpwned.com" target="_blank" rel="noopener noreferrer">Have I Been Pwned &#8599;</a>, welche Ihrer Daten geleakt wurden.</li>
+        <li><strong>Gerät auf Schadsoftware prüfen:</strong> Antivirus-Scan durchführen. Im Zweifel System neu aufsetzen.</li>
+      </ul>
+      <div class="karte karte--warnung">
+        <p>
+          <strong>Bei Identitätsdiebstahl:</strong> Richten Sie bei der
+          <a href="https://www.schufa.de" target="_blank" rel="noopener noreferrer">SCHUFA</a>
+          einen Identitätsalarm ein und beantragen Sie eine Selbstauskunft.
+        </p>
+      </div>
+    </article>
+
+    <article class="schritt" id="schritt-4" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">04</span><h2 class="schritt__titel">Anzeige erstatten</h2></div>
+      <button class="vorlesen-btn" data-vorlesen="schritt-4" aria-pressed="false">&#128264; Diesen Abschnitt vorlesen</button>
+      <p>
+        Auch wenn der Schaden gering wirkt: Eine Anzeige hilft, das
+        Muster aufzudecken und andere zu schützen.
+      </p>
+      <ul class="inhaltsliste">
+        <li>
+          Nutzen Sie die
+          <a href="https://portal.onlinewache.polizei.de/de/" target="_blank" rel="noopener noreferrer">Online-Wache der Polizei &#8599;</a>
+          oder gehen Sie zu einer Polizeidienststelle.
+        </li>
+        <li>
+          Relevante Straftatbestände: <strong>§ 202a StGB</strong>
+          (Ausspähen von Daten), <strong>§ 202c StGB</strong>
+          (Vorbereiten des Ausspähens), <strong>§ 263a StGB</strong>
+          (Computerbetrug) bei Finanzschäden.
+        </li>
+        <li>
+          Bringen Sie Screenshots, Zeitstempel, Mail-Header und
+          Transaktionsbelege mit.
+        </li>
+        <li>
+          Beim <strong>BSI</strong> können Sie den Vorfall ebenfalls melden:
+          <a href="tel:08002741000">0800 274 1000</a>.
+        </li>
+      </ul>
+    </article>
+
+    <!-- Kontakt -->
+    <section class="abschnitt" aria-labelledby="hilfe-titel">
+      <h2 id="hilfe-titel">Sie brauchen Hilfe?</h2>
+      <div class="kontakt-liste">
+        <a href="tel:08002741000" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128274;</span>
+          <div>
+            <div class="kontakt-kachel__name">BSI — Bürger-Hotline</div>
+            <div class="kontakt-kachel__nummer">0800 274 1000</div>
+            <div class="kontakt-kachel__info">Mo–Fr, kostenlos</div>
+          </div>
+        </a>
+        <a href="tel:116116" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128179;</span>
+          <div>
+            <div class="kontakt-kachel__name">Kartensperrung</div>
+            <div class="kontakt-kachel__nummer">116 116</div>
+            <div class="kontakt-kachel__info">Rund um die Uhr</div>
+          </div>
+        </a>
+        <a href="tel:110" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128680;</span>
+          <div>
+            <div class="kontakt-kachel__name">Polizei-Notruf</div>
+            <div class="kontakt-kachel__nummer">110</div>
+            <div class="kontakt-kachel__info">Akute Gefahr — 24/7</div>
+          </div>
+        </a>
+      </div>
+      <p style="margin-top: var(--abstand-lg);">
+        <a href="kontaktstellen.html" class="btn btn--sekundaer">Alle Kontaktstellen anzeigen</a>
+      </p>
+    </section>
+
+    <aside class="disclaimer" aria-label="Quellenhinweis">
+      <p class="disclaimer__titel">Hinweis</p>
+      <p>
+        Dies ist ein <strong>freiwilliger, unabhängiger Service</strong>.
+        Er wird nicht durch das BSI bereitgestellt und steht in keinem
+        offiziellen Zusammenhang mit dem BSI. Alle Inhalte dienen der
+        Erstinformation und ersetzen keine Rechtsberatung.
+      </p>
+      <p>
+        Inhalte werden durch KI-gestützte Verfahren auf Lesbarkeit geprüft.
+        Alle Inhalte haben originär menschliche Autorinnen und Autoren.
+      </p>
+    </aside>
+
+  </main>
+
+  <footer class="fusszeile">
+    <div class="fusszeile__inner">
+      <ul class="fusszeile__nav">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="kontaktstellen.html">Kontaktstellen</a></li>
+        <li><a href="leitfaeden.html">Leitfäden</a></li>
+        <li><a href="fachinfo.html">Für Fachkräfte</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="impressum.html">Impressum &amp; Datenschutz</a></li>
+      </ul>
+      <div class="fusszeile__hinweise">
+        <p>&copy; 2026 Novum Analytica GmbH. Alle Rechte vorbehalten.</p>
+        <p>Freiwilliger Service. Kein offizielles Angebot des BSI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="a11y-panel">
+    <button class="a11y-toggle" aria-expanded="false" aria-controls="a11y-optionen" aria-label="Barrierefreiheit anpassen">&#9881;</button>
+    <div id="a11y-optionen" class="a11y-optionen" role="region" aria-label="Einstellungen zur Barrierefreiheit">
+      <p class="a11y-optionen__titel">Darstellung anpassen</p>
+      <div class="a11y-option"><span>Große Schrift</span><button class="a11y-schalter" role="switch" aria-checked="false" aria-label="Große Schrift ein- oder ausschalten" data-a11y="grosse-schrift"></button></div>
+      <div class="a11y-option"><span>Hoher Kontrast</span><button class="a11y-schalter" role="switch" aria-checked="false" aria-label="Hohen Kontrast ein- oder ausschalten" data-a11y="hoher-kontrast"></button></div>
+      <div class="a11y-option"><span>Alles vorlesen</span><button class="a11y-schalter" role="switch" aria-checked="false" aria-label="Vorlesefunktion ein- oder ausschalten" data-a11y="vorlesen"></button></div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
