@@ -141,6 +141,7 @@ Alle interaktiven Elemente haben eine Mindestgröße von **48 × 48 Pixel**.
 - Eine Aktion pro Bildschirm auf Mobilgeräten
 - Farbcodierung konsistent verwenden (Rot = kritisch, Orange = Warnung, Blau = Info)
 - Jede Seite beginnt mit einer 1–2-Satz-Zusammenfassung (AEO-Snippet)
+- Jeder Leitfaden endet mit „Häufige Fragen" — sichtbar **und** als FAQPage-Schema (siehe Abschnitt 8)
 
 ### Don't
 - Keine Sidebar-Navigation auf Mobilgeräten
@@ -152,7 +153,25 @@ Alle interaktiven Elemente haben eine Mindestgröße von **48 × 48 Pixel**.
 
 ---
 
-## 8. Hinweise zu Inhalten
+## 8. Pflicht-Struktur jeder Leitfaden-Seite (AEO)
+
+Jeder Leitfaden folgt **immer** demselben Gerüst — das dient zugleich der
+Antwort-Engine-Optimierung (AEO) und der Verständlichkeit für Betroffene:
+
+1. **„Kurz erklärt"** — 1–2 Sätze direkt unter dem H1: Was ist passiert, was tun
+   (die Antwort in einem Satz). Prägnante Zusammenfassung *und* AEO-Snippet zugleich.
+2. **Schritt-für-Schritt-Anleitung** — nummerierte Schritte, als `HowTo`-Schema ausgezeichnet.
+3. **„Häufige Fragen" (FAQ)** — am Seitenende, **sichtbar** (aufklappbare `.faq-item`)
+   **und** als `FAQPage`-Schema. Die Fragen greifen die Kernaussagen des Leitfadens auf.
+   Sichtbarer Text und Schema-Text sind **deckungsgleich**.
+4. **Kontaktstellen** + Disclaimer.
+
+> **Warum FAQ:** doppelter Nutzen — es ist eine kurze, prägnante Zusammenfassung der
+> wichtigsten Punkte für Leserinnen und Leser **und** der stärkste AEO-Hebel, damit
+> Suchmaschinen und LLMs die Antworten direkt zitieren können. Neue Leitfäden ohne
+> FAQ gelten als unvollständig.
+
+## 9. Hinweise zu Inhalten
 
 - Alle Inhalte werden durch KI-gestützte Verfahren auf Lesbarkeit und Ausdruck geprüft.
 - Bilder und Infografiken können KI-generiert oder KI-überarbeitet sein.

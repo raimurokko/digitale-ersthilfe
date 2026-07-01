@@ -1144,6 +1144,59 @@ figure summary {
 }
 
 /* ==========================================================================
+   FAQ (Häufige Fragen) — aufklappbar, barrierefrei, crawlbar
+   ========================================================================== */
+
+.faq-item {
+  border: 1px solid var(--farbe-rand);
+  border-radius: var(--rund-md);
+  background: var(--farbe-oberflaeche);
+  margin-bottom: var(--abstand-sm);
+}
+
+.faq-item > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--abstand-md);
+  padding: var(--abstand-md) var(--abstand-lg);
+  min-height: var(--touch-min);
+  font-family: var(--schrift-ueberschrift);
+  font-weight: 700;
+  color: var(--farbe-text);
+}
+
+.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item > summary::after {
+  content: '\002B';
+  margin-left: auto;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--farbe-primaer);
+  flex-shrink: 0;
+}
+
+.faq-item[open] > summary::after {
+  content: '\2212';
+}
+
+.faq-item > summary:hover {
+  color: var(--farbe-primaer);
+}
+
+.faq-item__antwort {
+  padding: 0 var(--abstand-lg) var(--abstand-md);
+}
+
+.faq-item__antwort p {
+  margin: 0;
+}
+
+/* ==========================================================================
    Video-Container
    ========================================================================== */
 
@@ -1165,6 +1218,61 @@ figure summary {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* DSGVO-freundliche Video-Fassade: lädt nichts, bis der Nutzer klickt */
+.video-fassade {
+  position: relative;
+  display: block;
+  margin: var(--abstand-xl) 0;
+  border: 1px solid var(--farbe-rand);
+  border-radius: var(--rund-lg);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.video-fassade img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video-fassade__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: var(--rund-voll);
+  background: var(--farbe-kritisch);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  padding-left: 5px;
+  box-shadow: var(--schatten-lg);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.video-fassade:hover .video-fassade__play,
+.video-fassade:focus-visible .video-fassade__play {
+  background: var(--farbe-primaer);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.video-fassade__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.62);
+  color: #ffffff;
+  padding: var(--abstand-sm) var(--abstand-md);
+  font-family: var(--schrift-ueberschrift);
+  font-weight: 700;
+  font-size: var(--text-sm);
 }
 
 /* ==========================================================================

@@ -31,14 +31,29 @@ Offene Punkte, nach Priorität. Legende:
 
 ## 🟠 P2 — Video-Diffusion (YouTube & Social)
 
-- [ ] 👤 **Erklärvideos auf YouTube** (und später PeerTube/Vimeo) hochladen — für Reichweite
-  und damit LLMs/Suchmaschinen sie zitieren können. Danach hier einbetten mit
-  **DSGVO-freundlicher „Click-to-Load"-Fassade** (`youtube-nocookie.com`, kein Laden vor
-  Klick, lokales Poster). Muster kann ich bauen, sobald Kanal + Video-IDs existieren.
-- [ ] `VideoObject`-Schema je Video um `embedUrl`/`contentUrl` (YouTube) und `duration` ergänzen.
-- [ ] 👤 **Social-Kanäle** (YouTube, ggf. TikTok/Instagram/Mastodon): sobald vorhanden, in
-  Organization-Schema `sameAs` eintragen und im Footer verlinken. Idee für knappe Ressourcen:
-  ein Kurzclip pro Leitfaden vertikal schneiden, plattformübergreifend zweitverwerten.
+- [ ] 👤 **Erklärvideos auf YouTube** (`@novumanalytica`) hochladen und die konkreten
+  Watch-URLs/IDs je Leitfaden hinterlegen. Dann: Video-Fassade auf Inline-`iframe`
+  (`youtube-nocookie.com`, Laden erst nach Klick) umstellen und `VideoObject`-Schema
+  mit `embedUrl`/`duration` wieder ergänzen (im Phishing-Leitfaden vorbereitet).
+- [ ] **Automatismus: Multi-Plattform-Distribution.** Pipeline, die aus einem neuen
+  YouTube-Video automatisch Zuschnitte für **TikTok, Instagram (Reels), Facebook,
+  Mastodon** (und weitere) erzeugt: vertikaler 9:16-Crop, Untertitel/Captions,
+  Titel/Beschreibung + Link zum passenden Leitfaden, Thumbnail. Ziel: „ein Dreh →
+  viele Kanäle" bei knappen Personalressourcen. Kandidaten prüfen (ffmpeg-Zuschnitt,
+  Auto-Untertitel, Publer/Metricool/Buffer o. ä. für das Cross-Posting).
+- [ ] 👤 **Weitere Social-Kanäle** (TikTok/Instagram/Facebook/Mastodon): sobald vorhanden,
+  in Organization-`sameAs` und Footer ergänzen (YouTube ist bereits eingetragen).
+
+## 🟠 P2 — Suche & Assistenz
+
+- [ ] **Suchfeld** auf der Seite (löst die im Schema bewusst weggelassene `SearchAction` ein):
+  clientseitige Volltextsuche über die Leitfäden/Kontaktstellen (z. B. vorab generierter
+  JSON-Index + kleine JS-Suche wie Lunr/Pagefind — kein Server, DSGVO-freundlich, offline-fähig).
+  Danach `WebSite`-`potentialAction`/`SearchAction` im Schema nachziehen.
+- [ ] 👤 **Kleiner, lokaler „Frage-Antwort"-Assistent** auf Basis unseres Datenvorrats
+  (Leitfäden/FAQ) — Idee zur Abwägung: kleines RAG/LLM, das Fragen aus unseren Inhalten
+  beantwortet. Anmerkung: Die großen LLMs können das vermutlich ohnehin gut (u. U. besser);
+  Nutzen vs. Aufwand/Betrieb/DSGVO später bewerten. Vorerst nur Notiz.
 
 ## 🟠 P2 — Hosting (Aufgabe 5)
 
@@ -50,11 +65,12 @@ Offene Punkte, nach Priorität. Legende:
 
 ## 🟢 P3 — Politur & Technik
 
+- [ ] 👤 **Postfach `security@novumanalytica.com`** einrichten/routen (in `security.txt` als
+  Kontakt hinterlegt); `Expires`-Datum jährlich erneuern.
 - [ ] **Sichtbare Breadcrumb-Leiste** in den Seitenkopf (Schema `BreadcrumbList` ist bereits da;
   sichtbare Variante fehlt noch — Google mag beides deckungsgleich).
-- [ ] 👤 **FAQ-Abschnitte** auf `leitfaden-stalking` und `leitfaden-account-hack` ergänzen
-  (sichtbar + `FAQPage`-Schema) — stärkster AEO-Hebel; Inhalt redaktionell.
-- [ ] **„Verwandte Leitfäden"**-Verlinkung am Ende jedes Leitfadens (laterales Interlinking).
+- [ ] **„Verwandte Leitfäden"**-Verlinkung am Ende jedes Leitfadens (laterales Interlinking;
+  Stalking-Leitfaden verlinkt bereits Account-Hack und Echo-Stalking).
 - [ ] **Responsive Bilder** (`srcset`/WebP) für die Infografiken; `latin-ext`-Font-Subset prüfen.
 - [ ] `schema.org thumbnailUrl/contentUrl` im Phishing-Leitfaden auf lokale/finale URLs umstellen.
 - [ ] Echtes **favicon.ico** (Multi-Size) zusätzlich zu PNG/SVG.
@@ -88,3 +104,10 @@ Offene Punkte, nach Priorität. Legende:
     Organization um `logo` und `contactPoint` erweitert. Alle 26 JSON-LD-Blöcke valide.
   - Performance/Core Web Vitals: Font-`preload`, Infografiken von 2752px/~650 KB auf
     1400px/~300 KB verkleinert, `width`/`height` an Bildern (CLS behoben).
+- **FAQ** (sichtbar + `FAQPage`-Schema, deckungsgleich) auf `leitfaden-stalking` und
+  `leitfaden-account-hack` ergänzt — aus dem Bestand abgeleitet. Struktur-Prinzip
+  „Kurz erklärt + FAQ ist Pflicht" in DESIGN.md (Abschnitt 8) festgehalten.
+- **Video**: GitHub-mp4-Einbettung entfernt (Video auf GitHub war ungeeignet); durch
+  DSGVO-freundliche **YouTube-Fassade** ersetzt (`@novumanalytica`, lädt nichts vor Klick).
+  YouTube in Organization-`sameAs` und in allen Fußzeilen verlinkt.
+- **`security.txt`** (RFC 9116) unter `/.well-known/` und im Root angelegt.
