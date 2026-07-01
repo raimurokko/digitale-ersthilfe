@@ -8,17 +8,14 @@ Offene Punkte, nach Priorität. Legende:
 
 ## 🔴 P1 — Vor dem öffentlichen Go-Live
 
-- [ ] 👤 **Impressum-Pflichtangaben ausfüllen** (`impressum.html`). Aktuell Platzhalter:
-  Straße/Hausnummer, PLZ/Ort, Name der Geschäftsführung, Telefonnummer, Amtsgericht,
-  HRB-Nummer, USt-IdNr., Name + Adresse der/des Datenschutzverantwortlichen.
-  → Ohne vollständiges Impressum ist die Seite in DE nicht rechtskonform (§ 5 DDG / § 18 MStV).
-- [ ] 👤 **Widerspruch BSI-Bezug klären.** `ueber-uns.html` schreibt „Novum Analytica ist
-  **Teil** des Cyber-Sicherheitsnetzwerks (CSN) des BSI", während Disclaimer/README
-  „**kein offizieller Zusammenhang** mit dem BSI" betonen. Formulierung vereinheitlichen
-  (z. B. „nimmt am CSN teil" vs. „ist kein Angebot des BSI"), sonst irreführend.
 - [ ] 👤 **Datenschutzerklärung: Abschnitt zum Erklärvideo** ergänzen — das Video wird bei
   Wiedergabe von GitHub (githubusercontent.com, Microsoft) geladen; IP-Übermittlung
   transparent machen (Rechtsgrundlage, ggf. Consent). Alternativ Video self-hosten.
+- [ ] 👤 **Rechtsdaten gegenprüfen.** Impressum wurde aus dem RadiusOne-Projekt übernommen
+  (Novum Analytica GmbH, Kurfürstendamm 194, 10707 Berlin; GF Benjamin Stein,
+  Rainhard Z. Bengez; HRB 265538 B; USt DE362600306; inhaltlich verantwortlich
+  Maria Jackson). Vor Go-Live gegen die maßgebliche Quelle (novumanalytica.com/impressum)
+  final verifizieren; Kontakt-E-Mail ist hier `info@` (RadiusOne nutzt `kontakt@`).
 
 ## 🟠 P2 — Inhalte & Reichweite
 
@@ -67,3 +64,7 @@ Offene Punkte, nach Priorität. Legende:
 - Service-Worker-Cache um Fonts/Icons/Übersichtsseite erweitert (Offline vollständig).
 - Datenschutzerklärung an lokale Schriften angepasst; Altlast `code.html` entfernt.
 - README aktualisiert, BACKLOG angelegt.
+- Impressum vollständig ausgefüllt (Rechtsdaten aus RadiusOne-Projekt übernommen,
+  § 5 DDG, EU-Streitschlichtung/Verbraucherschlichtung ergänzt).
+- BSI/CSN-Formulierung site-weit vereinheitlicht (10 Stellen): CSN-Teilnahme, aber
+  nicht Teil des BSI, kein Auftrag, Inhalte/Meinungen nicht vom BSI autorisiert.
