@@ -343,7 +343,35 @@
   }
 
   /* --------------------------------------------------------------------------
-     6. PWA-Registrierung
+     6. Video-Fassade (DSGVO: YouTube lädt erst nach Klick)
+     -------------------------------------------------------------------------- */
+
+  function initVideoFassaden() {
+    var buttons = document.querySelectorAll('.video-fassade[data-yt-id]');
+    for (var i = 0; i < buttons.length; i++) {
+      (function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-yt-id');
+          if (!id) return;
+          var titel = btn.getAttribute('data-yt-title') || 'Video';
+          var wrap = document.createElement('div');
+          wrap.className = 'video-eingebettet';
+          var iframe = document.createElement('iframe');
+          // nocookie-Domain: kein Tracking-Cookie ohne Wiedergabe
+          iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+          iframe.title = titel;
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+          iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+          iframe.setAttribute('allowfullscreen', '');
+          wrap.appendChild(iframe);
+          btn.parentNode.replaceChild(wrap, btn);
+        });
+      })(buttons[i]);
+    }
+  }
+
+  /* --------------------------------------------------------------------------
+     7. PWA-Registrierung
      -------------------------------------------------------------------------- */
 
   function initPWA() {
@@ -357,7 +385,7 @@
   }
 
   /* --------------------------------------------------------------------------
-     7. Initialisierung
+     8. Initialisierung
      -------------------------------------------------------------------------- */
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -366,6 +394,7 @@
     initBarrierefreiheit();
     initFortschritt();
     initAkkordeon();
+    initVideoFassaden();
     initPWA();
   });
 

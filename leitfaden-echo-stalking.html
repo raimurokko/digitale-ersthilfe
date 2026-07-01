@@ -115,6 +115,21 @@
     ]
   }
   </script>
+  <!-- schema.org: VideoObject -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Verdacht auf Echo-Spionage — Erklärvideo",
+    "description": "Erklärvideo der Digitalen Ersthilfe: Wie Sie den Verdacht auf Überwachung durch einen Amazon Echo prüfen und Beweise sichern.",
+    "thumbnailUrl": "https://digitale-ersthilfe.novumanalytica.com/assets/images/echo-beweissicherung.jpg",
+    "uploadDate": "2026-03-15",
+    "inLanguage": "de",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/zBPo3I_zDuo",
+    "contentUrl": "https://www.youtube.com/watch?v=zBPo3I_zDuo",
+    "publisher": { "@type": "Organization", "name": "Novum Analytica GmbH" }
+  }
+  </script>
 </head>
 <body>
 
@@ -465,19 +480,28 @@
     <section class="abschnitt" aria-labelledby="video-titel">
       <h2 id="video-titel">Erklärvideo</h2>
       <p>
-        In diesem Video erklären wir die wichtigsten Schritte.
-        Das Video hat Untertitel.
+        In diesem Video erklären wir die wichtigsten Schritte. Das Video hat Untertitel.
       </p>
-      <div class="video-container">
-        <video controls preload="metadata"
-               aria-label="Erklärvideo: Verdacht auf Echo-Spionage">
-          <source src="assets/video/Verdacht__Echo-Spionage.mp4" type="video/mp4">
-          <p>
-            Ihr Browser unterstützt keine Videowiedergabe.
-            <a href="assets/video/Verdacht__Echo-Spionage.mp4">Video herunterladen</a>.
-          </p>
-        </video>
-      </div>
+      <p class="hinweis-extern">
+        Es wird <strong>nichts von YouTube geladen</strong>, solange Sie nicht auf
+        Wiedergabe tippen. Beim Abspielen gelten die Datenschutzbestimmungen von
+        YouTube (Google&nbsp;LLC).
+      </p>
+      <button class="video-fassade"
+              data-yt-id="zBPo3I_zDuo"
+              data-yt-title="Verdacht auf Echo-Spionage — Erklärvideo"
+              aria-label="Erklärvideo abspielen: Verdacht auf Echo-Spionage (lädt YouTube und startet die Wiedergabe)">
+        <img src="assets/images/echo-beweissicherung.jpg" width="1400" height="781" loading="lazy" alt="">
+        <span class="video-fassade__play" aria-hidden="true">&#9654;</span>
+        <span class="video-fassade__label">Video ansehen (lädt von YouTube)</span>
+      </button>
+      <noscript>
+        <p>
+          <a href="https://www.youtube.com/watch?v=zBPo3I_zDuo" target="_blank" rel="noopener noreferrer">
+            Erklärvideo auf YouTube ansehen &#8599;
+          </a>
+        </p>
+      </noscript>
     </section>
 
     <!-- Kontaktstellen am Ende -->

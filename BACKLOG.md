@@ -31,10 +31,15 @@ Offene Punkte, nach Priorität. Legende:
 
 ## 🟠 P2 — Video-Diffusion (YouTube & Social)
 
-- [ ] 👤 **Erklärvideos auf YouTube** (`@novumanalytica`) hochladen und die konkreten
-  Watch-URLs/IDs je Leitfaden hinterlegen. Dann: Video-Fassade auf Inline-`iframe`
-  (`youtube-nocookie.com`, Laden erst nach Klick) umstellen und `VideoObject`-Schema
-  mit `embedUrl`/`duration` wieder ergänzen (im Phishing-Leitfaden vorbereitet).
+- [x] **Echo-Leitfaden**: Erklärvideo (`youtube.com/watch?v=zBPo3I_zDuo`) als
+  DSGVO-Click-to-Load-Fassade (`youtube-nocookie.com`, lädt erst nach Klick, lokales
+  Poster) eingebunden; `VideoObject`-Schema ergänzt. Wiederverwendbare Fassade
+  (`.video-fassade[data-yt-id]` + `initVideoFassaden()` in app.js).
+- [ ] 👤 **Phishing-Leitfaden**: eigene YouTube-Video-ID hinterlegen (die Fassade dort
+  verlinkt bislang nur den Kanal). Dann auf dieselbe Click-to-Load-Fassade umstellen
+  und `VideoObject` wieder ergänzen.
+- [ ] 👤 Exaktes **Upload-Datum** des Echo-Videos in `VideoObject.uploadDate` eintragen
+  (aktuell Näherung 2026-03-15) und ggf. `duration` ergänzen.
 - [ ] **Automatismus: Multi-Plattform-Distribution.** Pipeline, die aus einem neuen
   YouTube-Video automatisch Zuschnitte für **TikTok, Instagram (Reels), Facebook,
   Mastodon** (und weitere) erzeugt: vertikaler 9:16-Crop, Untertitel/Captions,
