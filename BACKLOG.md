@@ -38,8 +38,7 @@ Offene Punkte, nach Priorität. Legende:
 - [ ] 👤 **Phishing-Leitfaden**: eigene YouTube-Video-ID hinterlegen (die Fassade dort
   verlinkt bislang nur den Kanal). Dann auf dieselbe Click-to-Load-Fassade umstellen
   und `VideoObject` wieder ergänzen.
-- [ ] 👤 Exaktes **Upload-Datum** des Echo-Videos in `VideoObject.uploadDate` eintragen
-  (aktuell Näherung 2026-03-15) und ggf. `duration` ergänzen.
+- [x] Echo-`VideoObject`: exaktes `uploadDate` (2026-03-26) und `duration` (PT5M29S) eingetragen.
 - [ ] **Automatismus: Multi-Plattform-Distribution.** Pipeline, die aus einem neuen
   YouTube-Video automatisch Zuschnitte für **TikTok, Instagram (Reels), Facebook,
   Mastodon** (und weitere) erzeugt: vertikaler 9:16-Crop, Untertitel/Captions,
