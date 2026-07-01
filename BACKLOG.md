@@ -57,10 +57,13 @@ Offene Punkte, nach Priorität. Legende:
 
 ## 🟠 P2 — Hosting (Aufgabe 5)
 
-- [ ] **GitHub Pages** aktivieren (Branch `main`, root); `CNAME`-Datei für die Produktiv-Domain.
-- [ ] **Codeberg Pages** einrichten.
-- [ ] **Produktiv-Domain** `digitale-ersthilfe.novumanalytica.com`: DNS (CNAME), HTTPS/Zertifikat.
-  (Canonical/OG/Sitemap sind bereits konsistent auf diese Domain gesetzt.)
+- [x] **GitHub-Action** für Pages-Deployment angelegt (`.github/workflows/deploy-pages.yml`),
+  `CNAME` + `.nojekyll` vorhanden.
+- [ ] 👤 **GitHub Pages aktivieren**: Repo → Settings → Pages → *Source: „GitHub Actions"*
+  (einmalig). Danach deployt jeder Push auf `main` automatisch.
+- [ ] 👤 **DNS setzen**: `digitale-ersthilfe.novumanalytica.com` als CNAME auf
+  `raimurokko.github.io` zeigen lassen; in den Pages-Settings „Enforce HTTPS" aktivieren.
+- [ ] **Codeberg Pages** einrichten (Spiegel).
 - [ ] Nach Go-Live **Sitemap in Google Search Console** und Bing Webmaster Tools einreichen.
 
 ## 🟢 P3 — Politur & Technik
