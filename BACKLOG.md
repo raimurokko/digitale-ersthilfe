@@ -121,3 +121,11 @@ Offene Punkte, nach Priorität. Legende:
   DSGVO-freundliche **YouTube-Fassade** ersetzt (`@novumanalytica`, lädt nichts vor Klick).
   YouTube in Organization-`sameAs` und in allen Fußzeilen verlinkt.
 - **`security.txt`** (RFC 9116) unter `/.well-known/` und im Root angelegt.
+- **Verbraucherzentrale-Links** integriert: Phishing-Radar, Fakeshop-Finder + Warnliste,
+  Musterbriefe (digitale Welt / Datenschutz) sowie die Ratgeber „Erste Hilfe bei
+  gehackten Onlinekonten" und „Ihre Daten, Ihre Rechte (DSGVO)" — jeweils an
+  passender Stelle (Kontaktstellen, Phishing- und Account-Hack-Leitfaden).
+- **Entscheidung (VZ-Warnungen):** Keine 1:1-Direktanzeige. Recherche ergab keinen
+  offiziellen Feed/keine offene Lizenz; tägliche Eigen-Zusammenfassung wäre zu
+  aufwändig. Daher nur Verlinkung. Klärung einer möglichen Kooperation erfolgt
+  telefonisch durch das Team (kein schriftlicher Anfrage-Entwurf nötig).
