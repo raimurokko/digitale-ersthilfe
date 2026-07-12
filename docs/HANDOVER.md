@@ -36,14 +36,17 @@ Requests** (DSGVO: keine CDNs, keine Cookies, keine Tracker; Fonts lokal).
 
 ## Inhaltlicher Stand
 
-**Live (9 Leitfäden, indexiert):** Account-Hack · Stalking · Echo-Überwachung · Phishing
+**Live (12 Leitfäden, indexiert):** Account-Hack · Stalking · Echo-Überwachung · Phishing
 (Signal/WhatsApp) · Vertrauliche Beweissicherung · **Bildbasierte Gewalt/NCII** · **Sextortion**
-· **Stalkerware** (mit „Checkliste zum Abhaken") · **Digitale Trennung**.
+· **Stalkerware** (mit „Checkliste zum Abhaken") · **Digitale Trennung** · **Cybermobbing** ·
+**Kinder & Jugendliche** (Cybergrooming) · **Doxing**.
 
-**ENTWÜRFE (fertig recherchiert, `noindex`, NICHT verlinkt, Freigabe ausstehend):**
-`leitfaden-cybermobbing.html` · `leitfaden-kinder-jugend.html` · `leitfaden-doxing.html`.
-Jede Entwurfsseite hat ein sichtbares **ENTWURF-Banner** und unten einen **Redaktions-Anhang**
-(Quellen + „vor Go-Live prüfen").
+Die drei zuletzt genannten waren SHOULD-Entwürfe; sie sind am **12.07.2026** faktengeprüft,
+freigegeben und live geschaltet (ENTWURF-Banner/`noindex`/Redaktions-Anhang entfernt; in
+Übersicht, Sitemap, SW, llms.txt, README, Startseiten-Triage verlinkt).
+
+**Aktualitätsdaten:** Jeder Leitfaden zeigt „zuletzt überprüft/aktualisiert" (oben + Kasten
+am Ende, `.beitrag-datum`); der Website-weite Stand steht auf `ueber-uns.html#aktualitaet`.
 
 **Funktionen:** Triage · Click-to-Call · **Vorlesen** (Abschnitts-Buttons + „Vorlesen per Klick")
 · **A11y-Panel** (Button rechts mittig: Textgröße, Hoher Kontrast, Graustufen, **Dyslexie/OpenDyslexic**,
@@ -73,10 +76,10 @@ Links hervorheben, Animationen reduzieren, Vorlesen) · **Scroll-up** (unten rec
 
 ## Offene Punkte / nächste Schritte (Priorität)
 
-1. 👤 **Freigabe der 3 SHOULD-Entwürfe** (Cybermobbing, Kinder/Jugend, Doxing) + Faktencheck.
-   **Wichtig:** NetzDG ist seit 2024 großteils durch den **DSA** ersetzt → Beschwerdestelle jetzt
-   **Bundesnetzagentur (`dsc.bund.de`)**; §§ (§ 176b, § 126a, § 51 BMG …) und **HateAid-Telefonnummer**
-   verifizieren. Danach live schalten.
+1. ✅ **ERLEDIGT (12.07.2026): Faktencheck + Freigabe + Go-Live der 3 SHOULD-Entwürfe**
+   (Cybermobbing, Kinder/Jugend, Doxing). Alle §§/Nummern/Behörden verifiziert (NetzDG→DSA/
+   Bundesnetzagentur `dsc.bund.de`, § 176b, § 126a, § 51 BMG, HateAid 030 252 088 38 u. a.);
+   sie sind jetzt live und verlinkt.
 2. **🔴 P1 Erklärvideos** (starke Nutzernachfrage): pro Leitfaden ein kurzes YouTube-Video.
    Skript für Stalkerware liegt vor (`docs/video-skript-stalkerware.md`). Einbindung ist ein
    Handgriff: `data-yt-id` in die Video-Fassade + `VideoObject`-Schema. **Phishing-Video-ID fehlt**

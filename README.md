@@ -78,6 +78,9 @@ haben Dark-Mode- und Hoher-Kontrast-Varianten. Siehe [DESIGN.md](DESIGN.md).
 | `leitfaden-sextortion.html` | Leitfaden: Sextortion (Erpressung mit Nacktbildern) |
 | `leitfaden-stalkerware.html` | Leitfaden: Stalkerware (heimliche Handy-Überwachung) |
 | `leitfaden-digitale-trennung.html` | Leitfaden: Digitale Trennung |
+| `leitfaden-cybermobbing.html` | Leitfaden: Cybermobbing und Hass im Netz |
+| `leitfaden-kinder-jugend.html` | Leitfaden: Kinder & Jugendliche (Cybergrooming/Cybermobbing) |
+| `leitfaden-doxing.html` | Leitfaden: Doxing (private Daten veröffentlicht) |
 | `fachinfo.html` | Ressourcen für Fachkräfte |
 | `ueber-uns.html` | Über das Projekt und Disclaimer |
 | `impressum.html` | Impressum und Datenschutzerklärung |

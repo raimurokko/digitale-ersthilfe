@@ -56,9 +56,10 @@ Frühere Beschreibung (erledigt):
 - [x] **Doxing** — Entwurf `leitfaden-doxing.html`. ✓ Faktencheck 12.07.2026: § 126a StGB
   (seit 22.09.2021), § 51 BMG (Sperre 2 J., verlängerbar), § 238 StGB, Art. 17 DSGVO bestätigt.
   **HateAid-Nummer jetzt verifiziert** (030 252 088 38) → im Entwurf ergänzbar.
-- [ ] 👤 Diese drei Entwürfe redaktionell **freigeben** (Faktencheck ist erledigt) und wie die
-  MUST-Leitfäden live schalten (Übersicht, Sitemap, SW, Triage, llms.txt, README, `noindex`
-  entfernen; Aktualitätsdatum auf Freigabedatum setzen).
+- [x] Diese drei Entwürfe redaktionell **freigegeben** und live geschaltet (12.07.2026):
+  ENTWURF-Banner/`noindex`/Redaktions-Anhang entfernt; in Übersicht (Karte + ItemList),
+  sitemap.xml, sw.js (v12), llms.txt, README und Startseiten-Triage (Cybermobbing + Doxing)
+  eingetragen; Aktualitätsdatum = Freigabedatum.
 - [x] Sichtbares **„zuletzt überprüft / aktualisiert"-Datum** auf jedem Leitfaden (oben unter dem
   Titel + Kasten am Ende, `.beitrag-datum`) **und** Website-weit auf `ueber-uns.html#aktualitaet`;
   Schema `datePublished`/`dateModified` ergänzt.
