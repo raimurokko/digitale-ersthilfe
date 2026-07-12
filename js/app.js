@@ -374,9 +374,9 @@
      7. Schnell verlassen (Schutz vor mitlesenden Personen)
      -------------------------------------------------------------------------- */
 
-  // Neutrales Ziel bei „Schnell verlassen": unauffällig (Wettersuche),
-  // ohne Tracking-Cookies (DuckDuckGo). Bei Bedarf hier anpassen.
-  var NEUTRAL_URL = 'https://duckduckgo.com/?q=wetter';
+  // Neutrales Ziel bei „Schnell verlassen": unauffällig (Deutscher Wetterdienst),
+  // datenschutzfreundliche, regionale Behördenseite. Bei Bedarf hier anpassen.
+  var NEUTRAL_URL = 'https://www.dwd.de/';
 
   function initSchnellVerlassen() {
     var btn = document.getElementById('schnell-verlassen');
