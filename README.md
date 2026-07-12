@@ -85,6 +85,8 @@ haben Dark-Mode- und Hoher-Kontrast-Varianten. Siehe [DESIGN.md](DESIGN.md).
 | `leitfaden-identitaetsdiebstahl.html` | Leitfaden: Identitätsdiebstahl / Fake-Profil |
 | `leitfaden-online-betrug.html` | Leitfaden: Online-Betrug (Fake-Shops, Anlagebetrug) |
 | `leitfaden-ransomware.html` | Leitfaden: Ransomware (Gerät gesperrt/verschlüsselt) |
+| `leitfaden-romance-scam.html` | Leitfaden: Romance/Love Scam (falsche Liebe) |
+| `leitfaden-sim-swapping.html` | Leitfaden: SIM-Swapping (Handynummer übernommen) |
 | `fachinfo.html` | Ressourcen für Fachkräfte |
 | `ueber-uns.html` | Über das Projekt und Disclaimer |
 | `impressum.html` | Impressum und Datenschutzerklärung |
