@@ -1040,6 +1040,43 @@ strong {
 }
 
 /* ==========================================================================
+   Schnell verlassen (Notausgang für Betroffene)
+   ========================================================================== */
+
+.schnell-verlassen {
+  position: fixed;
+  left: var(--abstand-md);
+  bottom: var(--abstand-md);
+  z-index: 200;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--abstand-sm);
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: var(--rund-voll);
+  font-family: var(--schrift-ueberschrift);
+  font-weight: 800;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  box-shadow: var(--schatten-lg);
+}
+
+.schnell-verlassen:hover,
+.schnell-verlassen:focus-visible {
+  background: var(--farbe-kritisch);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.schnell-verlassen__x {
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 
@@ -1402,6 +1439,7 @@ figure summary {
   .notfall-banner,
   .kopfzeile,
   .a11y-panel,
+  .schnell-verlassen,
   .vorlesen-btn,
   .menu-button,
   .nav-mobil {

@@ -371,7 +371,33 @@
   }
 
   /* --------------------------------------------------------------------------
-     7. PWA-Registrierung
+     7. Schnell verlassen (Schutz vor mitlesenden Personen)
+     -------------------------------------------------------------------------- */
+
+  function initSchnellVerlassen() {
+    var btn = document.getElementById('schnell-verlassen');
+    if (!btn) return;
+    var NEUTRAL = 'https://www.wetter.com/';
+    function verlassen(e) {
+      if (e) e.preventDefault();
+      // Neutrale Seite in neuem Tab öffnen (falls erlaubt) ...
+      try { window.open('https://www.google.de/', '_blank'); } catch (x) {}
+      // ... und die aktuelle Seite ersetzen, damit „Zurück" nicht hierher führt.
+      window.location.replace(NEUTRAL);
+    }
+    btn.addEventListener('click', verlassen);
+    // Doppeltes Drücken der Esc-Taste als zusätzlicher Notausgang
+    var letzteEsc = 0;
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      var jetzt = e.timeStamp || 0;
+      if (jetzt - letzteEsc < 600) { verlassen(); }
+      letzteEsc = jetzt;
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     8. PWA-Registrierung
      -------------------------------------------------------------------------- */
 
   function initPWA() {
@@ -385,10 +411,11 @@
   }
 
   /* --------------------------------------------------------------------------
-     8. Initialisierung
+     9. Initialisierung
      -------------------------------------------------------------------------- */
 
   document.addEventListener('DOMContentLoaded', function () {
+    initSchnellVerlassen();
     initNavigation();
     initVorlesen();
     initBarrierefreiheit();
