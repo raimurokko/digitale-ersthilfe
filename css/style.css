@@ -1040,6 +1040,24 @@ strong {
 }
 
 /* ==========================================================================
+   Entwurf-Banner (unveröffentlichte, redaktionell zu prüfende Seiten)
+   ========================================================================== */
+
+.entwurf-banner {
+  background: repeating-linear-gradient(
+    45deg,
+    #8a4b00, #8a4b00 12px,
+    #7a4200 12px, #7a4200 24px
+  );
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  padding: var(--abstand-sm) var(--abstand-md);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
    Schnell verlassen (Notausgang für Betroffene)
    ========================================================================== */
 
