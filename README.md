@@ -139,11 +139,13 @@ python3 -m http.server 8137
 
 ## Materialien
 
-Die Fach-Materialien (PDFs, Videos, Infografiken) werden in einem **separaten
-Repository** gepflegt und sind hier bewusst **nicht** eingecheckt (Größe):
+Die Fach-Materialien (PDFs, Videos, Infografiken) sollen in einem **separaten
+Repository** gepflegt werden und sind hier bewusst **nicht** eingecheckt (Größe).
+Die Repositories sind **noch in Vorbereitung** — bis dahin sind die Material-Karten
+auf der Website als „in Vorbereitung" markiert (nicht verlinkt):
 
-- **GitHub:** [raimurokko/digitale-ersthilfe-materialien](https://github.com/raimurokko/digitale-ersthilfe-materialien)
-- **Codeberg:** [raimu/digitale-ersthilfe-materialien](https://codeberg.org/raimu/digitale-ersthilfe-materialien)
+- **GitHub:** `raimurokko/digitale-ersthilfe-materialien` — *in Vorbereitung*
+- **Codeberg:** `raimu/digitale-ersthilfe-materialien` — *in Vorbereitung*
 
 ## Spiegel & Hosting
 
