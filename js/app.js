@@ -159,126 +159,159 @@
   }
 
   /* --------------------------------------------------------------------------
-     3. Barrierefreiheits-Panel
+     3. Scroll-up-Button
      -------------------------------------------------------------------------- */
 
+  function initScrollTop() {
+    var topBtn = document.getElementById('scroll-top');
+    if (!topBtn) return;
+    function onScroll() {
+      topBtn.classList.toggle('is-visible', window.scrollY > 600);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    topBtn.addEventListener('click', function () {
+      var reduce = document.documentElement.classList.contains('a11y-motion') ||
+        (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     3b. Barrierefreiheits-Panel
+     Zustand in localStorage ('de-a11y', JSON, kein Cookie); ein Inline-Script
+     im <head> wendet die Klassen bereits vor dem ersten Paint an.
+     -------------------------------------------------------------------------- */
+
+  var A11Y_KEY = 'de-a11y';
+  var A11Y_FLAGS = ['contrast', 'gray', 'dys', 'links', 'motion'];
+  var A11Y_SIZES = ['100%', '115%', '130%', '150%'];
+
   function initBarrierefreiheit() {
-    var toggle = document.querySelector('.a11y-toggle');
-    var optionen = document.getElementById('a11y-optionen');
-    if (!toggle || !optionen) return;
+    var root = document.documentElement;
+    var btn = document.getElementById('a11y-toggle');
+    var panel = document.getElementById('a11y-panel');
+    if (!btn || !panel) return;
 
-    // Panel öffnen / schließen
-    toggle.addEventListener('click', function () {
-      var istOffen = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!istOffen));
-      optionen.setAttribute('data-open', String(!istOffen));
+    var closeBtn = document.getElementById('a11y-close');
+    var resetBtn = document.getElementById('a11y-reset');
+    var sizeDown = document.getElementById('a11y-size-down');
+    var sizeUp = document.getElementById('a11y-size-up');
+    var sizeVal = document.getElementById('a11y-size-val');
+    var optButtons = panel.querySelectorAll('.a11y-opt');
+
+    var state;
+    try { state = JSON.parse(localStorage.getItem(A11Y_KEY) || '{}'); } catch (e) { state = {}; }
+    state.size = Math.min(Math.max(state.size || 0, 0), A11Y_SIZES.length - 1);
+
+    function save() {
+      try { localStorage.setItem(A11Y_KEY, JSON.stringify(state)); } catch (e) { /* localStorage n/a */ }
+    }
+
+    /* Vorlesen per Klick (Web Speech API — Sprachausgabe des Geräts) */
+    var voiceCurrent = null;
+    function voiceStop() {
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      if (voiceCurrent) { voiceCurrent.classList.remove('a11y-reading'); voiceCurrent = null; }
+    }
+    function voicePick() {
+      var voices = window.speechSynthesis.getVoices().filter(function (v) {
+        return v.lang && v.lang.toLowerCase().indexOf('de') === 0;
+      });
+      var local = voices.filter(function (v) { return v.localService; });
+      return local[0] || voices[0] || null;
+    }
+
+    function apply() {
+      for (var i = 0; i < A11Y_FLAGS.length; i++) {
+        root.classList.toggle('a11y-' + A11Y_FLAGS[i], !!state[A11Y_FLAGS[i]]);
+      }
+      root.style.fontSize = state.size ? A11Y_SIZES[state.size] : '';
+      for (var j = 0; j < optButtons.length; j++) {
+        optButtons[j].setAttribute('aria-pressed', String(!!state[optButtons[j].getAttribute('data-opt')]));
+      }
+      sizeVal.innerHTML = A11Y_SIZES[state.size].replace('%', '&nbsp;%');
+      sizeDown.disabled = state.size === 0;
+      sizeUp.disabled = state.size === A11Y_SIZES.length - 1;
+      if (!state.voice) voiceStop();
+    }
+
+    function oeffnen() {
+      panel.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', 'Einstellungen zur Barrierefreiheit schließen');
+      closeBtn.focus();
+    }
+    function schliessen() {
+      panel.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Einstellungen zur Barrierefreiheit öffnen');
+    }
+
+    btn.addEventListener('click', function () {
+      if (panel.hidden) { oeffnen(); } else { schliessen(); btn.focus(); }
     });
-
-    // Schließen bei Klick außerhalb
+    closeBtn.addEventListener('click', function () { schliessen(); btn.focus(); });
     document.addEventListener('click', function (e) {
-      if (!e.target.closest('.a11y-panel')) {
-        toggle.setAttribute('aria-expanded', 'false');
-        optionen.setAttribute('data-open', 'false');
-      }
+      if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) schliessen();
     });
 
-    // Schließen bei Escape-Taste
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        toggle.setAttribute('aria-expanded', 'false');
-        optionen.setAttribute('data-open', 'false');
-        toggle.focus();
-      }
-    });
-
-    // Gespeicherte Einstellungen laden
-    ladeEinstellungen();
-
-    // Schalter initialisieren
-    var schalter = document.querySelectorAll('.a11y-schalter');
-    for (var i = 0; i < schalter.length; i++) {
-      (function (btn) {
-        btn.addEventListener('click', function () {
-          var istAn = btn.getAttribute('aria-checked') === 'true';
-          btn.setAttribute('aria-checked', String(!istAn));
-
-          var funktion = btn.getAttribute('data-a11y');
-          wendeFunktionAn(funktion, !istAn);
-          speichereEinstellungen();
+    for (var k = 0; k < optButtons.length; k++) {
+      (function (b) {
+        b.addEventListener('click', function () {
+          var opt = b.getAttribute('data-opt');
+          state[opt] = !state[opt];
+          if (opt === 'voice' && state.voice && !('speechSynthesis' in window)) {
+            state.voice = false;
+            var hint = document.getElementById('a11y-voice-hint');
+            if (hint) hint.textContent = 'Ihr Browser stellt keine Sprachausgabe bereit — die Vorlesefunktion ist auf diesem Gerät nicht verfügbar.';
+          }
+          save(); apply();
         });
-      })(schalter[i]);
+      })(optButtons[k]);
     }
-  }
 
-  function wendeFunktionAn(funktion, aktiv) {
-    var html = document.documentElement;
+    sizeDown.addEventListener('click', function () {
+      if (state.size > 0) { state.size--; save(); apply(); }
+    });
+    sizeUp.addEventListener('click', function () {
+      if (state.size < A11Y_SIZES.length - 1) { state.size++; save(); apply(); }
+    });
+    resetBtn.addEventListener('click', function () {
+      state = { size: 0 }; save(); apply();
+    });
 
-    switch (funktion) {
-      case 'grosse-schrift':
-        if (aktiv) {
-          html.classList.add('grosse-schrift');
-        } else {
-          html.classList.remove('grosse-schrift');
-        }
-        break;
+    document.addEventListener('click', function (e) {
+      if (!state.voice || !('speechSynthesis' in window)) return;
+      if (panel.contains(e.target) || btn.contains(e.target)) return;
+      if (e.target.closest && e.target.closest('.vorlesen-btn, .a11y-toggle, .a11y-panel, .scroll-top, .schnell-verlassen')) return;
+      var el = e.target.closest && e.target.closest('p, h1, h2, h3, h4, dt, dd, li, figcaption, summary, a, button');
+      if (!el) return;
+      if (el.tagName === 'A' || el.tagName === 'BUTTON') e.preventDefault();
+      voiceStop();
+      var text = el.innerText || el.textContent;
+      if (!text || !text.trim()) return;
+      var u = new SpeechSynthesisUtterance(text.trim());
+      u.lang = 'de-DE';
+      u.rate = 0.95;
+      var v = voicePick();
+      if (v) u.voice = v;
+      voiceCurrent = el;
+      el.classList.add('a11y-reading');
+      u.onend = u.onerror = function () {
+        el.classList.remove('a11y-reading');
+        if (voiceCurrent === el) voiceCurrent = null;
+      };
+      window.speechSynthesis.speak(u);
+    }, true);
 
-      case 'hoher-kontrast':
-        if (aktiv) {
-          html.classList.add('hoher-kontrast');
-        } else {
-          html.classList.remove('hoher-kontrast');
-        }
-        break;
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (voiceCurrent) { voiceStop(); }
+      else if (!panel.hidden) { schliessen(); btn.focus(); }
+    });
 
-      case 'vorlesen':
-        if (aktiv) {
-          // Gesamte Seite vorlesen
-          var hauptinhalt = document.getElementById('hauptinhalt');
-          if (hauptinhalt) {
-            var text = textAusElement(hauptinhalt);
-            if (text) vorlesenStarten(text, null);
-          }
-        } else {
-          vorlesenStoppen();
-        }
-        break;
-    }
-  }
-
-  function speichereEinstellungen() {
-    try {
-      var einstellungen = {};
-      var schalter = document.querySelectorAll('.a11y-schalter');
-      for (var i = 0; i < schalter.length; i++) {
-        var funktion = schalter[i].getAttribute('data-a11y');
-        einstellungen[funktion] = schalter[i].getAttribute('aria-checked') === 'true';
-      }
-      localStorage.setItem('digitale-ersthilfe-a11y', JSON.stringify(einstellungen));
-    } catch (e) {
-      // localStorage nicht verfügbar — kein Problem
-    }
-  }
-
-  function ladeEinstellungen() {
-    try {
-      var gespeichert = localStorage.getItem('digitale-ersthilfe-a11y');
-      if (!gespeichert) return;
-
-      var einstellungen = JSON.parse(gespeichert);
-      var schalter = document.querySelectorAll('.a11y-schalter');
-      for (var i = 0; i < schalter.length; i++) {
-        var funktion = schalter[i].getAttribute('data-a11y');
-        if (einstellungen[funktion] === true) {
-          schalter[i].setAttribute('aria-checked', 'true');
-          // Vorlesen nicht automatisch beim Laden starten
-          if (funktion !== 'vorlesen') {
-            wendeFunktionAn(funktion, true);
-          }
-        }
-      }
-    } catch (e) {
-      // Fehler beim Laden — ignorieren
-    }
+    apply();
   }
 
   /* --------------------------------------------------------------------------
@@ -439,6 +472,7 @@
     initFortschritt();
     initAkkordeon();
     initVideoFassaden();
+    initScrollTop();
     initPWA();
   });
 

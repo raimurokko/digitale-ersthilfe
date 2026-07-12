@@ -3,7 +3,7 @@
    Offline-Fähigkeit: Cache-first für alle Seiten und Ressourcen
    ========================================================================== */
 
-var CACHE_NAME = 'digitale-ersthilfe-v7';
+var CACHE_NAME = 'digitale-ersthilfe-v8';
 
 var DATEIEN_ZUM_CACHEN = [
   '/',
@@ -29,6 +29,10 @@ var DATEIEN_ZUM_CACHEN = [
   '/assets/fonts/inter-latin-ext.woff2',
   '/assets/fonts/plus-jakarta-sans-latin.woff2',
   '/assets/fonts/plus-jakarta-sans-latin-ext.woff2',
+  '/assets/fonts/opendyslexic-regular.woff2',
+  '/assets/fonts/opendyslexic-bold.woff2',
+  '/assets/fonts/opendyslexic-italic.woff2',
+  '/assets/fonts/opendyslexic-bold-italic.woff2',
   '/assets/icons/icon.svg',
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',

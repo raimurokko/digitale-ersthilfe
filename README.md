@@ -34,7 +34,10 @@ Rechtsberatung, IT-Forensik oder polizeiliche Ermittlung.
 - **Erklärvideos** — DSGVO-freundlich per Click-to-Load-Fassade (`youtube-nocookie`):
   es wird nichts von YouTube geladen, bis die Nutzerin/der Nutzer aktiv auf Wiedergabe tippt
 - **Vorlesefunktion** — Alle Texte per Web Speech API vorlesen lassen
-- **Barrierefreiheit** — Große Schrift, hoher Kontrast, WCAG 2.1 AA, Vorlesen
+- **Barrierefreiheits-Panel** (Button rechts mittig) — Textgröße stufenlos, hoher Kontrast,
+  Graustufen, **Dyslexie-freundlich (OpenDyslexic)**, Links hervorheben, Animationen reduzieren,
+  Vorlesen per Klick; WCAG 2.1 AA
+- **Nach-oben-Button** unten rechts (ab etwas Scrollen sichtbar)
 - **PWA / Offline** — Als App installierbar, funktioniert ohne Internet
 - **schema.org** — Strukturierte Daten für Suchmaschinen und AI (HowTo, FAQPage, ItemList,
   ContactPage, MedicalWebPage, VideoObject, BreadcrumbList)

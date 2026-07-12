@@ -51,6 +51,10 @@ als CSS Custom Properties in `:root`.
 |---|---|---|
 | Überschriften | Plus Jakarta Sans (600–800) | h1–h4, Buttons, Logo |
 | Fließtext | Inter (400–700) | Absätze, Listen, Labels |
+| Dyslexie-Modus | OpenDyslexic (SIL OFL) | nur wenn im A11y-Panel aktiviert |
+
+Alle Schriften sind **lokal** in `assets/fonts/` (woff2), keine externen Requests.
+Die OFL-Lizenzdatei `OFL-OpenDyslexic.txt` muss im Repo bleiben.
 
 ### Schriftgrößen (Mobile-Basis)
 
@@ -121,9 +125,17 @@ Alle interaktiven Elemente haben eine Mindestgröße von **48 × 48 Pixel**.
 - Scrollabhängig: grau → blau (aktiv) → grün (fertig)
 
 ### Barrierefreiheits-Panel
-- Schwebendes Zahnrad-Icon unten rechts
-- Öffnet Popup mit Schaltern: Große Schrift, Hoher Kontrast, Vorlesen
-- Einstellungen werden in `localStorage` gespeichert
+- Runder Button (Rollstuhl-Icon) **rechts, vertikal mittig** (`#a11y-toggle`); Panel öffnet nach links
+- Optionen: **Textgröße** stufenlos (100/115/130/150 %), **Hoher Kontrast**, **Graustufen**
+  (Notfall-Banner bleibt farbig), **Dyslexie-freundlich** (OpenDyslexic), **Links hervorheben**,
+  **Animationen reduzieren**, **Vorlesen per Klick** (Web Speech API des Geräts)
+- Modi als `html.a11y-*`-Klassen + `html { font-size }`; Zustand in `localStorage` (`de-a11y`,
+  JSON, keine Cookies); ein Inline-`<head>`-Script wendet alles vor dem ersten Paint an
+- Neue Modi in drei Stellen ergänzen: Inline-Script, `main.js` (`A11Y_FLAGS`) und `style.css`
+
+### Scroll-up-Button (`#scroll-top`)
+- Rund, **unten rechts**; erscheint ab `scrollY > 600` (Klasse `is-visible`); scrollt nach oben
+  (respektiert „Animationen reduzieren" bzw. `prefers-reduced-motion`)
 
 ### „Schnell verlassen" (Notausgang, `.schnell-verlassen`)
 - Fixe Pille **unten links** (spiegelbildlich zum A11y-Zahnrad), dunkel, hoher Kontrast

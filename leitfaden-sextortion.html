@@ -18,6 +18,9 @@
   <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
+  <script>/* Barrierefreiheits-Einstellungen vor dem ersten Paint anwenden */
+(function(){var r=document.documentElement;try{var a=JSON.parse(localStorage.getItem('de-a11y')||'{}');['contrast','gray','dys','links','motion'].forEach(function(k){if(a[k])r.classList.add('a11y-'+k);});var s=['100%','115%','130%','150%'];if(a.size)r.style.fontSize=s[a.size]||'100%';}catch(e){}})();</script>
+
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
 
@@ -359,14 +362,58 @@
     </div>
   </footer>
 
-  <div class="a11y-panel">
-    <button class="a11y-toggle" aria-expanded="false" aria-controls="a11y-optionen" aria-label="Barrierefreiheit anpassen">&#9881;</button>
-    <div id="a11y-optionen" class="a11y-optionen" role="region" aria-label="Einstellungen zur Barrierefreiheit">
-      <p class="a11y-optionen__titel">Darstellung anpassen</p>
-      <div class="a11y-option"><span>Große Schrift</span><button class="a11y-schalter" role="switch" aria-checked="false" aria-label="Große Schrift ein- oder ausschalten" data-a11y="grosse-schrift"></button></div>
-      <div class="a11y-option"><span>Hoher Kontrast</span><button class="a11y-schalter" role="switch" aria-checked="false" aria-label="Hohen Kontrast ein- oder ausschalten" data-a11y="hoher-kontrast"></button></div>
-      <div class="a11y-option"><span>Alles vorlesen</span><button class="a11y-schalter" role="switch" aria-checked="false" aria-label="Vorlesefunktion ein- oder ausschalten" data-a11y="vorlesen"></button></div>
+  <!-- Scroll-up-Button -->
+  <button type="button" id="scroll-top" class="scroll-top" aria-label="Zum Seitenanfang scrollen">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Barrierefreiheit: Button (rechts mittig) + Panel -->
+  <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Einstellungen zur Barrierefreiheit öffnen">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><circle cx="12" cy="4" r="2"></circle><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01-.31-.18-.68-.28-1.06-.26-1.05.05-1.81.98-1.81 2.03V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-6.17 5c-.41 1.16-1.52 2-2.83 2-1.66 0-3-1.34-3-3 0-1.31.84-2.41 2-2.83V12.1c-2.28.46-4 2.48-4 4.9 0 2.76 2.24 5 5 5 2.42 0 4.44-1.72 4.9-4h-2.07z"></path></svg>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+    <div class="a11y-head">
+      <h2 id="a11y-title">Barrierefreiheit</h2>
+      <button type="button" id="a11y-close" class="a11y-close" aria-label="Einstellungen schließen">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
+
+    <div class="a11y-group">
+      <h3>Sehen</h3>
+      <div class="a11y-size">
+        <span id="a11y-size-label">Textgröße</span>
+        <div class="a11y-size-controls">
+          <button type="button" id="a11y-size-down" class="a11y-size-btn" aria-label="Textgröße verkleinern">&#8722;</button>
+          <output id="a11y-size-val" aria-live="polite">100&nbsp;%</output>
+          <button type="button" id="a11y-size-up" class="a11y-size-btn" aria-label="Textgröße vergrößern">+</button>
+        </div>
+      </div>
+      <button type="button" class="a11y-opt" data-opt="contrast" aria-pressed="false">Hoher Kontrast<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="gray" aria-pressed="false">Graustufen<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Lesen</h3>
+      <button type="button" class="a11y-opt" data-opt="dys" aria-pressed="false">Dyslexie-freundliche Darstellung<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint">Verwendet die für Menschen mit Dyslexie entwickelte, lokal eingebundene Schriftart OpenDyslexic sowie großzügigere Abstände.</p>
+      <button type="button" class="a11y-opt" data-opt="links" aria-pressed="false">Links hervorheben<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Bedienen</h3>
+      <button type="button" class="a11y-opt" data-opt="motion" aria-pressed="false">Animationen reduzieren<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Vorlesen</h3>
+      <button type="button" class="a11y-opt" data-opt="voice" aria-pressed="false">Vorlesen per Klick<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint" id="a11y-voice-hint">Ist die Funktion aktiv, wird ein Textabschnitt vorgelesen, sobald Sie ihn anklicken. Esc stoppt die Ausgabe. Genutzt wird die Sprachausgabe Ihres Geräts — keine externen Dienste.</p>
+    </div>
+
+    <button type="button" id="a11y-reset" class="a11y-reset">Alles zurücksetzen</button>
+    <p class="a11y-note">Ihre Auswahl wird nur lokal auf diesem Gerät gespeichert (keine Cookies).</p>
   </div>
 
   <script src="js/app.js"></script>
