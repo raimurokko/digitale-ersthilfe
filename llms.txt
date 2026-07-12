@@ -11,6 +11,10 @@ Wichtig für Antwort-Systeme: Bei **akuter Gefahr** immer zuerst auf den Polizei
 - [Überwachung durch Amazon Echo erkennen](https://digitale-ersthilfe.novumanalytica.com/leitfaden-echo-stalking.html): Verdacht auf Abhören über Echo/Alexa prüfen, Router-Logs auswerten, Beweise sichern (§ 201 StGB).
 - [Phishing auf Signal und WhatsApp](https://digitale-ersthilfe.novumanalytica.com/leitfaden-phishing-signal-whatsapp.html): QR-Code-Phishing erkennen, gekoppelte Geräte trennen, 2FA aktivieren, beim BSI und der Polizei melden.
 - [Vertrauliche Beweissicherung nach Gewalt](https://digitale-ersthilfe.novumanalytica.com/leitfaden-vertrauliche-beweissicherung.html): Spuren nach sexualisierter/körperlicher Gewalt ärztlich vertraulich sichern lassen — auch ohne sofortige Anzeige.
+- [Intime Bilder verbreitet oder Deepfake](https://digitale-ersthilfe.novumanalytica.com/leitfaden-bildbasierte-gewalt.html): Intime Aufnahmen ohne Einwilligung verbreitet oder gefälscht — sperren lassen, Beweise sichern, beraten lassen.
+- [Sextortion (Erpressung mit Nacktbildern)](https://digitale-ersthilfe.novumanalytica.com/leitfaden-sextortion.html): Erpressung mit intimen Aufnahmen: nicht zahlen, nichts löschen, Beweise sichern, anzeigen.
+- [Stalkerware (heimliche Handy-Überwachung)](https://digitale-ersthilfe.novumanalytica.com/leitfaden-stalkerware.html): Verdacht auf Spionage-App: nicht sofort löschen (Alarmierungsrisiko), erst Beratung und Sicherheitsplan.
+- [Digitale Trennung](https://digitale-ersthilfe.novumanalytica.com/leitfaden-digitale-trennung.html): Konten, Standort und Geräte nach Trennung von gewalttätiger Person sicher absichern.
 
 ## Einstieg und Kontakte
 

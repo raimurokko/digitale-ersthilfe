@@ -64,6 +64,10 @@ haben Dark-Mode- und Hoher-Kontrast-Varianten. Siehe [DESIGN.md](DESIGN.md).
 | `leitfaden-echo-stalking.html` | Leitfaden: Überwachung durch Amazon Echo |
 | `leitfaden-phishing-signal-whatsapp.html` | Leitfaden: Phishing auf Signal/WhatsApp |
 | `leitfaden-vertrauliche-beweissicherung.html` | Leitfaden: Vertrauliche Beweissicherung |
+| `leitfaden-bildbasierte-gewalt.html` | Leitfaden: Intime Bilder verbreitet oder Deepfake |
+| `leitfaden-sextortion.html` | Leitfaden: Sextortion (Erpressung mit Nacktbildern) |
+| `leitfaden-stalkerware.html` | Leitfaden: Stalkerware (heimliche Handy-Überwachung) |
+| `leitfaden-digitale-trennung.html` | Leitfaden: Digitale Trennung |
 | `fachinfo.html` | Ressourcen für Fachkräfte |
 | `ueber-uns.html` | Über das Projekt und Disclaimer |
 | `impressum.html` | Impressum und Datenschutzerklärung |

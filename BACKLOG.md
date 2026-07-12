@@ -23,13 +23,17 @@ Offene Punkte, nach Priorität. Legende:
 > vorhandenem Material. Alle redaktionell (👤); Recherche-/Entwurfs-Auftrag siehe
 > [docs/leitfaden-auftrag.md](docs/leitfaden-auftrag.md).
 
-**🔴 MUST — hier fehlt Betroffenen aktuell konkrete Hilfe:**
-> **Status:** Für alle vier MUST-Themen liegen recherchierte **ENTWÜRFE** vor
-> (`leitfaden-bildbasierte-gewalt.html`, `-sextortion.html`, `-stalkerware.html`,
-> `-digitale-trennung.html`) — `noindex`, nicht verlinkt, mit Quellen + markierten
-> Unsicherheiten. **Redaktionelle Freigabe + Faktencheck (§§, Nummern, Menü-Pfade)
-> ausstehend**, dann in Navigation/`leitfaeden.html`/`sitemap.xml`/Service-Worker aufnehmen.
-- [ ] 👤 **Bildbasierte Gewalt / NCII** (Rachepornos, Deepfakes, intime Bilder verbreitet):
+**🔴 MUST — Status: freigegeben und LIVE ✅**
+> Alle vier MUST-Leitfäden sind redaktionell freigegeben und live geschaltet:
+> in `leitfaeden.html` (Karten + ItemList), `sitemap.xml`, Service-Worker (v5),
+> Startseiten-Triage (Gerät → Stalkerware) und `llms.txt` eingebunden; `noindex`
+> und ENTWURF-Banner entfernt. **Weiterhin offen:** die in den (jetzt entfernten)
+> Redaktions-Anhängen markierten Punkte bleiben gültig — insb. Deepfake-Rechtslage
+> (im Umbruch), §§, Telefonnummern und Menü-Pfade **periodisch gegenprüfen**.
+- [x] **Bildbasierte Gewalt / NCII**, **Sextortion**, **Stalkerware**, **Digitale Trennung** — live.
+
+Frühere Beschreibung (erledigt):
+- [x] 👤 **Bildbasierte Gewalt / NCII** (Rachepornos, Deepfakes, intime Bilder verbreitet):
   Takedown-Wege (StopNCII.org, „Take It Down" für Minderjährige, Plattform-Meldung),
   Beweissicherung, Rechtsweg (§§ 201a, 33 KUG u. a. — prüfen).
 - [ ] 👤 **Sextortion / Sexerpressung**: Regeln (nicht zahlen, nicht löschen, Beweise
@@ -55,6 +59,20 @@ Sprachversionen (EN + Leichte Sprache, dann TR/AR/RU/UK) · PDF-Einzeiler pro Le
 - [ ] **Materialien-Repo** separat auf GitHub **und** Codeberg pushen; Dateiname mit
   führendem Leerzeichen korrigieren (`TLP-CLEAR _Beweissicherung_Leitfaden_Amazon_Echo…pdf`).
 - [ ] **Codeberg- und GitLab-Spiegel** einrichten (Remotes + Sync, siehe CONTRIBUTING.md).
+
+## 🔴 P1 — Erklärvideos ausbauen (starke Nutzernachfrage)
+
+> **Erkenntnis aus der Praxis:** Die Erklärvideos kommen sehr gut an — viele Menschen
+> schauen lieber ein kurzes Video, als Text zu lesen. Video ist damit ein
+> **Priorität-1-Kanal**, nicht nur Beiwerk.
+
+- [ ] 👤 **Pro Leitfaden ein kurzes Erklärvideo** (YouTube `@novumanalytica`), zuerst für
+  die vier neuen MUST-Themen (NCII, Sextortion, Stalkerware, Digitale Trennung) und die
+  Phishing-Seite. Einbindung über die bestehende **DSGVO-Click-to-Load-Fassade**
+  (`.video-fassade[data-yt-id]`) — nur Video-ID eintragen; ich ergänze `VideoObject`-Schema.
+- [ ] **Video prominenter platzieren**: Erklärvideo weiter oben im Leitfaden anbieten
+  (nach „Kurz erklärt“), da viele es dem Text vorziehen — Text bleibt als Volltext/zum Vorlesen.
+- [ ] 👤 **Phishing-Video-ID** nachreichen (Fassade verlinkt bislang nur den Kanal).
 
 ## 🟠 P2 — Video-Diffusion (YouTube & Social)
 
