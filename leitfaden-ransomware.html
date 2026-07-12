@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ransomware — mein Gerät ist gesperrt oder meine Daten sind verschlüsselt. Was tun? — Digitale Ersthilfe</title>
+  <meta name="description" content="Erpressungs-Trojaner? Gerät sofort vom Netz trennen, kein Lösegeld zahlen, Ransomware-Typ bestimmen (No More Ransom), aus Backup wiederherstellen, Anzeige erstatten. Einfache Sprache.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0f5f57">
+
+  <meta property="og:title" content="Ransomware — Gerät gesperrt oder Daten verschlüsselt. Was tun?">
+  <meta property="og:description" content="Vom Netz trennen, nicht zahlen, Ransomware-Typ bestimmen, aus Backup wiederherstellen, Anzeige erstatten.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="de_DE">
+
+  <link rel="manifest" href="manifest.json">
+  <!-- Favicon & App-Icons -->
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>/* Barrierefreiheits-Einstellungen vor dem ersten Paint anwenden */
+(function(){var r=document.documentElement;try{var a=JSON.parse(localStorage.getItem('de-a11y')||'{}');['contrast','gray','dys','links','motion'].forEach(function(k){if(a[k])r.classList.add('a11y-'+k);});var s=['100%','115%','130%','150%'];if(a.size)r.style.fontSize=s[a.size]||'100%';}catch(e){}})();</script>
+
+  <!-- schema.org: HowTo (Entwurf) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "datePublished": "2026-07-13",
+    "dateModified": "2026-07-13",
+    "image": "https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg",
+    "name": "Ransomware — Schritt für Schritt",
+    "description": "Anleitung bei einem Erpressungs-Trojaner: Gerät vom Netz trennen, kein Lösegeld zahlen, Ransomware-Typ bestimmen und Entschlüsselung prüfen, aus einem sauberen Backup wiederherstellen und Anzeige erstatten.",
+    "inLanguage": "de",
+    "totalTime": "PT40M",
+    "step": [
+      {"@type": "HowToStep", "position": 1, "name": "Sofort vom Netz trennen", "text": "Gerät sofort vom Internet und WLAN trennen, Netzwerkkabel ziehen und angeschlossene USB-Sticks und externe Festplatten abziehen. Nichts löschen und nicht überstürzt neu aufsetzen."},
+      {"@type": "HowToStep", "position": 2, "name": "Kein Lösegeld zahlen", "text": "Zahlen Sie kein Lösegeld — es gibt keine Garantie auf Entschlüsselung und Sie finanzieren Kriminalität. BSI und Europol raten davon ab."},
+      {"@type": "HowToStep", "position": 3, "name": "Art bestimmen und Entschlüsselung prüfen", "text": "Über No More Ransom (Crypto Sheriff) die Ransomware identifizieren und prüfen, ob ein kostenloses Entschlüsselungstool existiert. Verschlüsselte Dateien für später aufbewahren."},
+      {"@type": "HowToStep", "position": 4, "name": "Wiederherstellen, anzeigen, absichern", "text": "Aus einem sauberen Backup wiederherstellen oder das System neu aufsetzen; Passwörter von einem sauberen Gerät ändern; Anzeige bei der Polizei erstatten und den Vorfall beim BSI melden."}
+    ],
+    "author": {"@type": "Organization", "name": "Novum Analytica GmbH"}
+  }
+  </script>
+  <!-- Canonical, Social & Breadcrumb -->
+  <link rel="canonical" href="https://digitale-ersthilfe.novumanalytica.com/leitfaden-ransomware.html">
+  <meta property="og:url" content="https://digitale-ersthilfe.novumanalytica.com/leitfaden-ransomware.html">
+  <meta property="og:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digitale Ersthilfe — Schnelle Hilfe bei digitaler Gewalt">
+  <meta property="og:site_name" content="Digitale Ersthilfe">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ransomware — Gerät gesperrt oder Daten verschlüsselt. Was tun?">
+  <meta name="twitter:description" content="Vom Netz trennen, nicht zahlen, Ransomware-Typ bestimmen, aus Backup wiederherstellen, Anzeige erstatten.">
+  <meta name="twitter:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://digitale-ersthilfe.novumanalytica.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Leitfäden", "item": "https://digitale-ersthilfe.novumanalytica.com/leitfaeden.html" },
+      { "@type": "ListItem", "position": 3, "name": "Ransomware", "item": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-ransomware.html" }
+    ]
+  }
+  </script>
+  <!-- schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Soll ich das Lösegeld zahlen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nein. Es gibt keine Garantie, dass Sie Ihre Daten zurückbekommen, und Sie finanzieren Kriminalität. BSI und Europol raten ausdrücklich davon ab."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mein Bildschirm ist mit einer „Polizei“- oder „BKA“-Meldung gesperrt — ist das echt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nein. Das ist ein Erpressungs-Trojaner (Sperrbildschirm). Behörden sperren keine Geräte und fordern kein Geld per Bildschirmmeldung. Solche Sperren lassen sich oft im abgesicherten Modus oder über ein Rettungssystem entfernen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich meine verschlüsselten Dateien retten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vielleicht. Prüfen Sie mit No More Ransom (Crypto Sheriff), um welche Ransomware es sich handelt — für viele Familien gibt es kostenlose Entschlüsselungstools. Bewahren Sie die verschlüsselten Dateien auf, falls erst später ein Tool erscheint."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie kam die Ransomware auf mein Gerät?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Häufig über Phishing-Anhänge oder -Links, gefälschte Downloads oder ungepatchte Sicherheitslücken. Nach der Bereinigung helfen Updates, regelmäßige Backups und Vorsicht bei Anhängen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist mit meinen anderen Geräten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prüfen Sie alle Geräte im selben Netzwerk und alle angeschlossenen Datenträger. Ransomware breitet sich oft auf verbundene Geräte und Netzlaufwerke aus."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#hauptinhalt">Zum Hauptinhalt springen</a>
+  <!-- Notausgang: schnell zu einer neutralen Seite wechseln -->
+  <a class="schnell-verlassen" id="schnell-verlassen" href="https://www.dwd.de/" rel="nofollow noopener" aria-label="Diese Seite schnell verlassen und zu einer neutralen Seite wechseln">
+    <span class="schnell-verlassen__x" aria-hidden="true">&#10005;</span> Schnell verlassen
+  </a>
+
+  <div class="notfall-banner" role="alert">
+    In akuter Gefahr? Rufen Sie jetzt die <a href="tel:110">Polizei: 110</a> an.
+  </div>
+
+  <div class="entwurf-banner" role="alert">
+    ENTWURF — noch nicht redaktionell freigegeben. Rechtsangaben (§§), Telefonnummern und
+    Menü-Pfade sind vor Veröffentlichung zu prüfen. Diese Seite ist nicht verlinkt und für
+    Suchmaschinen gesperrt.
+  </div>
+
+  <header class="kopfzeile">
+    <div class="kopfzeile__inner">
+      <a href="index.html" class="kopfzeile__logo" aria-label="Digitale Ersthilfe — Startseite">Digitale Ersthilfe</a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="kontaktstellen.html">Kontaktstellen</a></li>
+          <li><a href="leitfaeden.html" aria-current="page">Leitfäden</a></li>
+          <li><a href="fachinfo.html">Für Fachkräfte</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+      <button class="menu-button" aria-expanded="false" aria-controls="nav-mobil" aria-label="Menü öffnen">
+        <span class="menu-icon-open" aria-hidden="true">&#9776;</span>
+        <span class="menu-icon-close" aria-hidden="true">&#10005;</span>
+      </button>
+    </div>
+    <nav id="nav-mobil" class="nav-mobil" aria-label="Hauptnavigation mobil">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="kontaktstellen.html">Kontaktstellen</a></li>
+        <li><a href="leitfaeden.html" aria-current="page">Leitfäden</a></li>
+        <li><a href="fachinfo.html">Für Fachkräfte</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="hauptinhalt" class="seiten-container">
+
+    <section class="abschnitt" aria-labelledby="leitfaden-titel">
+      <p><a href="index.html">&larr; Zurück zur Startseite</a></p>
+      <h1 id="leitfaden-titel">Ransomware — mein Gerät ist gesperrt oder meine Daten sind verschlüsselt. Was tun?</h1>
+      <p class="beitrag-datum beitrag-datum--top">
+        <svg class="beitrag-datum__icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        Zuletzt überprüft: <time datetime="2026-07-13">13. Juli 2026</time> · aktualisiert: <time datetime="2026-07-13">13. Juli 2026</time>
+      </p>
+      <p>
+        <strong>Kurz erklärt:</strong> Ein <strong>Erpressungs-Trojaner (Ransomware)</strong> hat Ihr
+        Gerät gesperrt oder Ihre Dateien verschlüsselt und fordert Geld. In 4 Schritten: sofort vom
+        Netz trennen, <strong>kein Lösegeld zahlen</strong>, die Art bestimmen und Entschlüsselung
+        prüfen, aus einem sauberen Backup wiederherstellen und Anzeige erstatten.
+      </p>
+
+      <button class="vorlesen-btn" data-vorlesen="ganzer-leitfaden" aria-pressed="false">
+        &#128264; Gesamten Leitfaden vorlesen
+      </button>
+    </section>
+
+    <div class="fortschritt" role="progressbar" aria-label="Fortschritt im Leitfaden" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4">
+      <div class="fortschritt__segment" data-schritt="1"></div>
+      <div class="fortschritt__segment" data-schritt="2"></div>
+      <div class="fortschritt__segment" data-schritt="3"></div>
+      <div class="fortschritt__segment" data-schritt="4"></div>
+    </div>
+
+    <div class="karte karte--kritisch" role="alert">
+      <p><strong>Erste Hilfe:</strong></p>
+      <ul class="inhaltsliste">
+        <li><strong>Zahlen Sie kein Lösegeld.</strong></li>
+        <li><strong>Trennen Sie das Gerät sofort vom Netzwerk</strong> (WLAN aus, Netzwerkkabel ziehen) und ziehen Sie angeschlossene USB-Sticks und externe Festplatten ab.</li>
+        <li><strong>Löschen Sie nichts</strong> und setzen Sie nicht überstürzt neu auf — Sie brauchen die Daten eventuell für eine spätere, kostenlose Entschlüsselung.</li>
+      </ul>
+    </div>
+
+    <article class="schritt" id="schritt-1" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">01</span><h2 class="schritt__titel">Sofort vom Netz trennen</h2></div>
+      <button class="vorlesen-btn" data-vorlesen="schritt-1" aria-pressed="false">&#128264; Diesen Abschnitt vorlesen</button>
+      <ul class="inhaltsliste">
+        <li><strong>Vom Internet trennen:</strong> WLAN ausschalten und das Netzwerkkabel ziehen — so kann sich die Ransomware nicht weiter ausbreiten.</li>
+        <li><strong>Datenträger abziehen:</strong> USB-Sticks, externe Festplatten und Speicherkarten trennen.</li>
+        <li><strong>Andere Geräte prüfen:</strong> Kontrollieren Sie weitere Geräte im selben Netzwerk und Netzlaufwerke.</li>
+        <li><strong>Nicht überstürzt handeln:</strong> Löschen Sie nichts und setzen Sie das Gerät noch nicht neu auf.</li>
+      </ul>
+    </article>
+
+    <article class="schritt" id="schritt-2" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">02</span><h2 class="schritt__titel">Kein Lösegeld zahlen</h2></div>
+      <button class="vorlesen-btn" data-vorlesen="schritt-2" aria-pressed="false">&#128264; Diesen Abschnitt vorlesen</button>
+      <p>
+        <strong>Zahlen Sie nicht.</strong> Es gibt keine Garantie, dass Sie Ihre Daten zurückbekommen —
+        und jede Zahlung finanziert weitere Straftaten. BSI und Europol raten ausdrücklich ab.
+      </p>
+      <div class="karte karte--info">
+        <p>
+          <strong>Sperrbildschirm statt Verschlüsselung?</strong> Zeigt Ihr Gerät nur eine
+          „Polizei"- oder „BKA"-Sperrmeldung, ist das ein Sperr-Trojaner — Behörden sperren keine
+          Geräte. Solche Sperren lassen sich oft im <strong>abgesicherten Modus</strong> oder über ein
+          Rettungssystem entfernen. Holen Sie im Zweifel fachliche Hilfe.
+        </p>
+      </div>
+    </article>
+
+    <article class="schritt" id="schritt-3" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">03</span><h2 class="schritt__titel">Art bestimmen und Entschlüsselung prüfen</h2></div>
+      <button class="vorlesen-btn" data-vorlesen="schritt-3" aria-pressed="false">&#128264; Diesen Abschnitt vorlesen</button>
+      <ul class="inhaltsliste">
+        <li><strong>Ransomware identifizieren:</strong> Über den <a href="https://www.nomoreransom.org/de/" target="_blank" rel="noopener noreferrer">„Crypto Sheriff" von No More Ransom &#8599;</a> (eine verschlüsselte Datei und die Erpresser-Nachricht hochladen) erfahren Sie, um welche Ransomware es sich handelt.</li>
+        <li><strong>Kostenlose Entschlüsselung:</strong> No More Ransom bietet für viele Ransomware-Familien <strong>kostenlose Entschlüsselungstools</strong>. Alternativ hilft <a href="https://id-ransomware.malwarehunterteam.com" target="_blank" rel="noopener noreferrer">ID Ransomware &#8599;</a> bei der Bestimmung.</li>
+        <li><strong>Verschlüsselte Dateien aufbewahren:</strong> Auch wenn es heute noch kein Tool gibt — bewahren Sie die Dateien auf; oft erscheinen später Entschlüsseler.</li>
+        <li><strong>Vorsicht:</strong> Nutzen Sie keine dubiosen „Entschlüsselungs-Dienste" aus dem Netz — das ist oft die nächste Betrugsmasche.</li>
+      </ul>
+    </article>
+
+    <article class="schritt" id="schritt-4" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">04</span><h2 class="schritt__titel">Wiederherstellen, anzeigen, absichern</h2></div>
+      <button class="vorlesen-btn" data-vorlesen="schritt-4" aria-pressed="false">&#128264; Diesen Abschnitt vorlesen</button>
+      <ul class="inhaltsliste">
+        <li><strong>Sauber wiederherstellen:</strong> Setzen Sie das System neu auf und spielen Sie ein <strong>sauberes Backup</strong> ein (von vor dem Befall). Spielen Sie keine möglicherweise infizierten Sicherungen zurück.</li>
+        <li><strong>Passwörter ändern:</strong> von einem <strong>sauberen Gerät</strong> aus, besonders für E-Mail und Online-Banking.</li>
+        <li>
+          <strong>Anzeige:</strong> bei der Polizei oder online über die
+          <a href="https://portal.onlinewache.polizei.de/de/" target="_blank" rel="noopener noreferrer">Online-Wache der Polizei &#8599;</a>.
+          Den Vorfall können Sie auch beim <strong>BSI</strong> melden: <a href="tel:08002741000">0800 274 1000</a>.
+        </li>
+        <li>
+          <strong>Mögliche Tatbestände:</strong> je nach Fall <strong>§ 253 StGB</strong> (Erpressung),
+          <strong>§ 303a/§ 303b StGB</strong> (Datenveränderung/Computersabotage). Die Einordnung nimmt die Polizei vor.
+        </li>
+      </ul>
+    </article>
+
+    <!-- Häufige Fragen (FAQ) -->
+    <section class="abschnitt" aria-labelledby="faq-titel" data-vorlesen-abschnitt>
+      <h2 id="faq-titel">Häufige Fragen</h2>
+      <details class="faq-item">
+        <summary>Soll ich das Lösegeld zahlen?</summary>
+        <div class="faq-item__antwort"><p>Nein. Es gibt keine Garantie, dass Sie Ihre Daten zurückbekommen, und Sie finanzieren Kriminalität. BSI und Europol raten ausdrücklich davon ab.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Mein Bildschirm ist mit einer „Polizei“- oder „BKA“-Meldung gesperrt — ist das echt?</summary>
+        <div class="faq-item__antwort"><p>Nein. Das ist ein Erpressungs-Trojaner (Sperrbildschirm). Behörden sperren keine Geräte und fordern kein Geld per Bildschirmmeldung. Solche Sperren lassen sich oft im abgesicherten Modus oder über ein Rettungssystem entfernen.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Kann ich meine verschlüsselten Dateien retten?</summary>
+        <div class="faq-item__antwort"><p>Vielleicht. Prüfen Sie mit No More Ransom (Crypto Sheriff), um welche Ransomware es sich handelt — für viele Familien gibt es kostenlose Entschlüsselungstools. Bewahren Sie die verschlüsselten Dateien auf, falls erst später ein Tool erscheint.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Wie kam die Ransomware auf mein Gerät?</summary>
+        <div class="faq-item__antwort"><p>Häufig über Phishing-Anhänge oder -Links, gefälschte Downloads oder ungepatchte Sicherheitslücken. Nach der Bereinigung helfen Updates, regelmäßige Backups und Vorsicht bei Anhängen.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Was ist mit meinen anderen Geräten?</summary>
+        <div class="faq-item__antwort"><p>Prüfen Sie alle Geräte im selben Netzwerk und alle angeschlossenen Datenträger. Ransomware breitet sich oft auf verbundene Geräte und Netzlaufwerke aus.</p></div>
+      </details>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="abschnitt" aria-labelledby="hilfe-titel">
+      <h2 id="hilfe-titel">Sie brauchen Hilfe?</h2>
+      <div class="kontakt-liste">
+        <a href="tel:08002741000" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128274;</span>
+          <div>
+            <div class="kontakt-kachel__name">BSI — Bürger-Hotline</div>
+            <div class="kontakt-kachel__nummer">0800 274 1000</div>
+            <div class="kontakt-kachel__info">Mo–Fr, kostenlos</div>
+          </div>
+        </a>
+        <a href="tel:110" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128680;</span>
+          <div>
+            <div class="kontakt-kachel__name">Polizei-Notruf</div>
+            <div class="kontakt-kachel__nummer">110</div>
+            <div class="kontakt-kachel__info">Bei akuter Gefahr — 24/7</div>
+          </div>
+        </a>
+      </div>
+      <div class="karte karte--info">
+        <p><strong>Werkzeuge und weitere Hilfen:</strong></p>
+        <ul class="inhaltsliste">
+          <li><a href="https://www.nomoreransom.org/de/" target="_blank" rel="noopener noreferrer">No More Ransom &#8599;</a> — Ransomware bestimmen (Crypto Sheriff) und kostenlose Entschlüsselungstools.</li>
+          <li><a href="https://id-ransomware.malwarehunterteam.com" target="_blank" rel="noopener noreferrer">ID Ransomware &#8599;</a> — Ransomware-Typ anhand einer Datei bestimmen.</li>
+          <li><a href="https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/was-ist-ransomware-und-wie-kann-ich-mich-schuetzen-69789" target="_blank" rel="noopener noreferrer">Verbraucherzentrale — Ransomware &#8599;</a></li>
+          <li><a href="https://portal.onlinewache.polizei.de/de/" target="_blank" rel="noopener noreferrer">Online-Wache der Polizei &#8599;</a> — Anzeige online erstatten.</li>
+        </ul>
+      </div>
+      <p style="margin-top: var(--abstand-lg);">
+        <a href="kontaktstellen.html" class="btn btn--sekundaer">Alle Kontaktstellen anzeigen</a>
+      </p>
+    </section>
+
+    <div class="beitrag-datum beitrag-datum--fuss" aria-label="Aktualität dieses Beitrags">
+      <p>
+        <strong>Inhalt zuletzt überprüft:</strong> <time datetime="2026-07-13">13. Juli 2026</time><br>
+        <strong>Inhalt zuletzt aktualisiert:</strong> <time datetime="2026-07-13">13. Juli 2026</time>
+      </p>
+      <p class="beitrag-datum__hinweis">Wir prüfen unsere Leitfäden regelmäßig auf Aktualität von Rechtsangaben, Telefonnummern und Verweisen. Den Stand der gesamten Website finden Sie unter <a href="ueber-uns.html#aktualitaet">Über&nbsp;uns</a>.</p>
+    </div>
+
+    <aside class="disclaimer" aria-label="Wichtiger Hinweis">
+      <p class="disclaimer__titel">Wichtiger Hinweis</p>
+      <p>
+        Dies ist ein <strong>freiwilliger, unabhängiger Service</strong>. Alle Inhalte dienen der
+        Erstinformation und ersetzen keine professionelle Rechtsberatung, IT-Forensik,
+        psychologische Betreuung oder polizeiliche Ermittlung. Die Nutzung erfolgt auf eigene Verantwortung.
+      </p>
+      <p>
+        Novum Analytica nimmt am Cyber-Sicherheitsnetzwerk (CSN) des BSI teil, ist aber nicht Teil
+        des BSI und handelt nicht in dessen Auftrag. Inhalte und Meinungen sind nicht vom BSI
+        autorisiert und geben keine offizielle Position des BSI wieder.
+      </p>
+      <p>
+        Inhalte werden durch KI-gestützte Verfahren auf Lesbarkeit geprüft. Alle Inhalte haben
+        originär menschliche Autorinnen und Autoren und werden redaktionell gegengelesen.
+      </p>
+    </aside>
+
+    <!-- ================= NUR REDAKTION (Entwurf) ================= -->
+    <section class="abschnitt" aria-labelledby="redaktion-titel">
+      <h2 id="redaktion-titel">Nur für die redaktionelle Prüfung (Entwurf)</h2>
+      <div class="karte karte--warnung">
+        <p><strong>Quellen (Recherche, Abruf 13.07.2026):</strong></p>
+        <ul class="inhaltsliste">
+        <li><a href="https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Schadprogramme/Ransomware/ransomware_node.html" target="_blank" rel="noopener noreferrer">BSI — Ransomware (Verbraucherinnen und Verbraucher)</a></li>
+        <li><a href="https://www.nomoreransom.org/de/" target="_blank" rel="noopener noreferrer">No More Ransom (Europol/Politie) — Crypto Sheriff und Entschlüsselungstools</a></li>
+        <li><a href="https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/was-ist-ransomware-und-wie-kann-ich-mich-schuetzen-69789" target="_blank" rel="noopener noreferrer">Verbraucherzentrale — Was ist Ransomware</a></li>
+        <li><a href="https://www.gesetze-im-internet.de/stgb/__253.html" target="_blank" rel="noopener noreferrer">§ 253 StGB (Erpressung)</a> · <a href="https://www.gesetze-im-internet.de/stgb/__303b.html" target="_blank" rel="noopener noreferrer">§ 303b StGB (Computersabotage)</a></li>
+        </ul>
+        <p style="margin-top: var(--abstand-md);"><strong>Vor Veröffentlichung prüfen:</strong></p>
+        <ul class="inhaltsliste">
+        <li>„Nicht zahlen" ist BSI/Europol-Linie — bestätigt. Formulierung bewusst deutlich.</li>
+        <li>„Vom Netz trennen, nicht überstürzt neu aufsetzen": BSI empfiehlt Trennung; für eine spätere Entschlüsselung/Beweissicherung verschlüsselte Daten aufbewahren. Ob Gerät an- oder ausschalten ist fallabhängig — bewusst offen gehalten („nicht überstürzt").</li>
+        <li>Sperrbildschirm vs. Verschlüsselung unterschieden; „abgesicherter Modus/Rettungssystem" ist geräteabhängig — als allgemeiner Hinweis belassen, ggf. konkrete Anleitung ergänzen.</li>
+        <li>§§ 253/303a/303b als Standard; Einzelfall der Polizei. Für Unternehmen zusätzlich ZAC (siehe kontaktstellen.html).</li>
+        <li>Prävention (Backups, Updates) nur kurz im FAQ — ggf. eigener Präventionsabschnitt.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="fusszeile">
+    <div class="fusszeile__inner">
+      <ul class="fusszeile__nav">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="kontaktstellen.html">Kontaktstellen</a></li>
+        <li><a href="leitfaeden.html">Leitfäden</a></li>
+        <li><a href="fachinfo.html">Für Fachkräfte</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="impressum.html">Impressum &amp; Datenschutz</a></li>
+        <li><a href="https://www.youtube.com/@novumanalytica" target="_blank" rel="noopener noreferrer">YouTube &#8599;</a></li>
+      </ul>
+      <div class="fusszeile__hinweise">
+        <p>&copy; 2026 Novum Analytica GmbH. Alle Rechte vorbehalten.</p>
+        <p>Freiwilliger Service. Kein offizielles Angebot des BSI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-up-Button -->
+  <button type="button" id="scroll-top" class="scroll-top" aria-label="Zum Seitenanfang scrollen">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Barrierefreiheit: Button (rechts mittig) + Panel -->
+  <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Einstellungen zur Barrierefreiheit öffnen">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><circle cx="12" cy="4" r="2"></circle><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.34-.34-.61-.45-.01 0-.01-.01-.02-.01-.31-.18-.68-.28-1.06-.26-1.05.05-1.81.98-1.81 2.03V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-6.17 5c-.41 1.16-1.52 2-2.83 2-1.66 0-3-1.34-3-3 0-1.31.84-2.41 2-2.83V12.1c-2.28.46-4 2.48-4 4.9 0 2.76 2.24 5 5 5 2.42 0 4.44-1.72 4.9-4h-2.07z"></path></svg>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+    <div class="a11y-head">
+      <h2 id="a11y-title">Barrierefreiheit</h2>
+      <button type="button" id="a11y-close" class="a11y-close" aria-label="Einstellungen schließen">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Sehen</h3>
+      <div class="a11y-size">
+        <span id="a11y-size-label">Textgröße</span>
+        <div class="a11y-size-controls">
+          <button type="button" id="a11y-size-down" class="a11y-size-btn" aria-label="Textgröße verkleinern">&#8722;</button>
+          <output id="a11y-size-val" aria-live="polite">100&nbsp;%</output>
+          <button type="button" id="a11y-size-up" class="a11y-size-btn" aria-label="Textgröße vergrößern">+</button>
+        </div>
+      </div>
+      <button type="button" class="a11y-opt" data-opt="contrast" aria-pressed="false">Hoher Kontrast<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="gray" aria-pressed="false">Graustufen<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Lesen</h3>
+      <button type="button" class="a11y-opt" data-opt="dys" aria-pressed="false">Dyslexie-freundliche Darstellung<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint">Verwendet die für Menschen mit Dyslexie entwickelte, lokal eingebundene Schriftart OpenDyslexic sowie großzügigere Abstände.</p>
+      <button type="button" class="a11y-opt" data-opt="links" aria-pressed="false">Links hervorheben<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Bedienen</h3>
+      <button type="button" class="a11y-opt" data-opt="motion" aria-pressed="false">Animationen reduzieren<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Vorlesen</h3>
+      <button type="button" class="a11y-opt" data-opt="voice" aria-pressed="false">Vorlesen per Klick<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint" id="a11y-voice-hint">Ist die Funktion aktiv, wird ein Textabschnitt vorgelesen, sobald Sie ihn anklicken. Esc stoppt die Ausgabe. Genutzt wird die Sprachausgabe Ihres Geräts — keine externen Dienste.</p>
+    </div>
+
+    <button type="button" id="a11y-reset" class="a11y-reset">Alles zurücksetzen</button>
+    <p class="a11y-note">Ihre Auswahl wird nur lokal auf diesem Gerät gespeichert (keine Cookies).</p>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
