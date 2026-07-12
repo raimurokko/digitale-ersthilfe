@@ -66,4 +66,4 @@ Material-Repository gepflegt:
 Wenn Sie Materialien beisteuern möchten, lesen Sie bitte die
 [CONTRIBUTING.md](../CONTRIBUTING.md) im Haupt-Repository.
 
-Kontakt: info@novumanalytica.com
+Kontakt: digitale-ersthilfe@novumanalytica.com

@@ -18,15 +18,20 @@ hilft, schneller zur richtigen Information oder Kontaktstelle zu gelangen.
 
 ## 2. Farben
 
-Vereinfachtes System mit fünf funktionalen Farbrollen:
+Warme, ruhige Palette („Fürsorge statt Behörde") mit funktionalen Farbrollen.
+Alle Werte sind CSS Custom Properties in `css/style.css` (`:root`):
 
 | Rolle | Variable | Hex | Verwendung |
 |---|---|---|---|
-| Primär | `--farbe-primaer` | `#121f80` | Überschriften, Links, aktive Elemente |
-| Primär hell | `--farbe-primaer-hell` | `#dfe0ff` | Hintergründe von Info-Karten, Highlights |
-| Warnung | `--farbe-warnung` | `#9d4300` | Warnhinweise, „Achtung"-Boxen |
-| Kritisch | `--farbe-kritisch` | `#ba1a1a` | Notfall-Banner, „Wichtig"-Boxen |
-| Erfolg | `--farbe-erfolg` | `#006e2c` | Tipps, positive Bestätigungen |
+| Primär | `--farbe-primaer` | `#0f5f57` | Überschriften, Links, aktive Elemente (ruhiges Teal) |
+| Primär hell | `--farbe-primaer-hell` | `#d6e8e2` | Hintergründe von Info-Karten, Kontakt-Icons |
+| Akzent (warm) | `--farbe-akzent` / `-hell` | `#b5622a` / `#f7e4d3` | sparsame Wärme, z. B. Triage-Icons |
+| Warnung | `--farbe-warnung` | `#8a4b00` | Warnhinweise, „Achtung"-Boxen |
+| Kritisch | `--farbe-kritisch` | `#b3261e` | Notfall-Banner, „Wichtig"-Boxen |
+| Erfolg | `--farbe-erfolg` | `#2e6b3f` | Tipps, positive Bestätigungen |
+
+Oberflächen sind **warme Neutraltöne** statt kühlem Weiß: Hintergrund `#faf7f2` (Ivory),
+Fläche `#ffffff`, sekundär `#f2ede4`, Text `#2a2520`, Rand `#e0d8cb`.
 
 ### Kein Glassmorphism, kein Tonal Layering
 
@@ -119,6 +124,27 @@ Alle interaktiven Elemente haben eine Mindestgröße von **48 × 48 Pixel**.
 - Schwebendes Zahnrad-Icon unten rechts
 - Öffnet Popup mit Schaltern: Große Schrift, Hoher Kontrast, Vorlesen
 - Einstellungen werden in `localStorage` gespeichert
+
+### „Schnell verlassen" (Notausgang, `.schnell-verlassen`)
+- Fixe Pille **unten links** (spiegelbildlich zum A11y-Zahnrad), dunkel, hoher Kontrast
+- Auf **jeder** Seite; wechselt sofort zu einer neutralen Seite und ersetzt die aktuelle
+  per `location.replace` (kein „Zurück"). **Doppeltes `Esc`** als zusätzlicher Notausgang
+- Ohne JavaScript funktioniert der Link als normale Navigation
+- Auf der Startseite ergänzt durch den Hinweis „Sind Sie sicher? Tipps zum unbeobachteten Surfen"
+
+### Video-Fassade (`.video-fassade` / `.video-eingebettet`)
+- DSGVO-freundliches **Click-to-Load** für YouTube: lokales Poster + Play-Button, es wird
+  **nichts** von YouTube geladen, bis geklickt wird; dann Inline-`iframe` von `youtube-nocookie.com`
+- Wiederverwendbar über `data-yt-id`; `<noscript>`-Fallback verlinkt das Video direkt
+- Kann auch als reiner Kanal-Link (`<a class="video-fassade">`) genutzt werden
+
+### FAQ (`.faq-item`)
+- Aufklappbare `<details>`/`<summary>` mit +/−-Indikator
+- Sichtbarer Text und `FAQPage`-Schema sind deckungsgleich (siehe Abschnitt 8)
+
+### Entwurf-Banner (`.entwurf-banner`)
+- Auffälliges diagonales Warnmuster für **unveröffentlichte** Leitfaden-Entwürfe
+  (zusammen mit `noindex` und einem Redaktions-Anhang); wird beim Live-Schalten entfernt
 
 ---
 

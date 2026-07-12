@@ -82,6 +82,30 @@ git push codeberg main
 - **TLP-Klassifizierung:** Alle Materialien mit TLP-Kennzeichnung versehen.
 - **Kein Tracking:** Keine Analyse-Tools, keine Cookies, keine Werbung.
 
+## Neuen Leitfaden erstellen (Workflow)
+
+Jeder Leitfaden folgt einem festen Aufbau **und** einem festen Prozess:
+
+1. **Recherche & Entwurf.** Vorlage nutzen: [docs/leitfaden-auftrag.md](docs/leitfaden-auftrag.md)
+   (enthält eine Prompt-Vorlage für KI-gestützte Recherche mit Quellen- und Sicherheitsvorgaben).
+   Pflichtformat: „Kurz erklärt“ → Erste Hilfe → Schritte (HowTo) → Häufige Fragen (FAQ) →
+   Kontaktstellen → Disclaimer (siehe [DESIGN.md](DESIGN.md), Abschnitt 8).
+2. **Entwurf einstellen.** Neue Seite `leitfaden-<thema>.html` mit
+   `<meta name="robots" content="noindex, nofollow">`, sichtbarem ENTWURF-Banner
+   (`.entwurf-banner`) und einem Redaktions-Anhang (Quellenliste + offene Punkte).
+   **Nicht** in Navigation, `leitfaeden.html`, `sitemap.xml` oder Service-Worker verlinken.
+3. **Redaktionelle Freigabe.** §§, Telefonnummern, Menü-Pfade und Fristen gegen die Quellen prüfen.
+   Erst nach menschlicher Freigabe geht ein Leitfaden live.
+4. **Live schalten.** ENTWURF-Banner, `noindex` und Redaktions-Anhang entfernen; `index, follow`,
+   Canonical, OG-Image, Twitter Card und BreadcrumbList ergänzen; in `leitfaeden.html`
+   (Karte + ItemList), `sitemap.xml`, `sw.js` (Cache-Version erhöhen), `llms.txt` und README
+   eintragen; ggf. die Triage auf der Startseite verknüpfen.
+
+**Sicherheit für Betroffene:** Jede Seite enthält den „Schnell verlassen“-Button (Notausgang) und
+bei sensiblen Themen einen Inhaltshinweis. Erklärvideos werden DSGVO-freundlich über die
+Click-to-Load-Fassade eingebunden (`.video-fassade[data-yt-id]`, `youtube-nocookie` — lädt nichts
+vor dem Klick).
+
 ## Kontakt
 
-info@novumanalytica.com
+digitale-ersthilfe@novumanalytica.com

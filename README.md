@@ -27,11 +27,17 @@ Rechtsberatung, IT-Forensik oder polizeiliche Ermittlung.
 ## Funktionen
 
 - **Triage-Einstieg** — „Was ist passiert?" führt direkt zum passenden Leitfaden
+- **Schnell verlassen** — Notausgang-Button auf jeder Seite: wechselt sofort zu einer
+  neutralen Seite und ersetzt die aktuelle (kein „Zurück") — Schutz für Betroffene auf
+  überwachten Geräten. Ergänzt durch einen Hinweis zum unbeobachteten Surfen.
 - **Click-to-Call** — Kontaktstellen mit einem Tipp anrufen
+- **Erklärvideos** — DSGVO-freundlich per Click-to-Load-Fassade (`youtube-nocookie`):
+  es wird nichts von YouTube geladen, bis die Nutzerin/der Nutzer aktiv auf Wiedergabe tippt
 - **Vorlesefunktion** — Alle Texte per Web Speech API vorlesen lassen
 - **Barrierefreiheit** — Große Schrift, hoher Kontrast, WCAG 2.1 AA, Vorlesen
 - **PWA / Offline** — Als App installierbar, funktioniert ohne Internet
-- **schema.org** — Strukturierte Daten für Suchmaschinen und AI (HowTo, FAQPage, ItemList, ContactPage)
+- **schema.org** — Strukturierte Daten für Suchmaschinen und AI (HowTo, FAQPage, ItemList,
+  ContactPage, MedicalWebPage, VideoObject, BreadcrumbList)
 - **Leichte Sprache** — Sprachniveau A2/B1
 
 ## Datenschutz by Design
@@ -40,8 +46,9 @@ Rechtsberatung, IT-Forensik oder polizeiliche Ermittlung.
   Variable Fonts **lokal eingebunden** (`assets/fonts/`) — keine Verbindung zu
   Google Fonts. Infografiken werden lokal ausgeliefert.
 - **Kein Tracking, keine Cookies, keine Analyse-Tools.**
-- Das Erklärvideo (im separaten Materialien-Repo) lädt erst nach aktivem
-  Tippen auf „Wiedergabe" und ist mit einem Hinweis versehen.
+- **Erklärvideos** werden über eine **Click-to-Load-Fassade** eingebunden: erst wenn die
+  Nutzerin/der Nutzer auf Wiedergabe tippt, wird das Video von `youtube-nocookie.com`
+  geladen — vorher gibt es keinerlei Verbindung zu YouTube/Google. Das Poster liegt lokal.
 - Einstellungen der Barrierefreiheit werden nur lokal im Browser
   (`localStorage`) gespeichert.
 
@@ -110,14 +117,21 @@ python3 -m http.server 8137
 ```
 .
 ├── index.html, leitfaeden.html, kontaktstellen.html, fachinfo.html, …
-├── css/style.css          # Design-System + @font-face
-├── js/app.js              # Vanilla JS
-├── sw.js, manifest.json   # PWA
+├── leitfaden-*.html            # alle Leitfäden
+├── css/style.css               # Design-System + @font-face
+├── js/app.js                   # Vanilla JS (Nav, Vorlesen, A11y, Schnell-verlassen, Video-Fassade, PWA)
+├── sw.js, manifest.json        # PWA
+├── robots.txt, sitemap.xml     # Crawler / Suchmaschinen
+├── llms.txt                    # kuratierte Inhaltskarte für LLMs (llmstxt.org)
+├── security.txt                # RFC 9116 (auch unter .well-known/)
+├── CNAME, .nojekyll            # GitHub-Pages-Konfiguration
+├── .github/workflows/          # Auto-Deployment nach GitHub Pages
 ├── assets/
-│   ├── fonts/             # lokale Variable Fonts (woff2)
-│   ├── icons/             # App-Icons + favicon (aus icon.svg generiert)
-│   └── images/            # lokal gehostete Infografiken
-└── docs/                  # Link-, Tool- und Materialien-Listen
+│   ├── fonts/                  # lokale Variable Fonts (woff2)
+│   ├── icons/                  # App-Icons + Favicon (aus icon.svg generiert)
+│   ├── images/                 # lokal gehostete Infografiken + Video-Poster
+│   └── og-image.jpg            # Social-/LLM-Vorschaubild
+└── docs/                       # Link-/Tool-/Materialien-Listen + leitfaden-auftrag.md
 ```
 
 ## Materialien
