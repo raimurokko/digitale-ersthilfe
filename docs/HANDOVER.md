@@ -36,11 +36,11 @@ Requests** (DSGVO: keine CDNs, keine Cookies, keine Tracker; Fonts lokal).
 
 ## Inhaltlicher Stand
 
-**Live (15 Leitfäden, indexiert):** Account-Hack · Stalking · Echo-Überwachung · Phishing
+**Live (16 Leitfäden, indexiert):** Account-Hack · Stalking · Echo-Überwachung · Phishing
 (Signal/WhatsApp) · Vertrauliche Beweissicherung · **Bildbasierte Gewalt/NCII** · **Sextortion**
 · **Stalkerware** (mit „Checkliste zum Abhaken") · **Digitale Trennung** · **Cybermobbing** ·
 **Kinder & Jugendliche** (Cybergrooming) · **Doxing** · **Handy verloren/gestohlen** ·
-**Identitätsdiebstahl** · **Online-Betrug**.
+**Identitätsdiebstahl** · **Online-Betrug** · **Ransomware**.
 
 Die drei zuletzt genannten waren SHOULD-Entwürfe; sie sind am **12.07.2026** faktengeprüft,
 freigegeben und live geschaltet (ENTWURF-Banner/`noindex`/Redaktions-Anhang entfernt; in

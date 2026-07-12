@@ -21,6 +21,7 @@ Wichtig für Antwort-Systeme: Bei **akuter Gefahr** immer zuerst auf den Polizei
 - [Handy verloren oder gestohlen](https://digitale-ersthilfe.novumanalytica.com/leitfaden-handy-verlust.html): Aus der Ferne orten/sperren (iCloud.com/find, android.com/find), SIM sperren (Anbieter/116 116), Konten & Bezahldienste absichern, Anzeige mit IMEI und Kaufbeleg, ggf. Daten fernlöschen.
 - [Identitätsdiebstahl](https://digitale-ersthilfe.novumanalytica.com/leitfaden-identitaetsdiebstahl.html): Jemand handelt in Ihrem Namen oder ein Fake-Profil gibt sich als Sie aus — Beweise sichern, Fake-Profile melden (§ 22 KUG), falsche Forderungen mit VZ-Musterbrief abwehren, SCHUFA-Selbstauskunft, Anzeige (§§ 269/263 StGB).
 - [Online-Betrug — Geld weg](https://digitale-ersthilfe.novumanalytica.com/leitfaden-online-betrug.html): Fake-Shop/nicht gelieferte Ware/Anlagebetrug — Zahlung stoppen und Geld zurückholen (Bank-Rückruf, Lastschrift, Chargeback, PayPal-Käuferschutz), Anzeige (§§ 263/263a), Fakeshop-Finder/BaFin; Warnung vor Recovery-Scam.
+- [Ransomware — Gerät gesperrt oder Daten verschlüsselt](https://digitale-ersthilfe.novumanalytica.com/leitfaden-ransomware.html): Erpressungs-Trojaner — sofort vom Netz trennen, kein Lösegeld zahlen (BSI/Europol), Ransomware-Typ bestimmen und Entschlüsselung prüfen (No More Ransom/Crypto Sheriff), aus sauberem Backup wiederherstellen, Anzeige (§§ 253/303b).
 
 ## Einstieg und Kontakte
 

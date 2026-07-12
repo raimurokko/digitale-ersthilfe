@@ -84,6 +84,7 @@ haben Dark-Mode- und Hoher-Kontrast-Varianten. Siehe [DESIGN.md](DESIGN.md).
 | `leitfaden-handy-verlust.html` | Leitfaden: Handy verloren oder gestohlen |
 | `leitfaden-identitaetsdiebstahl.html` | Leitfaden: Identitätsdiebstahl / Fake-Profil |
 | `leitfaden-online-betrug.html` | Leitfaden: Online-Betrug (Fake-Shops, Anlagebetrug) |
+| `leitfaden-ransomware.html` | Leitfaden: Ransomware (Gerät gesperrt/verschlüsselt) |
 | `fachinfo.html` | Ressourcen für Fachkräfte |
 | `ueber-uns.html` | Über das Projekt und Disclaimer |
 | `impressum.html` | Impressum und Datenschutzerklärung |
