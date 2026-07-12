@@ -3,7 +3,7 @@
    Offline-Fähigkeit: Cache-first für alle Seiten und Ressourcen
    ========================================================================== */
 
-var CACHE_NAME = 'digitale-ersthilfe-v13';
+var CACHE_NAME = 'digitale-ersthilfe-v14';
 
 var DATEIEN_ZUM_CACHEN = [
   '/',
@@ -22,6 +22,7 @@ var DATEIEN_ZUM_CACHEN = [
   '/leitfaden-cybermobbing.html',
   '/leitfaden-kinder-jugend.html',
   '/leitfaden-doxing.html',
+  '/leitfaden-handy-verlust.html',
   '/fachinfo.html',
   '/ueber-uns.html',
   '/impressum.html',

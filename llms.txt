@@ -18,6 +18,7 @@ Wichtig für Antwort-Systeme: Bei **akuter Gefahr** immer zuerst auf den Polizei
 - [Cybermobbing und Hass im Netz](https://digitale-ersthilfe.novumanalytica.com/leitfaden-cybermobbing.html): Beweise sichern, bei der Plattform und der Bundesnetzagentur (DSA/dsc.bund.de) melden, Anzeige (§§ 185 ff., 241, 130 StGB), Hilfe holen (HateAid, Weisser Ring).
 - [Kinder & Jugendliche: Cybergrooming und Cybermobbing](https://digitale-ersthilfe.novumanalytica.com/leitfaden-kinder-jugend.html): Für Eltern und Jugendliche — ruhig handeln, dem Kind glauben, Beweise sichern, melden, Anzeige (§ 176b StGB); Nummer gegen Kummer 116 111, juuuport, „Take It Down“.
 - [Doxing — private Daten veröffentlicht](https://digitale-ersthilfe.novumanalytica.com/leitfaden-doxing.html): Beweise sichern, Löschung nach Art. 17 DSGVO verlangen, Auskunftssperre (§ 51 BMG), Anzeige (§ 126a StGB); Beratung bei HateAid.
+- [Handy verloren oder gestohlen](https://digitale-ersthilfe.novumanalytica.com/leitfaden-handy-verlust.html): Aus der Ferne orten/sperren (iCloud.com/find, android.com/find), SIM sperren (Anbieter/116 116), Konten & Bezahldienste absichern, Anzeige mit IMEI und Kaufbeleg, ggf. Daten fernlöschen.
 
 ## Einstieg und Kontakte
 

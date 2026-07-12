@@ -81,6 +81,7 @@ haben Dark-Mode- und Hoher-Kontrast-Varianten. Siehe [DESIGN.md](DESIGN.md).
 | `leitfaden-cybermobbing.html` | Leitfaden: Cybermobbing und Hass im Netz |
 | `leitfaden-kinder-jugend.html` | Leitfaden: Kinder & Jugendliche (Cybergrooming/Cybermobbing) |
 | `leitfaden-doxing.html` | Leitfaden: Doxing (private Daten veröffentlicht) |
+| `leitfaden-handy-verlust.html` | Leitfaden: Handy verloren oder gestohlen |
 | `fachinfo.html` | Ressourcen für Fachkräfte |
 | `ueber-uns.html` | Über das Projekt und Disclaimer |
 | `impressum.html` | Impressum und Datenschutzerklärung |
