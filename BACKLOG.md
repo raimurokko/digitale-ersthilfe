@@ -24,6 +24,11 @@ Offene Punkte, nach Priorität. Legende:
 > [docs/leitfaden-auftrag.md](docs/leitfaden-auftrag.md).
 
 **🔴 MUST — hier fehlt Betroffenen aktuell konkrete Hilfe:**
+> **Status:** Für alle vier MUST-Themen liegen recherchierte **ENTWÜRFE** vor
+> (`leitfaden-bildbasierte-gewalt.html`, `-sextortion.html`, `-stalkerware.html`,
+> `-digitale-trennung.html`) — `noindex`, nicht verlinkt, mit Quellen + markierten
+> Unsicherheiten. **Redaktionelle Freigabe + Faktencheck (§§, Nummern, Menü-Pfade)
+> ausstehend**, dann in Navigation/`leitfaeden.html`/`sitemap.xml`/Service-Worker aufnehmen.
 - [ ] 👤 **Bildbasierte Gewalt / NCII** (Rachepornos, Deepfakes, intime Bilder verbreitet):
   Takedown-Wege (StopNCII.org, „Take It Down" für Minderjährige, Plattform-Meldung),
   Beweissicherung, Rechtsweg (§§ 201a, 33 KUG u. a. — prüfen).
