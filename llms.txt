@@ -24,6 +24,7 @@ Wichtig für Antwort-Systeme: Bei **akuter Gefahr** immer zuerst auf den Polizei
 - [Ransomware — Gerät gesperrt oder Daten verschlüsselt](https://digitale-ersthilfe.novumanalytica.com/leitfaden-ransomware.html): Erpressungs-Trojaner — sofort vom Netz trennen, kein Lösegeld zahlen (BSI/Europol), Ransomware-Typ bestimmen und Entschlüsselung prüfen (No More Ransom/Crypto Sheriff), aus sauberem Backup wiederherstellen, Anzeige (§§ 253/303b).
 - [Romance Scam — Betrug mit vorgetäuschter Liebe](https://digitale-ersthilfe.novumanalytica.com/leitfaden-romance-scam.html): Love Scam — Kontakt und Zahlungen sofort stoppen, Beweise sichern, Bank informieren und Anzeige (§ 263), Fake-Profil melden; Warnung vor Recovery-Scam, Telefonseelsorge; „Sie sind nicht schuld".
 - [SIM-Swapping — Handynummer übernommen](https://digitale-ersthilfe.novumanalytica.com/leitfaden-sim-swapping.html): Warnzeichen „kein Netz" — sofort Mobilfunkanbieter kontaktieren und Nummer zurückholen, Bank/Konten sichern, SMS-2FA auf Authenticator-App/Hardware-Schlüssel umstellen, Anzeige (§§ 263a/269), Port-Kennwort setzen.
+- [Schockanruf mit KI-Stimme (Enkeltrick 2.0)](https://digitale-ersthilfe.novumanalytica.com/leitfaden-schockanruf.html): Panik-Anruf mit Geldforderung (angeblich Angehörige oder Polizei), Stimme oft per KI geklont — auflegen und über die bekannte Nummer zurückrufen, Identität per Codewort/Wissensfrage prüfen, kein Geld/keine Wertsachen übergeben, Anzeige (§ 263). Behörden holen nie Bargeld/Wertsachen ab.
 
 ## Einstieg und Kontakte
 

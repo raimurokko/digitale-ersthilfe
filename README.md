@@ -87,6 +87,7 @@ haben Dark-Mode- und Hoher-Kontrast-Varianten. Siehe [DESIGN.md](DESIGN.md).
 | `leitfaden-ransomware.html` | Leitfaden: Ransomware (Gerät gesperrt/verschlüsselt) |
 | `leitfaden-romance-scam.html` | Leitfaden: Romance/Love Scam (falsche Liebe) |
 | `leitfaden-sim-swapping.html` | Leitfaden: SIM-Swapping (Handynummer übernommen) |
+| `leitfaden-schockanruf.html` | Leitfaden: Schockanruf mit KI-Stimme (Enkeltrick 2.0) |
 | `fachinfo.html` | Ressourcen für Fachkräfte |
 | `ueber-uns.html` | Über das Projekt und Disclaimer |
 | `impressum.html` | Impressum und Datenschutzerklärung |
