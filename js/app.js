@@ -374,16 +374,17 @@
      7. Schnell verlassen (Schutz vor mitlesenden Personen)
      -------------------------------------------------------------------------- */
 
+  // Neutrales Ziel bei „Schnell verlassen": unauffällig (Wettersuche),
+  // ohne Tracking-Cookies (DuckDuckGo). Bei Bedarf hier anpassen.
+  var NEUTRAL_URL = 'https://duckduckgo.com/?q=wetter';
+
   function initSchnellVerlassen() {
     var btn = document.getElementById('schnell-verlassen');
     if (!btn) return;
-    var NEUTRAL = 'https://www.wetter.com/';
     function verlassen(e) {
       if (e) e.preventDefault();
-      // Neutrale Seite in neuem Tab öffnen (falls erlaubt) ...
-      try { window.open('https://www.google.de/', '_blank'); } catch (x) {}
-      // ... und die aktuelle Seite ersetzen, damit „Zurück" nicht hierher führt.
-      window.location.replace(NEUTRAL);
+      // Aktuelle Seite ersetzen, damit „Zurück" nicht hierher führt.
+      window.location.replace(NEUTRAL_URL);
     }
     btn.addEventListener('click', verlassen);
     // Doppeltes Drücken der Esc-Taste als zusätzlicher Notausgang
@@ -394,6 +395,21 @@
       if (jetzt - letzteEsc < 600) { verlassen(); }
       letzteEsc = jetzt;
     });
+  }
+
+  // Passende Tastenkürzel je Betriebssystem/Browser einsetzen
+  function initSicherSurfen() {
+    var ink = document.getElementById('kbd-inkognito');
+    var ver = document.getElementById('kbd-verlauf');
+    if (!ink && !ver) return;
+    var ua = navigator.userAgent || '';
+    var isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || ua);
+    var isFirefox = /Firefox/.test(ua);
+    var mod = isMac ? '⌘' : 'Strg';        // ⌘ oder Strg
+    var del = isMac ? '⌫' : 'Entf';         // ⌫ oder Entf
+    var privTaste = isFirefox ? 'P' : 'N';       // Firefox: P, sonst N
+    if (ink) ink.textContent = mod + ' + Umschalt + ' + privTaste;
+    if (ver) ver.textContent = mod + ' + Umschalt + ' + del;
   }
 
   /* --------------------------------------------------------------------------
@@ -416,6 +432,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     initSchnellVerlassen();
+    initSicherSurfen();
     initNavigation();
     initVorlesen();
     initBarrierefreiheit();

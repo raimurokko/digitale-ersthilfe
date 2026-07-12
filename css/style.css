@@ -765,6 +765,26 @@ strong {
   line-height: 1.6;
 }
 
+/* Text füllt die Karte (kein 65ch-Leerraum rechts) */
+.disclaimer p,
+.karte p {
+  max-width: none;
+}
+
+/* Tastenkürzel-Darstellung */
+kbd {
+  display: inline-block;
+  font-family: var(--schrift-mono);
+  font-size: 0.85em;
+  white-space: nowrap;
+  padding: 0.1em 0.45em;
+  color: var(--farbe-text);
+  background: var(--farbe-oberflaeche);
+  border: 1px solid var(--farbe-rand);
+  border-bottom-width: 2px;
+  border-radius: var(--rund-sm);
+}
+
 .disclaimer__titel {
   font-weight: 700;
   color: var(--farbe-text);
