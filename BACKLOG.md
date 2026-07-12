@@ -32,15 +32,15 @@ Offene Punkte, nach Priorität. Legende:
 > (im Umbruch), §§, Telefonnummern und Menü-Pfade **periodisch gegenprüfen**.
 - [x] **Bildbasierte Gewalt / NCII**, **Sextortion**, **Stalkerware**, **Digitale Trennung** — live.
 
-Frühere Beschreibung (erledigt):
+Frühere Beschreibung (alle erledigt / live):
 - [x] 👤 **Bildbasierte Gewalt / NCII** (Rachepornos, Deepfakes, intime Bilder verbreitet):
   Takedown-Wege (StopNCII.org, „Take It Down" für Minderjährige, Plattform-Meldung),
   Beweissicherung, Rechtsweg (§§ 201a, 33 KUG u. a. — prüfen).
-- [ ] 👤 **Sextortion / Sexerpressung**: Regeln (nicht zahlen, nicht löschen, Beweise
-  sichern, anzeigen), Plattform-Meldung, Beratung.
-- [ ] 👤 **Stalkerware / Spyware auf dem Handy**: Erkennen + **sicheres** Entfernen —
+- [x] 👤 **Sextortion / Sexerpressung**: Regeln (nicht zahlen, nicht löschen, Beweise
+  sichern, anzeigen), Plattform-Meldung, Beratung. (Zusätzlich: Abschnitt Fake-Sextortion-Mail.)
+- [x] 👤 **Stalkerware / Spyware auf dem Handy**: Erkennen + **sicheres** Entfernen —
   mit Warnung, dass Entfernen die überwachende Person alarmieren kann; Sicherheitsplan.
-- [ ] 👤 **Digitale Trennung**: Konten/Standort/Familienfreigabe/Smart-Home/Abos nach
+- [x] 👤 **Digitale Trennung**: Konten/Standort/Familienfreigabe/Smart-Home/Abos nach
   Trennung von gewalttätiger Person absichern (roter Faden für IPV-Betroffene).
 
 **🟠 SHOULD:** — Entwürfe erstellt (noindex, unverlinkt), **Faktencheck erledigt**, Freigabe ausstehend
@@ -64,29 +64,45 @@ Frühere Beschreibung (erledigt):
   Titel + Kasten am Ende, `.beitrag-datum`) **und** Website-weit auf `ueber-uns.html#aktualitaet`;
   Schema `datePublished`/`dateModified` ergänzt.
 
-**Themen-Roadmap neue Leitfäden (priorisiert 12.07.2026 — Häufigkeit × Leidensdruck × Lücke).**
-Größte Abdeckungslücken: **Betrug/Finanzschaden** und **akute Geräte-Notfälle**.
+**Themen-Roadmap neue Leitfäden — Stand 13.07.2026: alle priorisierten Themen LIVE ✅**
+In dieser Iteration von **13 auf 19 Leitfäden** ausgebaut; jeder faktengeprüft, live
+geschaltet und in Übersicht (Karte + ItemList), sitemap.xml, sw.js, llms.txt, README und
+Startseiten-Triage eingebunden.
 
-🔴 _Top-Lücken:_
-- [ ] 👤 **Handy verloren/gestohlen** — sofort orten/sperren/fernlöschen, SIM & Banking-Apps
-  sperren (116 116), Anzeige. Klassische Ersthilfe, sehr häufig, fehlt komplett.
-- [ ] 👤 **Identitätsdiebstahl / Fake-Profil in meinem Namen** — Impersonation melden, Bestellungen/
-  Inkasso/SCHUFA abwehren; distinkt vom Account-Hack.
-- [ ] 👤 **Online-Betrug: Fake-Shops & Waren-/Anlagebetrug (inkl. Krypto)** — „Geld weg, was tun?":
-  Bank/Rückbuchung, Anzeige, Fakeshop-Finder/Warnliste (bereits in kontaktstellen.html verlinkt).
+🔴 _Top-Lücken (erledigt):_
+- [x] **Handy verloren/gestohlen** (`leitfaden-handy-verlust.html`) — live 12.07.2026.
+- [x] **Identitätsdiebstahl / Fake-Profil** (`leitfaden-identitaetsdiebstahl.html`) — live 12.07.2026.
+- [x] **Online-Betrug: Fake-Shops & Anlage-/Krypto-Betrug** (`leitfaden-online-betrug.html`) — live 12.07.2026.
 
-🟠 _Wichtig:_
-- [ ] 👤 **Ransomware / Gerät gesperrt oder Daten verschlüsselt** (Privat/Verein) — nicht zahlen,
-  isolieren, No More Ransom/BSI (Ressourcen in kontaktstellen.html vorhanden).
-- [ ] 👤 **Romance/Love Scam** — emotional + finanziell, oft ältere Menschen.
-- [ ] 👤 **SIM-Swapping** — hebelt SMS-2FA aus; eng an Account-Hack.
+🟠 _Wichtig (erledigt):_
+- [x] **Ransomware / Gerät gesperrt oder verschlüsselt** (`leitfaden-ransomware.html`) — live 13.07.2026.
+- [x] **Romance/Love Scam** (`leitfaden-romance-scam.html`) — live 13.07.2026.
+- [x] **SIM-Swapping** (`leitfaden-sim-swapping.html`) — live 13.07.2026.
 
-🟢 _Kurz (eher FAQ/Abschnitt statt eigener Leitfaden):_
-- [ ] **Fake-Sextortion-Massenmail** („Webcam-Erpressung") — Panik nehmen, meist Bluff → Abschnitt im Sextortion-Leitfaden.
-- [ ] **Deepfake-/Voice-Clone-Schockanruf** („Enkeltrick 2.0").
-- [ ] Account-Recovery (Google/Apple/Microsoft) · IoT/Smart-Home · rechtssichere Dokumentation.
+🟢 _Kurz (erledigt):_
+- [x] **Fake-Sextortion-Massenmail** — als Abschnitt „Sonderfall: Webcam-Erpressung" im Sextortion-Leitfaden (13.07.2026).
+- [x] **Deepfake-/Voice-Clone-Schockanruf** (`leitfaden-schockanruf.html`, „Enkeltrick 2.0") — live 13.07.2026.
 
-**Reichweite:** Sprachversionen (EN + Leichte Sprache, dann TR/AR/RU/UK) · PDF-Einzeiler pro Leitfaden.
+**🟢 Weitere Themen-Ideen (offen, niedrige Prio):** Account-Recovery (Google/Apple/Microsoft) ·
+IoT/Smart-Home · rechtssichere Dokumentation · gehackter Messenger-Account (WhatsApp-Code-Betrug) ·
+Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
+
+## 🟠🟢 Reichweite & Zugänglichkeit
+
+> Sammelstelle für Reichweiten- und Zugänglichkeitsoptimierungen. Hinweis: Die Bestandstexte
+> sind bereits **einfache Sprache**; „Leichte Sprache" ist die strengere Extra-Stufe.
+
+- [x] **Sprach-Audit „einfache/zugängliche Sprache"** über alle 19 Leitfäden + Startseite +
+  Kontaktstellen durchgeführt (13.07.2026), Verständlichkeits-Fixes eingepflegt.
+- [x] **„Verwandte Leitfäden"** — laterale Verlinkung am Ende jedes Leitfadens (13.07.2026).
+- [ ] **Leichte Sprache** (formal): eigene, streng vereinfachte Fassung je Leitfaden
+  (ein Gedanke pro Satz, Worterklärungen, Bilder).
+- [ ] **Sprachversionen**: EN zuerst, dann TR/AR/RU/UK (`hreflang`, Sprachumschalter).
+- [ ] **PDF-Merkblatt/Einzeiler** pro Leitfaden (druck-/aushangfähig; wichtig für ältere
+  Zielgruppen, z. B. Schockanruf/Enkeltrick).
+- [ ] **Vorlese-Audio/Podcast-Fassung** je Leitfaden (Audiodatei zusätzlich zum Browser-Vorlesen).
+- [ ] **Sichtbare Breadcrumb-Leiste** im Seitenkopf (Schema `BreadcrumbList` ist bereits vorhanden).
+- [ ] **Responsive Bilder** (`srcset`/WebP) für Infografiken.
 
 **Erledigt am 12.07.2026 (Ressourcen/Links, kein eigener Leitfaden nötig):**
 - [x] Online-Wache als **klickbarer** Link in allen anzeigenden Leitfäden vereinheitlicht
@@ -163,12 +179,8 @@ Größte Abdeckungslücken: **Betrug/Finanzschaden** und **akute Geräte-Notfäl
 
 - [ ] 👤 **Postfach `security@novumanalytica.com`** einrichten/routen (in `security.txt` als
   Kontakt hinterlegt); `Expires`-Datum jährlich erneuern.
-- [ ] **Sichtbare Breadcrumb-Leiste** in den Seitenkopf (Schema `BreadcrumbList` ist bereits da;
-  sichtbare Variante fehlt noch — Google mag beides deckungsgleich).
-- [ ] **„Verwandte Leitfäden"**-Verlinkung am Ende jedes Leitfadens (laterales Interlinking;
-  Stalking-Leitfaden verlinkt bereits Account-Hack und Echo-Stalking).
-- [ ] **Responsive Bilder** (`srcset`/WebP) für die Infografiken; `latin-ext`-Font-Subset prüfen.
 - [ ] `schema.org thumbnailUrl/contentUrl` im Phishing-Leitfaden auf lokale/finale URLs umstellen.
+  (Breadcrumb-Leiste, „Verwandte Leitfäden", responsive Bilder → siehe „Reichweite & Zugänglichkeit".)
 - [ ] Echtes **favicon.ico** (Multi-Size) zusätzlich zu PNG/SVG.
 - [ ] **CI**: Link-Checker + automatisiertes A11y/Lighthouse-Audit (WCAG-AA, Core Web Vitals).
 

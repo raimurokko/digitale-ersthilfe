@@ -158,6 +158,12 @@ Alle interaktiven Elemente haben eine Mindestgröße von **48 × 48 Pixel**.
 - Auffälliges diagonales Warnmuster für **unveröffentlichte** Leitfaden-Entwürfe
   (zusammen mit `noindex` und einem Redaktions-Anhang); wird beim Live-Schalten entfernt
 
+### Verwandte Leitfäden
+- Am Ende jedes Leitfadens (direkt vor dem Aktualitäts-Kasten) ein Abschnitt
+  **„Verwandte Leitfäden"** mit 2–3 internen Links (`ul.inhaltsliste.verwandte-liste`)
+  auf thematisch nahe Leitfäden — laterales Interlinking für Betroffene und SEO.
+  Neue Leitfäden hier gegenseitig verknüpfen.
+
 ### Aktualitätsangabe (`.beitrag-datum`)
 - Zeigt **„Zuletzt überprüft"** und **„zuletzt aktualisiert"** je Beitrag an zwei Stellen:
   kompakt direkt unter dem H1 (`.beitrag-datum--top`, mit Uhr-Icon) **und** ausführlich als
