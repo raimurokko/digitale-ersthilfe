@@ -43,12 +43,16 @@ Frühere Beschreibung (erledigt):
 - [ ] 👤 **Digitale Trennung**: Konten/Standort/Familienfreigabe/Smart-Home/Abos nach
   Trennung von gewalttätiger Person absichern (roter Faden für IPV-Betroffene).
 
-**🟠 SHOULD:**
-- [ ] 👤 **Cybermobbing / Hass im Netz — Handlungsleitfaden**: dokumentieren, bei Plattform
-  nach DSA/NetzDG melden, Anzeige (§§ 185 ff.). (Triage „online belästigt" führt bisher
-  nur auf Kontaktstellen, ohne Leitfaden.)
-- [ ] 👤 **Kinder & Jugendliche**: Cybergrooming, Cybermobbing — für Eltern und Jugendliche.
-- [ ] 👤 **Doxing**: veröffentlichte Daten — Takedown, DSGVO-Löschung, Meldung.
+**🟠 SHOULD:** — Entwürfe erstellt (noindex, unverlinkt), Freigabe ausstehend
+- [x] **Cybermobbing / Hass im Netz** — Entwurf `leitfaden-cybermobbing.html`.
+  Faktencheck: NetzDG seit 2024 großteils durch DSA ersetzt (Beschwerdestelle jetzt
+  Bundesnetzagentur/dsc.bund.de) — juristisch bestätigen.
+- [x] **Kinder & Jugendliche** (Cybergrooming/Cybermobbing) — Entwurf
+  `leitfaden-kinder-jugend.html`. § 176b StGB und Nummern vor Go-Live prüfen.
+- [x] **Doxing** — Entwurf `leitfaden-doxing.html`. § 126a StGB, § 51 BMG, Art. 17 DSGVO;
+  HateAid-Telefonnummer vor Go-Live verifizieren.
+- [ ] 👤 Diese drei Entwürfe redaktionell freigeben und wie die MUST-Leitfäden live
+  schalten (Übersicht, Sitemap, SW, Triage, llms.txt, README, `noindex` entfernen).
 - [ ] Sichtbares **„Stand / geprüft am"-Datum** auf jedem Leitfaden (Datum steckt bisher
   nur im Schema `dateModified`).
 
