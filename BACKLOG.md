@@ -17,14 +17,36 @@ Offene Punkte, nach Priorität. Legende:
   Maria Jackson). Vor Go-Live gegen die maßgebliche Quelle (novumanalytica.com/impressum)
   final verifizieren; Kontakt-E-Mail ist hier `info@` (RadiusOne nutzt `kontakt@`).
 
-## 🟠 P2 — Inhalte & Reichweite
+## 🔴🟠 Neue Leitfäden — bedarfs-priorisiert (kritische Content-Review)
 
-- [ ] 👤 **Fehlende Leitfäden schreiben** (in `fachinfo.html` als „In Vorbereitung" angekündigt):
-  - Stalkerware-Erkennung auf Android und iOS (deckt Triage „Mein Gerät verhält sich seltsam" besser ab)
-  - Account Recovery bei Identitätsdiebstahl (Google, Apple, Microsoft)
-  - Phishing-Erkennung und forensische E-Mail-Analyse
-  - IoT-Sicherheit und Smart-Home-Absicherung
-  - Rechtssichere Dokumentation digitaler Gewalt
+> Reihenfolge nach **Häufigkeit + Leidensdruck** der Betroffenen, nicht nach
+> vorhandenem Material. Alle redaktionell (👤); Recherche-/Entwurfs-Auftrag siehe
+> [docs/leitfaden-auftrag.md](docs/leitfaden-auftrag.md).
+
+**🔴 MUST — hier fehlt Betroffenen aktuell konkrete Hilfe:**
+- [ ] 👤 **Bildbasierte Gewalt / NCII** (Rachepornos, Deepfakes, intime Bilder verbreitet):
+  Takedown-Wege (StopNCII.org, „Take It Down" für Minderjährige, Plattform-Meldung),
+  Beweissicherung, Rechtsweg (§§ 201a, 33 KUG u. a. — prüfen).
+- [ ] 👤 **Sextortion / Sexerpressung**: Regeln (nicht zahlen, nicht löschen, Beweise
+  sichern, anzeigen), Plattform-Meldung, Beratung.
+- [ ] 👤 **Stalkerware / Spyware auf dem Handy**: Erkennen + **sicheres** Entfernen —
+  mit Warnung, dass Entfernen die überwachende Person alarmieren kann; Sicherheitsplan.
+- [ ] 👤 **Digitale Trennung**: Konten/Standort/Familienfreigabe/Smart-Home/Abos nach
+  Trennung von gewalttätiger Person absichern (roter Faden für IPV-Betroffene).
+
+**🟠 SHOULD:**
+- [ ] 👤 **Cybermobbing / Hass im Netz — Handlungsleitfaden**: dokumentieren, bei Plattform
+  nach DSA/NetzDG melden, Anzeige (§§ 185 ff.). (Triage „online belästigt" führt bisher
+  nur auf Kontaktstellen, ohne Leitfaden.)
+- [ ] 👤 **Kinder & Jugendliche**: Cybergrooming, Cybermobbing — für Eltern und Jugendliche.
+- [ ] 👤 **Doxing**: veröffentlichte Daten — Takedown, DSGVO-Löschung, Meldung.
+- [ ] Sichtbares **„Stand / geprüft am"-Datum** auf jedem Leitfaden (Datum steckt bisher
+  nur im Schema `dateModified`).
+
+**🟢 NICE:** Fake-Shops/Online-Betrug-Leitfaden · SIM-Swapping · Romance Scam ·
+Account-Recovery (Google/Apple/Microsoft) · IoT/Smart-Home · rechtssichere Dokumentation ·
+Sprachversionen (EN + Leichte Sprache, dann TR/AR/RU/UK) · PDF-Einzeiler pro Leitfaden.
+
 - [ ] **Materialien-Repo** separat auf GitHub **und** Codeberg pushen; Dateiname mit
   führendem Leerzeichen korrigieren (`TLP-CLEAR _Beweissicherung_Leitfaden_Amazon_Echo…pdf`).
 - [ ] **Codeberg- und GitLab-Spiegel** einrichten (Remotes + Sync, siehe CONTRIBUTING.md).
@@ -121,6 +143,8 @@ Offene Punkte, nach Priorität. Legende:
   DSGVO-freundliche **YouTube-Fassade** ersetzt (`@novumanalytica`, lädt nichts vor Klick).
   YouTube in Organization-`sameAs` und in allen Fußzeilen verlinkt.
 - **`security.txt`** (RFC 9116) unter `/.well-known/` und im Root angelegt.
+- **Safety-Layer**: „Schnell verlassen"-Button (alle Seiten, `location.replace`, kein
+  Zurück, doppeltes Esc als Notausgang) + Startseiten-Hinweis „unbeobachtet surfen".
 - **Verbraucherzentrale-Links** integriert: Phishing-Radar, Fakeshop-Finder + Warnliste,
   Musterbriefe (digitale Welt / Datenschutz) sowie die Ratgeber „Erste Hilfe bei
   gehackten Onlinekonten" und „Ihre Daten, Ihre Rechte (DSGVO)" — jeweils an
