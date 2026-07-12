@@ -6,6 +6,11 @@ Alle hier aufgeführten Tools sind frei verfügbar.
 > Für den Einsatz in rechtlichen Verfahren sollte immer eine qualifizierte
 > IT-Forensikerin oder ein qualifizierter IT-Forensiker hinzugezogen werden.
 
+> **Noch nicht abgedeckt / geplant:** siehe
+> [tools-fachanwender-luecken.md](tools-fachanwender-luecken.md) — Kommandozeilen- und
+> Bordmittel je Betriebssystem (mac/Win/Linux), Mobilgeräte-Forensik (MVT, adb,
+> libimobiledevice), Malware-/Doku-Analyse, Timeline-/Disk-Forensik, OSINT-Exposure u. a.
+
 ---
 
 ## Ransomware und Verschlüsselung

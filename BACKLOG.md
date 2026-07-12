@@ -64,9 +64,38 @@ Frühere Beschreibung (erledigt):
   Titel + Kasten am Ende, `.beitrag-datum`) **und** Website-weit auf `ueber-uns.html#aktualitaet`;
   Schema `datePublished`/`dateModified` ergänzt.
 
-**🟢 NICE:** Fake-Shops/Online-Betrug-Leitfaden · SIM-Swapping · Romance Scam ·
-Account-Recovery (Google/Apple/Microsoft) · IoT/Smart-Home · rechtssichere Dokumentation ·
-Sprachversionen (EN + Leichte Sprache, dann TR/AR/RU/UK) · PDF-Einzeiler pro Leitfaden.
+**Themen-Roadmap neue Leitfäden (priorisiert 12.07.2026 — Häufigkeit × Leidensdruck × Lücke).**
+Größte Abdeckungslücken: **Betrug/Finanzschaden** und **akute Geräte-Notfälle**.
+
+🔴 _Top-Lücken:_
+- [ ] 👤 **Handy verloren/gestohlen** — sofort orten/sperren/fernlöschen, SIM & Banking-Apps
+  sperren (116 116), Anzeige. Klassische Ersthilfe, sehr häufig, fehlt komplett.
+- [ ] 👤 **Identitätsdiebstahl / Fake-Profil in meinem Namen** — Impersonation melden, Bestellungen/
+  Inkasso/SCHUFA abwehren; distinkt vom Account-Hack.
+- [ ] 👤 **Online-Betrug: Fake-Shops & Waren-/Anlagebetrug (inkl. Krypto)** — „Geld weg, was tun?":
+  Bank/Rückbuchung, Anzeige, Fakeshop-Finder/Warnliste (bereits in kontaktstellen.html verlinkt).
+
+🟠 _Wichtig:_
+- [ ] 👤 **Ransomware / Gerät gesperrt oder Daten verschlüsselt** (Privat/Verein) — nicht zahlen,
+  isolieren, No More Ransom/BSI (Ressourcen in kontaktstellen.html vorhanden).
+- [ ] 👤 **Romance/Love Scam** — emotional + finanziell, oft ältere Menschen.
+- [ ] 👤 **SIM-Swapping** — hebelt SMS-2FA aus; eng an Account-Hack.
+
+🟢 _Kurz (eher FAQ/Abschnitt statt eigener Leitfaden):_
+- [ ] **Fake-Sextortion-Massenmail** („Webcam-Erpressung") — Panik nehmen, meist Bluff → Abschnitt im Sextortion-Leitfaden.
+- [ ] **Deepfake-/Voice-Clone-Schockanruf** („Enkeltrick 2.0").
+- [ ] Account-Recovery (Google/Apple/Microsoft) · IoT/Smart-Home · rechtssichere Dokumentation.
+
+**Reichweite:** Sprachversionen (EN + Leichte Sprache, dann TR/AR/RU/UK) · PDF-Einzeiler pro Leitfaden.
+
+**Erledigt am 12.07.2026 (Ressourcen/Links, kein eigener Leitfaden nötig):**
+- [x] Online-Wache als **klickbarer** Link in allen anzeigenden Leitfäden vereinheitlicht
+  (`portal.onlinewache.polizei.de/de/`).
+- [x] **Datenleck-Check** (HPI ILC + Have I Been Pwned) auch zentral in `kontaktstellen.html`
+  (IT-Sicherheit) — war bisher nur im Account-Hack-Leitfaden.
+- [x] **StopNCII.org** (Erwachsene) im Sextortion-Leitfaden ergänzt (war nur „Take It Down"/Minderjährige).
+- [x] **Fachanwender-Tool-Lückenliste** angelegt: `docs/tools-fachanwender-luecken.md`
+  (CLI-Bordmittel mac/Win/Linux, Mobilgeräte-Forensik, Malware-/Timeline-Forensik, OSINT).
 
 - [ ] **Materialien-Repo** separat auf GitHub **und** Codeberg pushen; Dateiname mit
   führendem Leerzeichen korrigieren (`TLP-CLEAR _Beweissicherung_Leitfaden_Amazon_Echo…pdf`).
