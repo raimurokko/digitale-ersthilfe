@@ -99,7 +99,15 @@ Jeder Leitfaden folgt einem festen Aufbau **und** einem festen Prozess:
 4. **Live schalten.** ENTWURF-Banner, `noindex` und Redaktions-Anhang entfernen; `index, follow`,
    Canonical, OG-Image, Twitter Card und BreadcrumbList ergänzen; in `leitfaeden.html`
    (Karte + ItemList), `sitemap.xml`, `sw.js` (Cache-Version erhöhen), `llms.txt` und README
-   eintragen; ggf. die Triage auf der Startseite verknüpfen.
+   eintragen; ggf. die Triage auf der Startseite verknüpfen. **Aktualitätsdatum setzen:**
+   sichtbares „zuletzt überprüft/aktualisiert" (`.beitrag-datum`, oben + unten) und Schema
+   `datePublished`/`dateModified` auf das Freigabedatum setzen.
+
+**Aktualität pflegen:** Bei jeder **inhaltlichen** Änderung eines Leitfadens das
+`aktualisiert`-Datum (sichtbar + Schema `dateModified`) hochsetzen. Nach einer **Faktenprüfung**
+(§§, Telefonnummern, Verweise) das `überprüft`-Datum setzen — das ist eine redaktionelle Aussage
+und wird **nicht** automatisch gesetzt. Den **Website-weiten Stand** auf
+[ueber-uns.html](ueber-uns.html) (`#aktualitaet`) mitziehen.
 
 **Sicherheit für Betroffene:** Jede Seite enthält den „Schnell verlassen“-Button (Notausgang) und
 bei sensiblen Themen einen Inhaltshinweis. Erklärvideos werden DSGVO-freundlich über die

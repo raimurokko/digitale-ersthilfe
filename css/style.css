@@ -1743,6 +1743,55 @@ figure summary {
 }
 
 /* ==========================================================================
+   Aktualitätsangabe — „zuletzt überprüft / aktualisiert" (Beitrag & Website)
+   ========================================================================== */
+
+.beitrag-datum {
+  color: var(--farbe-text-sekundaer);
+  font-size: var(--text-sm);
+}
+
+/* Kompakte Zeile direkt unter dem Titel */
+.beitrag-datum--top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15rem var(--abstand-xs);
+  margin: 0 0 var(--abstand-lg);
+  font-size: var(--text-xs);
+}
+
+.beitrag-datum--top .beitrag-datum__icon {
+  flex: none;
+  margin-right: var(--abstand-xs);
+  color: var(--farbe-primaer);
+}
+
+/* Ausführlicher Block am Seitenende (vor dem Disclaimer) */
+.beitrag-datum--fuss {
+  background: var(--farbe-oberflaeche-sekundaer);
+  border: 1px solid var(--farbe-rand);
+  border-left: 4px solid var(--farbe-primaer);
+  border-radius: var(--rund-md);
+  padding: var(--abstand-md) var(--abstand-lg);
+  margin: var(--abstand-2xl) 0 var(--abstand-lg);
+  line-height: 1.6;
+}
+
+.beitrag-datum--fuss p {
+  margin: 0;
+}
+
+.beitrag-datum time {
+  font-variant-numeric: tabular-nums;
+}
+
+.beitrag-datum__hinweis {
+  margin-top: var(--abstand-sm) !important;
+  font-size: var(--text-xs);
+}
+
+/* ==========================================================================
    Druck
    ========================================================================== */
 

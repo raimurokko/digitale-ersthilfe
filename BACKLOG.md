@@ -43,18 +43,25 @@ Frühere Beschreibung (erledigt):
 - [ ] 👤 **Digitale Trennung**: Konten/Standort/Familienfreigabe/Smart-Home/Abos nach
   Trennung von gewalttätiger Person absichern (roter Faden für IPV-Betroffene).
 
-**🟠 SHOULD:** — Entwürfe erstellt (noindex, unverlinkt), Freigabe ausstehend
+**🟠 SHOULD:** — Entwürfe erstellt (noindex, unverlinkt), **Faktencheck erledigt**, Freigabe ausstehend
 - [x] **Cybermobbing / Hass im Netz** — Entwurf `leitfaden-cybermobbing.html`.
-  Faktencheck: NetzDG seit 2024 großteils durch DSA ersetzt (Beschwerdestelle jetzt
-  Bundesnetzagentur/dsc.bund.de) — juristisch bestätigen.
+  ✓ Faktencheck 12.07.2026: NetzDG zum 14.05.2024 aufgehoben, DSA seit 17.02.2024 (dt.
+  Umsetzung DDG), Bundesnetzagentur = Koordinator für digitale Dienste (dsc.bund.de) —
+  **bestätigt**. §§ 185/186/187/241/130 StGB, HateAid 030 252 088 38, Weisser Ring 116 006
+  (tägl. 7–22) bestätigt.
 - [x] **Kinder & Jugendliche** (Cybergrooming/Cybermobbing) — Entwurf
-  `leitfaden-kinder-jugend.html`. § 176b StGB und Nummern vor Go-Live prüfen.
-- [x] **Doxing** — Entwurf `leitfaden-doxing.html`. § 126a StGB, § 51 BMG, Art. 17 DSGVO;
-  HateAid-Telefonnummer vor Go-Live verifizieren.
-- [ ] 👤 Diese drei Entwürfe redaktionell freigeben und wie die MUST-Leitfäden live
-  schalten (Übersicht, Sitemap, SW, Triage, llms.txt, README, `noindex` entfernen).
-- [ ] Sichtbares **„Stand / geprüft am"-Datum** auf jedem Leitfaden (Datum steckt bisher
-  nur im Schema `dateModified`).
+  `leitfaden-kinder-jugend.html`. ✓ Faktencheck 12.07.2026: § 176b StGB („Vorbereitung des
+  sexuellen Missbrauchs", 3 Mon.–5 J.), Nummer gegen Kummer 116 111 / Eltern 0800 111 0 550
+  bestätigt (die alternative 0800 111 0 333 ist ebenfalls gültig).
+- [x] **Doxing** — Entwurf `leitfaden-doxing.html`. ✓ Faktencheck 12.07.2026: § 126a StGB
+  (seit 22.09.2021), § 51 BMG (Sperre 2 J., verlängerbar), § 238 StGB, Art. 17 DSGVO bestätigt.
+  **HateAid-Nummer jetzt verifiziert** (030 252 088 38) → im Entwurf ergänzbar.
+- [ ] 👤 Diese drei Entwürfe redaktionell **freigeben** (Faktencheck ist erledigt) und wie die
+  MUST-Leitfäden live schalten (Übersicht, Sitemap, SW, Triage, llms.txt, README, `noindex`
+  entfernen; Aktualitätsdatum auf Freigabedatum setzen).
+- [x] Sichtbares **„zuletzt überprüft / aktualisiert"-Datum** auf jedem Leitfaden (oben unter dem
+  Titel + Kasten am Ende, `.beitrag-datum`) **und** Website-weit auf `ueber-uns.html#aktualitaet`;
+  Schema `datePublished`/`dateModified` ergänzt.
 
 **🟢 NICE:** Fake-Shops/Online-Betrug-Leitfaden · SIM-Swapping · Romance Scam ·
 Account-Recovery (Google/Apple/Microsoft) · IoT/Smart-Home · rechtssichere Dokumentation ·

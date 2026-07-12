@@ -158,6 +158,19 @@ Alle interaktiven Elemente haben eine Mindestgröße von **48 × 48 Pixel**.
 - Auffälliges diagonales Warnmuster für **unveröffentlichte** Leitfaden-Entwürfe
   (zusammen mit `noindex` und einem Redaktions-Anhang); wird beim Live-Schalten entfernt
 
+### Aktualitätsangabe (`.beitrag-datum`)
+- Zeigt **„Zuletzt überprüft"** und **„zuletzt aktualisiert"** je Beitrag an zwei Stellen:
+  kompakt direkt unter dem H1 (`.beitrag-datum--top`, mit Uhr-Icon) **und** ausführlich als
+  Kasten vor dem Disclaimer (`.beitrag-datum--fuss`, linke Teal-Leiste)
+- **Website-weiter Stand** (ganze Seite überprüft/aktualisiert) steht **nur** auf `ueber-uns.html`
+  (Anker `#aktualitaet`), verlinkt aus dem Fuß-Kasten jedes Leitfadens
+- Daten als `<time datetime="JJJJ-MM-TT">` (maschinenlesbar) + deutsche Anzeige; Schema-Pendant
+  ist `datePublished`/`dateModified` im HowTo/Article
+- **Semantik (wichtig):** *aktualisiert* = Tag der letzten **inhaltlichen** Änderung (aus Git
+  ableitbar; ein reiner Datums-Stempel zählt **nicht** als Aktualisierung). *überprüft* = Tag der
+  letzten **menschlichen** Faktenkontrolle (Rechtsangaben/Nummern/Verweise) — **redaktionell
+  gesetzt, nicht automatisch**
+
 ---
 
 ## 6. Barrierefreiheit
