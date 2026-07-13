@@ -87,6 +87,41 @@ Startseiten-Triage eingebunden.
 IoT/Smart-Home · rechtssichere Dokumentation · gehackter Messenger-Account (WhatsApp-Code-Betrug) ·
 Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
 
+## 🟢 Alltagshilfe & Entwarnung (digitale Grundbildung)
+
+> **Idee (13.07.2026):** Neben den Krisen-Leitfäden sollten wir auch die **wiederkehrenden
+> Alltagssorgen** rund um Technik aufgreifen — Fragen, die viele Menschen umtreiben und die
+> oft als „Werde ich überwacht/gehackt?" missverstanden werden, obwohl die Ursache meist
+> **harmlos und alltäglich** ist.
+>
+> **Wichtige Rahmung — Einordnen, nicht verharmlosen:** Erst **Entwarnung + Erklärung**
+> („das ist normal, und so prüfen Sie es"), aber **immer** ein klarer Pfad „Wann ist es doch
+> ein Warnzeichen?" mit Verweis auf den passenden Krisen-Leitfaden. Betroffene von Stalking/
+> Beziehungsgewalt dürfen sich nicht abgewimmelt fühlen. Ruhiger, ermutigender Ton, einfache
+> Sprache. Format: kurze FAQ-/Einordnungs-Leitfäden oder eine Sammelseite „Häufige Sorgen —
+> erste Einordnung" (ggf. mit einfacher Entscheidungshilfe „harmlos oder Warnzeichen?").
+
+- [ ] **a) „Komische Zeichen/Symbole am Bildschirm"** (Statussymbole, Akku-/Firmware-Update-
+  Hinweise, Benachrichtigungen) — erklären, was normale Symbole bedeuten; Entwarnung.
+- [ ] **b) „Mein WLAN ist langsam"** — Alltagsursachen (Entfernung/Wände, Auslastung, veralteter
+  Router, Router-Neustart, Kanalwahl) statt „gehackt"; einfache Selbsthilfe.
+- [ ] **c) „Im Router sehe ich komische Gerätenamen"** (Android TV, „Bluetooth des TV", IoT/
+  Smart-Home) — meist harmlose eigene Geräte; erklären, wie man Geräte zuordnet — und **wann**
+  es doch ein Warnzeichen ist → Verweis [Echo-Überwachung] / [Stalkerware].
+- [ ] **d) „Backup und Updates sind essenziell"** — Grundlagen-Leitfaden: regelmäßige Backups
+  + Updates schützen vor Datenverlust, Ransomware und Sicherheitslücken → Verweis [Ransomware].
+- [ ] **e) „Handy-Akku wird schnell leer"** — häufigste Ursachen sind **normal**: Bluetooth/WLAN/
+  GPS an, Hintergrund-Apps, Display-Helligkeit, alter Akku — **nicht nur** Spionage-Software;
+  Entwarnung + wann doch prüfen → Verweis [Stalkerware].
+- [ ] **f) „Neustart/Herunterfahren hilft"** — Grundlagen: viele Probleme löst ein Neustart;
+  regelmäßiges Herunterfahren ist gesund; wie man richtig neu startet.
+- [ ] **g) „Kein Zugriff mehr auf mein Google-/Apple-/Microsoft-Konto"** — Account-Recovery-
+  Leitfaden (Wiederherstellungswege der Anbieter, Backup-Codes, was ohne Zugriff geht);
+  ergänzt [Konto gehackt].
+- [ ] **h) Weitere wiederkehrende Alltagsfragen** laufend sammeln (z. B. „Speicher voll",
+  „Pop-ups/Werbung", „Update lädt nicht", „Kamera-/Mikrofon-Symbol leuchtet", „unbekannte
+  Abbuchung im App-Store", „SMS von unbekannter Nummer") — aus Nutzerfragen/Beratung speisen.
+
 ## 🟠🟢 Reichweite & Zugänglichkeit
 
 > Sammelstelle für Reichweiten- und Zugänglichkeitsoptimierungen. Hinweis: Die Bestandstexte
