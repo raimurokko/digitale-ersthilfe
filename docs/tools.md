@@ -41,14 +41,14 @@ Alle hier aufgeführten Tools sind frei verfügbar.
 | Tool | Beschreibung | URL |
 |---|---|---|
 | **Coalition Against Stalkerware** | Informationen und Ressourcen zur Erkennung | [stopstalkerware.org](https://stopstalkerware.org) |
-| **TinyCheck** | Netzwerkbasierte Stalkerware-Erkennung (Kaspersky) | [github.com/KasperskyLab/TinyCheck](https://github.com/KasperskyLab/TinyCheck) |
+| **TinyCheck** | Netzwerkbasierte Stalkerware-Erkennung (Kaspersky-Original archiviert; aktiver Fork) | [TinyCheck-Fork](https://github.com/shreshta-labs/TinyCheck-threat-detection-edition) |
 
 ## Passwörter und Zugangsdaten
 
 | Tool | Beschreibung | URL |
 |---|---|---|
 | **Have I Been Pwned** | Prüfen, ob E-Mail-Adresse in Datenlecks auftaucht | [haveibeenpwned.com](https://haveibeenpwned.com) |
-| **HPI Identity Leak Checker** | Deutschsprachige Prüfung auf Datenlecks (Hasso-Plattner-Institut) | [sec.hpi.de/ilc](https://sec.hpi.de/ilc) |
+| **HPI Identity Leak Checker** | Deutschsprachige Prüfung auf Datenlecks (Hasso-Plattner-Institut) | [sec.hpi.de/ilc](https://sec.hpi.de/ilc/) |
 
 ## Smart-Home / IoT
 
@@ -63,5 +63,5 @@ Alle hier aufgeführten Tools sind frei verfügbar.
 | Ressource | Beschreibung | URL |
 |---|---|---|
 | **BSI — Bürger-CERT** | Aktuelle Warnmeldungen zu IT-Sicherheit | [bsi.bund.de](https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/methoden-der-cyber-kriminalitaet_node.html) |
-| **BSI — Cyber-Sicherheitsnetzwerk** | Informationen zur CSN-Qualifizierung | [bsi.bund.de/csn](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Cyber-Sicherheitslage/Cyber-Sicherheitsnetzwerk/cyber-sicherheitsnetzwerk_node.html) |
+| **BSI — Cyber-Sicherheitsnetzwerk** | Informationen zur CSN-Qualifizierung | [bsi.bund.de/csn](https://www.bsi.bund.de/dok/csn) |
 | **Polizei-Beratung** | Prävention und Aufklärung zu Cybercrime | [polizei-beratung.de](https://www.polizei-beratung.de) |

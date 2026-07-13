@@ -2,7 +2,7 @@
 # Security issue found? Please report it responsibly.
 
 Contact: mailto:security@novumanalytica.com
-Contact: https://novumanalytica.com/kontakt
+Contact: https://novumanalytica.com/impressum
 Expires: 2027-07-01T00:00:00.000Z
 Preferred-Languages: de, en
 Canonical: https://digitale-ersthilfe.novumanalytica.com/.well-known/security.txt
