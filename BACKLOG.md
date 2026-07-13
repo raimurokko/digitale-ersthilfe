@@ -154,11 +154,15 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
   Dichte §§-Aufzählungen ohne ↗-Pfeil, Einzelnennungen mit Pfeil. Bewusst offengelassen:
   `§ 27 SGB V`, generische „DSGVO"-Nennungen ohne Artikel, Google-Recovery-Formulare u. Ä.
   (keine passende/verifizierte Deep-Link-URL).
-- [ ] **Rest von „Alles verlinken": Behörden/Portale/Apps + interne Fließtext-Verweise.**
-  Die meisten Orgs/Apps sind bereits verlinkt; die §§-Runde hat hier bewusst nichts Neues
-  ergänzt. Bei künftiger Durchsicht je Leitfaden noch unverlinkte, namentlich genannte Stellen
-  (z. B. BSI-Themenseiten) und natürliche Themen-Querverweise im Fließtext klickbar machen —
-  Ziel-URLs per WebFetch prüfen, kein `<a>` in JSON-LD.
+- [x] **Rest von „Alles verlinken": Behörden/Portale + interne Fließtext-Verweise (13.07.2026).**
+  Org-Namen mit nur `tel:`-Link zusätzlich mit Homepage verlinkt (**14 Links**: Hilfetelefon,
+  Weisser Ring, Nummer gegen Kummer, Verbraucherzentrale — verifizierte URL-Karte) sowie **2 interne
+  Fließtext-Querverweise** (Phishing in Ransomware/SIM-Swapping). Bewusst **nicht** verlinkt:
+  **„BSI"** (jede Nennung ist der CSN-Disclaimer, der die Seite bewusst vom BSI abgrenzt) und
+  Org-Namen in `kontakt-kachel`-Karten (die Karte ist selbst ein `<a href="tel:">` → sonst
+  verschachtelte Anker). Verifiziert: 59/59 JSON-LD-Blöcke valide/ohne `<a>`, keine verschachtelten Anker.
+- [ ] **Optional-Rest:** Apps und weitere Fließtext-Querverweise nach Bedarf; die meisten Orgs/Apps
+  waren ohnehin schon verlinkt.
 - [ ] **Leichte Sprache** (formal): eigene, streng vereinfachte Fassung je Leitfaden
   (ein Gedanke pro Satz, Worterklärungen, Bilder).
 - [ ] **Sprachversionen**: EN zuerst, dann TR/AR/RU/UK (`hreflang`, Sprachumschalter).

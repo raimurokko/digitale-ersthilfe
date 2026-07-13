@@ -28,7 +28,7 @@ Requests** (DSGVO: keine CDNs, keine Cookies, keine Tracker; Fonts lokal).
 | `kontaktstellen.html`, `fachinfo.html`, `ueber-uns.html`, `impressum.html` | weitere Seiten |
 | `css/style.css` | gesamtes Design-System (Tokens `--farbe-*`, Dark Mode, A11y-Modi, Print) |
 | `js/app.js` | Vanilla-JS (IIFE): Nav, Vorlesen, **A11y-Panel**, **Schnell-verlassen**, **Scroll-up**, **Video-Fassade**, PWA |
-| `sw.js` | Service Worker (Offline). **Cache-Version bei CSS/JS/Seiten-Änderungen hochzählen** (aktuell `v26`) |
+| `sw.js` | Service Worker (Offline). **Cache-Version bei CSS/JS/Seiten-Änderungen hochzählen** (aktuell `v27`) |
 | `robots.txt`, `sitemap.xml`, `llms.txt`, `security.txt`, `.well-known/` | Crawler/SEO/AEO/Security |
 | `assets/fonts/` | Inter, Plus Jakarta Sans, **OpenDyslexic** (woff2, lokal) + OFL-Lizenz |
 | `docs/leitfaden-auftrag.md` | **Recherche-/Schreib-Auftrag für neue Leitfäden** (Prompt-Vorlage) |
@@ -79,7 +79,7 @@ Links hervorheben, Animationen reduzieren, Vorlesen) · **Scroll-up** (unten rec
   auf der Startseite verknüpfen.
 - **A11y-Modus hinzufügen:** an DREI Stellen pflegen — Inline-`<head>`-Script (jede Seite),
   `js/app.js` (`A11Y_FLAGS`) und `css/style.css` (`html.a11y-*`). Zustand: `localStorage 'de-a11y'`.
-- **Nach CSS/JS-/Seiten-Änderung:** SW-`CACHE_NAME` hochzählen (returning users; aktuell `v26`).
+- **Nach CSS/JS-/Seiten-Änderung:** SW-`CACHE_NAME` hochzählen (returning users; aktuell `v27`).
   Lokaler Browser-Cache ist beim Testen zäh; per curl gegen den lokalen Server prüft man den
   echten Auslieferungsstand (umgeht den SW).
 - **Links:** Nur **sichtbaren** Text verlinken — **kein `<a>` in JSON-LD-Schema-Strings** (macht
@@ -107,10 +107,11 @@ Links hervorheben, Animationen reduzieren, Vorlesen) · **Scroll-up** (unten rec
    befüllen, dann Material-Karten auf echte Links umstellen.
 4. **DNS** für die Produktiv-Domain setzen; **Codeberg-/GitLab-Spiegel** einrichten (CI-Link-Check-
    Configs liegen bereit und greifen nach dem Spiegeln); nach Go-Live **Sitemap in Search Console**.
-5. **🟢 „Alles verlinken":** Gesetze-Teil **erledigt (13.07.2026)** — alle 19 Leitfäden haben jetzt
-   klickbare §§ (59 neue Links, StGB/KUG/BMG/GewSchG → gesetze-im-internet.de, DSGVO → dsgvo-gesetz.de;
-   59/59 JSON-LD-Blöcke valide). **Rest offen:** noch unverlinkte Behörden/Portale/Apps und
-   Fließtext-Querverweise (die meisten Orgs sind bereits verlinkt) — Details in BACKLOG.md.
+5. **🟢 „Alles verlinken":** **erledigt (13.07.2026).** Alle 19 Leitfäden haben klickbare §§
+   (59 Links, StGB/KUG/BMG/GewSchG → gesetze-im-internet.de, DSGVO → dsgvo-gesetz.de) sowie
+   Org-Homepage-Links (14: Hilfetelefon/Weisser Ring/Nummer gegen Kummer/Verbraucherzentrale) und
+   interne Fließtext-Querverweise. „BSI" bewusst nie verlinkt (CSN-Disclaimer). Nur optionaler
+   Feinschliff offen — Details in BACKLOG.md.
 6. **🟢 Eigenes „Vorfall-Tagebuch"-Tool** (NO-STALK-App eingestellt; „Stalking-Tagebuch" ist
    ambivalent → Naming) **und AirGuard-Review** (letztes Update 05/2025; iOS/Android-Bordmittel als
    Alternative) — Details in BACKLOG.md.
