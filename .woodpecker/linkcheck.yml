@@ -1,0 +1,17 @@
+# Codeberg-CI (Woodpecker) — Link-Check mit lychee.
+# Für einen Codeberg-Spiegel des Repos; nutzt dieselbe .lycheeignore.
+# Aktivierung: Repo unter Codeberg CI (ci.codeberg.org) freischalten.
+
+when:
+  - event: [pull_request, manual, cron]
+  - event: push
+    branch: main
+
+steps:
+  linkcheck:
+    image: lycheeverse/lychee:latest
+    commands:
+      - >-
+        lychee --no-progress --max-retries 3 --retry-wait-time 2
+        --accept 200,206,429
+        "**/*.html" "**/*.md" "**/*.txt"

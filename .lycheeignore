@@ -1,0 +1,15 @@
+# Regex-Muster (eine pro Zeile) für bekannte, bewusst ausgenommene URLs.
+# Wird von lychee automatisch gelesen (GitHub/GitLab/Codeberg-CI).
+
+# Produktiv-Domain: DNS noch nicht gesetzt (Canonical/OG zeigen bereits dorthin)
+^https://digitale-ersthilfe\.novumanalytica\.com/
+
+# Materialien-Repo noch nicht angelegt (offener Backlog-Punkt)
+digitale-ersthilfe-materialien
+
+# Social-Hilfeseiten blocken automatisierte Anfragen (HTTP 400), existieren aber real
+^https://www\.facebook\.com/hacked
+^https://help\.instagram\.com/
+
+# „Schnell verlassen"-Tarnziel (Wetterdienst) — reiner Fluchtlink
+^https://www\.dwd\.de/

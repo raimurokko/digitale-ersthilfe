@@ -1,0 +1,49 @@
+name: Link-Check
+
+# Prüft alle internen und externen Links in HTML/Markdown/Text auf tote Ziele (404 etc.).
+# Ausnahmen stehen in .lycheeignore. Läuft wöchentlich, bei Pushes/PRs auf main und manuell.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - '**/*.md'
+      - '**/*.txt'
+      - '.lycheeignore'
+      - '.github/workflows/linkcheck.yml'
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1'   # jeden Montag 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write            # für automatische Issue-Erstellung bei Funden (schedule)
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Links prüfen (lychee)
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 3
+            --retry-wait-time 2
+            --accept 200,206,429
+            "**/*.html" "**/*.md" "**/*.txt"
+          # Bei geplanten Läufen nicht hart fehlschlagen, sondern Issue öffnen (siehe unten).
+          fail: ${{ github.event_name != 'schedule' }}
+
+      - name: Issue bei toten Links (nur schedule)
+        if: ${{ github.event_name == 'schedule' && steps.lychee.outputs.exit_code != 0 }}
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: 'Link-Check: tote Links gefunden'
+          content-filepath: ./lychee/out.md
+          labels: link-check, automated

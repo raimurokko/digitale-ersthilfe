@@ -1,0 +1,23 @@
+# GitLab-CI: Link-Check mit lychee (für einen GitLab-Spiegel des Repos).
+# Nutzt dieselbe .lycheeignore wie GitHub/Codeberg. Auf GitHub wird diese Datei ignoriert.
+
+stages:
+  - test
+
+link_check:
+  stage: test
+  image:
+    name: lycheeverse/lychee:latest
+    entrypoint: [""]
+  script:
+    - >-
+      lychee --no-progress --max-retries 3 --retry-wait-time 2
+      --accept 200,206,429
+      "**/*.html" "**/*.md" "**/*.txt"
+  rules:
+    # Bei Merge Requests und geplanten Pipelines prüfen; manuell immer möglich.
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+    - when: manual
+      allow_failure: true
