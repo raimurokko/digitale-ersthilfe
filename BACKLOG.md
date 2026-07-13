@@ -146,12 +146,19 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
 - [x] **Sprach-Audit „einfache/zugängliche Sprache"** über alle 19 Leitfäden + Startseite +
   Kontaktstellen durchgeführt (13.07.2026), Verständlichkeits-Fixes eingepflegt.
 - [x] **„Verwandte Leitfäden"** — laterale Verlinkung am Ende jedes Leitfadens (13.07.2026).
-- [ ] **„Alles Erwähnte verlinken"** — Gesetze (gesetze-im-internet.de), Behörden/Portale, Apps
-  und interne Leitfäden konsequent klickbar machen (Vertrauens-/Einstiegsportal-Effekt).
-  Im **Stalking-Leitfaden umgesetzt** (13.07.2026: §§ 238/185/201a/202a/223/241 StGB, SGB XIV,
-  Gewaltschutzgesetz, Familiengericht-Finder justiz, NO STALK, Stalking-Tagebuch, AirGuard,
-  interne Verweise). **TODO: gleiches Muster auf die übrigen Leitfäden ausrollen.** Nur
-  **sichtbaren** Text verlinken — kein `<a>` in JSON-LD-Schema-Strings.
+- [x] **„Alles Erwähnte verlinken" — Gesetze site-weit ausgerollt (13.07.2026).** Nach dem
+  Stalking-Muster jetzt in **allen 19 Leitfäden** jeder im sichtbaren Text genannte Paragraph
+  klickbar: **59 neue Gesetzes-Links** (StGB → gesetze-im-internet.de, KUG/`kunsturhg`, BMG,
+  GewSchG; DSGVO-Art. → dsgvo-gesetz.de). Jede Ziel-URL vorab per WebFetch geprüft; nur
+  **sichtbarer** Text, **kein `<a>` in JSON-LD** (59/59 Schema-Blöcke valide verifiziert).
+  Dichte §§-Aufzählungen ohne ↗-Pfeil, Einzelnennungen mit Pfeil. Bewusst offengelassen:
+  `§ 27 SGB V`, generische „DSGVO"-Nennungen ohne Artikel, Google-Recovery-Formulare u. Ä.
+  (keine passende/verifizierte Deep-Link-URL).
+- [ ] **Rest von „Alles verlinken": Behörden/Portale/Apps + interne Fließtext-Verweise.**
+  Die meisten Orgs/Apps sind bereits verlinkt; die §§-Runde hat hier bewusst nichts Neues
+  ergänzt. Bei künftiger Durchsicht je Leitfaden noch unverlinkte, namentlich genannte Stellen
+  (z. B. BSI-Themenseiten) und natürliche Themen-Querverweise im Fließtext klickbar machen —
+  Ziel-URLs per WebFetch prüfen, kein `<a>` in JSON-LD.
 - [ ] **Leichte Sprache** (formal): eigene, streng vereinfachte Fassung je Leitfaden
   (ein Gedanke pro Satz, Worterklärungen, Bilder).
 - [ ] **Sprachversionen**: EN zuerst, dann TR/AR/RU/UK (`hreflang`, Sprachumschalter).
