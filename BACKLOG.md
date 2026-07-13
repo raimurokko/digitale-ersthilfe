@@ -122,6 +122,22 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
   „Pop-ups/Werbung", „Update lädt nicht", „Kamera-/Mikrofon-Symbol leuchtet", „unbekannte
   Abbuchung im App-Store", „SMS von unbekannter Nummer") — aus Nutzerfragen/Beratung speisen.
 
+## 🟢 Eigene Werkzeuge & Tool-Reviews
+
+- [ ] **Eigenes „Vorfall-Tagebuch" (digitale Doku-Hilfe) erwägen** — als schlanke, lokale
+  PWA/Formular (DSGVO-konform, ohne Server; Export als PDF). Hintergrund: Die frühere
+  **NO-STALK-App des Weißen Rings wurde zum 01.06.2025 eingestellt** → es fehlt eine
+  niedrigschwellige digitale Dokumentationshilfe. **Naming beachten:** „Stalking-Tagebuch"
+  ist ambivalent und kann abschreckend wirken — neutraler benennen (z. B. „Vorfall-Protokoll",
+  „Beweis-Tagebuch", „Doku-Helfer"). Über mehrere Leitfäden nutzbar (Stalking, Cybermobbing,
+  Doxing, Bildbasierte Gewalt, Betrug).
+- [ ] **AirGuard-Review** (aktuell im Stalking-Leitfaden verlinkt): im Text kurz erklären,
+  **was** es ist — kostenlose Open-Source-App der TU Darmstadt, die fremde Bluetooth-Tracker
+  (AirTags, Samsung SmartTags, Tile) findet. **Achtung:** letztes Update Mai 2025 (v1.4) —
+  Pflegezustand bei nächster Prüfung erneut checken. **Ergänzen/alternativ:** die in **iOS**
+  („Wo ist?") und **Android** („Unbekannte Tracker finden") **eingebauten** Tracker-Warnungen —
+  oft ausreichend und stets aktuell; ggf. Bordmittel priorisieren.
+
 ## 🟠🟢 Reichweite & Zugänglichkeit
 
 > Sammelstelle für Reichweiten- und Zugänglichkeitsoptimierungen. Hinweis: Die Bestandstexte
@@ -157,6 +173,8 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
 - [ ] **Materialien-Repo** separat auf GitHub **und** Codeberg pushen; Dateiname mit
   führendem Leerzeichen korrigieren (`TLP-CLEAR _Beweissicherung_Leitfaden_Amazon_Echo…pdf`).
 - [ ] **Codeberg- und GitLab-Spiegel** einrichten (Remotes + Sync, siehe CONTRIBUTING.md).
+  Die CI-Link-Check-Configs (`.gitlab-ci.yml`, `.woodpecker/linkcheck.yml`) liegen bereits im
+  Repo und greifen automatisch nach dem Spiegeln.
 
 ## 🔴 P1 — Erklärvideos ausbauen (starke Nutzernachfrage)
 
@@ -223,7 +241,11 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
 - [ ] `schema.org thumbnailUrl/contentUrl` im Phishing-Leitfaden auf lokale/finale URLs umstellen.
   (Breadcrumb-Leiste, „Verwandte Leitfäden", responsive Bilder → siehe „Reichweite & Zugänglichkeit".)
 - [ ] Echtes **favicon.ico** (Multi-Size) zusätzlich zu PNG/SVG.
-- [ ] **CI**: Link-Checker + automatisiertes A11y/Lighthouse-Audit (WCAG-AA, Core Web Vitals).
+- [x] **CI Link-Checker** (lychee) eingerichtet (13.07.2026): GitHub-Action
+  `.github/workflows/linkcheck.yml` (Push/PR/main, wöchentlich Mo, manuell; öffnet bei
+  geplanten Läufen ein Issue). Fertige Spiegel-Configs `.gitlab-ci.yml` und
+  `.woodpecker/linkcheck.yml`; Ausnahmen in `.lycheeignore`.
+- [ ] **CI**: automatisiertes A11y/Lighthouse-Audit (WCAG-AA, Core Web Vitals).
 
 ---
 

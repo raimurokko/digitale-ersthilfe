@@ -1,6 +1,6 @@
 # Handover — Digitale Ersthilfe
 
-Stand: 2026-07-12. Dieses Dokument fasst den Projektstand zusammen, damit die nächste
+Stand: 2026-07-13. Dieses Dokument fasst den Projektstand zusammen, damit die nächste
 Session (oder ein Teammitglied) ohne Rückfragen weiterarbeiten kann. Ergänzt README.md,
 DESIGN.md, CONTRIBUTING.md und BACKLOG.md — dort stehen die Details.
 
@@ -28,11 +28,13 @@ Requests** (DSGVO: keine CDNs, keine Cookies, keine Tracker; Fonts lokal).
 | `kontaktstellen.html`, `fachinfo.html`, `ueber-uns.html`, `impressum.html` | weitere Seiten |
 | `css/style.css` | gesamtes Design-System (Tokens `--farbe-*`, Dark Mode, A11y-Modi, Print) |
 | `js/app.js` | Vanilla-JS (IIFE): Nav, Vorlesen, **A11y-Panel**, **Schnell-verlassen**, **Scroll-up**, **Video-Fassade**, PWA |
-| `sw.js` | Service Worker (Offline). **Cache-Version bei CSS/JS/Seiten-Änderungen hochzählen** (aktuell `v10`) |
+| `sw.js` | Service Worker (Offline). **Cache-Version bei CSS/JS/Seiten-Änderungen hochzählen** (aktuell `v25`) |
 | `robots.txt`, `sitemap.xml`, `llms.txt`, `security.txt`, `.well-known/` | Crawler/SEO/AEO/Security |
 | `assets/fonts/` | Inter, Plus Jakarta Sans, **OpenDyslexic** (woff2, lokal) + OFL-Lizenz |
 | `docs/leitfaden-auftrag.md` | **Recherche-/Schreib-Auftrag für neue Leitfäden** (Prompt-Vorlage) |
 | `docs/video-skript-stalkerware.md` | fertiger Video-Skript-Entwurf (Echo-Stil) |
+| `docs/tools.md`, `docs/tools-fachanwender-luecken.md` | Fachanwender-Tools + Lückenliste (CLI/Forensik) |
+| `.github/workflows/linkcheck.yml`, `.gitlab-ci.yml`, `.woodpecker/linkcheck.yml`, `.lycheeignore` | **CI-Link-Checker** (lychee) für GitHub/GitLab/Codeberg |
 
 ## Inhaltlicher Stand
 
@@ -44,12 +46,17 @@ Requests** (DSGVO: keine CDNs, keine Cookies, keine Tracker; Fonts lokal).
 **Schockanruf/KI-Stimme**. Der Sextortion-Leitfaden hat zusätzlich einen Abschnitt zur
 **Fake-Sextortion-Massenmail**.
 
-Die drei zuletzt genannten waren SHOULD-Entwürfe; sie sind am **12.07.2026** faktengeprüft,
-freigegeben und live geschaltet (ENTWURF-Banner/`noindex`/Redaktions-Anhang entfernt; in
-Übersicht, Sitemap, SW, llms.txt, README, Startseiten-Triage verlinkt).
+In der Session **12.–13.07.2026** von 9 auf **19 Leitfäden** ausgebaut (alle faktengeprüft,
+live, in Übersicht/Sitemap/SW/llms.txt/README/Startseiten-Triage verlinkt). Zusätzlich:
+**„Verwandte Leitfäden"**-Vernetzung am Ende jedes Leitfadens · **Sprach-Audit** (einfache
+Sprache) über alle Seiten mit Fixes · **site-weiter Link-Audit** (tote externe Links behoben) ·
+**CI-Link-Checker** (lychee) eingerichtet · neue **Fachanwender-Tool-Lückenliste**.
 
 **Aktualitätsdaten:** Jeder Leitfaden zeigt „zuletzt überprüft/aktualisiert" (oben + Kasten
 am Ende, `.beitrag-datum`); der Website-weite Stand steht auf `ueber-uns.html#aktualitaet`.
+
+**„Verwandte Leitfäden":** jeder Leitfaden hat vor dem Aktualitäts-Kasten eine Sektion mit
+2–3 internen Links auf thematisch nahe Leitfäden (Relatedness-Map, `.verwandte-liste`).
 
 **Funktionen:** Triage · Click-to-Call · **Vorlesen** (Abschnitts-Buttons + „Vorlesen per Klick")
 · **A11y-Panel** (Button rechts mittig: Textgröße, Hoher Kontrast, Graustufen, **Dyslexie/OpenDyslexic**,
@@ -72,31 +79,45 @@ Links hervorheben, Animationen reduzieren, Vorlesen) · **Scroll-up** (unten rec
   auf der Startseite verknüpfen.
 - **A11y-Modus hinzufügen:** an DREI Stellen pflegen — Inline-`<head>`-Script (jede Seite),
   `js/app.js` (`A11Y_FLAGS`) und `css/style.css` (`html.a11y-*`). Zustand: `localStorage 'de-a11y'`.
-- **Nach CSS/JS-Änderung:** SW-`CACHE_NAME` hochzählen (returning users). Lokaler Browser-Cache
-  ist beim Testen zäh — für echte JS-Tests hilft ein temporäres `?v=` am `<script src>`.
+- **Nach CSS/JS-/Seiten-Änderung:** SW-`CACHE_NAME` hochzählen (returning users; aktuell `v25`).
+  Lokaler Browser-Cache ist beim Testen zäh; per curl gegen den lokalen Server prüft man den
+  echten Auslieferungsstand (umgeht den SW).
+- **Links:** Nur **sichtbaren** Text verlinken — **kein `<a>` in JSON-LD-Schema-Strings** (macht
+  das JSON ungültig/unschön). Neue **externe** Links vor dem Setzen per `WebFetch` (echter
+  HTTP-Status) prüfen — externe Seiten ziehen um/verschwinden (in dieser Session: Polizei-Stalking-
+  Seite umgezogen, NO-STALK-App eingestellt). Der **CI-Link-Checker** (lychee) prüft automatisch;
+  bewusste Ausnahmen in `.lycheeignore`.
+- **Verwandte Leitfäden:** neue Leitfäden gegenseitig im „Verwandte Leitfäden"-Abschnitt verlinken.
+- **Aktualitätsdatum:** bei inhaltlicher Änderung das `aktualisiert`-Datum (sichtbar **und** Schema
+  `dateModified`) hochsetzen; nach Faktenprüfung `überprüft`. Achtung: das sichtbare Datum nutzt ein
+  geschütztes Leerzeichen (`12.&nbsp;Juli`) — bei Skript-Ersetzungen die nbsp-Variante mit-ersetzen.
 - **Rechtsdaten/BSI-Formulierung:** siehe Memory-Einträge; Quelle Impressum-Daten =
   RadiusOne `.../lib/site.ts`; „CSN-Teilnahme JA, aber nicht Teil des BSI / nicht autorisiert".
 
 ## Offene Punkte / nächste Schritte (Priorität)
 
-1. ✅ **ERLEDIGT (12.07.2026): Faktencheck + Freigabe + Go-Live der 3 SHOULD-Entwürfe**
-   (Cybermobbing, Kinder/Jugend, Doxing). Alle §§/Nummern/Behörden verifiziert (NetzDG→DSA/
-   Bundesnetzagentur `dsc.bund.de`, § 176b, § 126a, § 51 BMG, HateAid 030 252 088 38 u. a.);
-   sie sind jetzt live und verlinkt.
-2. **🔴 P1 Erklärvideos** (starke Nutzernachfrage): pro Leitfaden ein kurzes YouTube-Video.
+1. **🔴 P1 Erklärvideos** (starke Nutzernachfrage): pro Leitfaden ein kurzes YouTube-Video.
    Skript für Stalkerware liegt vor (`docs/video-skript-stalkerware.md`). Einbindung ist ein
    Handgriff: `data-yt-id` in die Video-Fassade + `VideoObject`-Schema. **Phishing-Video-ID fehlt**
    (Fassade dort verlinkt nur den Kanal). Echo-Video ist eingebunden (`zBPo3I_zDuo`).
-3. 👤 **Rechtliche Go-Live-Punkte:** Datenschutz-Absatz zum extern geladenen Video ergänzen;
+2. 👤 **Rechtliche Go-Live-Punkte:** Datenschutz-Absatz zum extern geladenen Video ergänzen;
    Impressum-Daten gegen `novumanalytica.com/impressum` final prüfen; `security@`-Postfach routen.
-4. **Materialien-Repo** (`digitale-ersthilfe-materialien` GitHub **und** Codeberg) **existiert noch
-   nicht** — Material-Karten sind derzeit als „in Vorbereitung" markiert (nicht klickbar). Repo
-   anlegen/befüllen, dann Markierung wieder auf echte Links umstellen.
-5. **DNS** für die Produktiv-Domain setzen; **Codeberg-/GitLab-Spiegel** einrichten (siehe
-   CONTRIBUTING.md); nach Go-Live **Sitemap in Search Console** einreichen.
-6. **🟢 NICE:** Fake-Shops-/SIM-Swap-/Romance-Scam-Leitfaden; Sprachversionen (EN + Leichte
-   Sprache); sichtbare Breadcrumbs; „Verwandte Leitfäden"-Verlinkung; responsive Bilder (srcset);
-   sichtbares „Stand/geprüft am"-Datum je Leitfaden.
+3. **Materialien-Repo** (`digitale-ersthilfe-materialien` GitHub **und** Codeberg) **existiert noch
+   nicht** — Links darauf stehen nur in der Doku (in `.lycheeignore` ausgenommen). Repo anlegen/
+   befüllen, dann Material-Karten auf echte Links umstellen.
+4. **DNS** für die Produktiv-Domain setzen; **Codeberg-/GitLab-Spiegel** einrichten (CI-Link-Check-
+   Configs liegen bereit und greifen nach dem Spiegeln); nach Go-Live **Sitemap in Search Console**.
+5. **🟢 „Alles verlinken" ausrollen:** das im **Stalking-Leitfaden** umgesetzte Muster (Gesetze →
+   gesetze-im-internet, Behörden/Portale, Apps, interne Leitfäden klickbar) auf die übrigen 18
+   Leitfäden ziehen — nur **sichtbarer** Text, jede externe URL per `WebFetch` geprüft.
+6. **🟢 Eigenes „Vorfall-Tagebuch"-Tool** (NO-STALK-App eingestellt; „Stalking-Tagebuch" ist
+   ambivalent → Naming) **und AirGuard-Review** (letztes Update 05/2025; iOS/Android-Bordmittel als
+   Alternative) — Details in BACKLOG.md.
+7. **🟢 Neue Content-Säule „Alltagshilfe & Entwarnung"** (häufige Alltagssorgen einordnen statt
+   verharmlosen; z. B. Akku leer, langsames WLAN, komische Router-Gerätenamen, Account-Recovery) —
+   siehe BACKLOG.md.
+8. **🟢 Reichweite:** Leichte Sprache + EN, PDF-Merkblätter, sichtbare Breadcrumbs, Vorlese-Audio,
+   responsive Bilder; **A11y/Lighthouse-CI** (Link-Checker-CI ist bereits eingerichtet).
 
 ## Hinweise
 
