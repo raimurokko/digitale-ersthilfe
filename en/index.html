@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitale Ersthilfe — Quick help with digital violence</title>
+  <meta name="description" content="Quick help with digital violence, stalking, hacking and online scams. Simple, easy-to-read guides for people affected. A voluntary service by Novum Analytica.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f5f57">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Digitale Ersthilfe — Quick help with digital violence">
+  <meta property="og:description" content="Quick help with digital violence, stalking, hacking and online scams. Simple, easy-to-read guides for people affected.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en">
+  <meta property="og:locale:alternate" content="de_DE">
+
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Favicon & App-Icons -->
+  <link rel="icon" href="../assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>/* Apply accessibility settings before the first paint */
+(function(){var r=document.documentElement;try{var a=JSON.parse(localStorage.getItem('de-a11y')||'{}');['contrast','gray','cvd','dys','links','motion'].forEach(function(k){if(a[k])r.classList.add('a11y-'+k);});var s=['100%','115%','130%','150%'];if(a.size)r.style.fontSize=s[a.size]||'100%';}catch(e){}})();</script>
+
+  <!-- schema.org: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Digitale Ersthilfe",
+    "url": "https://digitale-ersthilfe.novumanalytica.com/en/",
+    "description": "Quick help with digital violence, stalking, hacking and online scams.",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Novum Analytica GmbH",
+      "url": "https://novumanalytica.com",
+      "sameAs": ["https://www.youtube.com/@novumanalytica"],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://digitale-ersthilfe.novumanalytica.com/assets/icons/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "digitale-ersthilfe@novumanalytica.com",
+        "areaServed": "DE",
+        "availableLanguage": ["German", "English"]
+      }
+    }
+  }
+  </script>
+
+  <!-- schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "en",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What should I do if my online account was hacked?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Change your password right away. Turn on two-factor authentication. Check whether unknown devices are signed in. Report it to the police online (Online-Wache)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do about digital stalking or surveillance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Save evidence before you change any device. Write down what happened, with date and time. Contact the police or a support service like HateAid or Weisser Ring."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do about a suspicious email or message?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Do not click any links. Do not open attachments. Check the sender address closely. Report the message as spam or phishing."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Canonical, language alternates, social & performance -->
+  <link rel="canonical" href="https://digitale-ersthilfe.novumanalytica.com/en/">
+  <link rel="alternate" hreflang="de" href="https://digitale-ersthilfe.novumanalytica.com/">
+  <link rel="alternate" hreflang="en" href="https://digitale-ersthilfe.novumanalytica.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://digitale-ersthilfe.novumanalytica.com/">
+  <meta property="og:url" content="https://digitale-ersthilfe.novumanalytica.com/en/">
+  <meta property="og:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digitale Ersthilfe — Quick help with digital violence">
+  <meta property="og:site_name" content="Digitale Ersthilfe">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digitale Ersthilfe — Quick help with digital violence">
+  <meta name="twitter:description" content="Quick help with digital violence, stalking, hacking and online scams. Simple, easy-to-read guides for people affected.">
+  <meta name="twitter:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
+</head>
+<body>
+
+  <!-- Skip navigation -->
+  <a class="skip-link" href="#hauptinhalt">Skip to main content</a>
+  <!-- Emergency exit: switch quickly to a neutral page -->
+  <a class="schnell-verlassen" id="schnell-verlassen" href="https://www.dwd.de/" rel="nofollow noopener" aria-label="Leave this page quickly and switch to a neutral website">
+    <span class="schnell-verlassen__x" aria-hidden="true">&#10005;</span> Quick exit
+  </a>
+
+  <!-- Emergency banner -->
+  <div class="notfall-banner" role="alert">
+    In immediate danger? Call the <a href="tel:110">police now: 110</a>.
+  </div>
+
+  <!-- Header -->
+  <header class="kopfzeile">
+    <div class="kopfzeile__inner">
+      <a href="index.html" class="kopfzeile__logo" aria-label="Digitale Ersthilfe — Home">
+        <span lang="de">Digitale Ersthilfe</span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav aria-label="Main navigation">
+        <ul class="nav-desktop">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="../kontaktstellen.html">Help &amp; contacts</a></li>
+          <li><a href="../leitfaeden.html">Guides</a></li>
+          <li><a href="../fachinfo.html">For professionals</a></li>
+          <li><a href="../ueber-uns.html">About us</a></li>
+          <li><a href="../impressum.html">Legal notice</a></li>
+        </ul>
+      </nav>
+
+      <!-- Language menu -->
+      <details class="lang-menu">
+        <summary class="lang-menu__toggle" aria-label="Choose language – currently English"><svg class="lang-menu__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span aria-hidden="true">EN</span></summary>
+        <div class="lang-menu__panel">
+          <p class="lang-menu__hinweis">This page is available in <strong>English</strong> and German. More languages are coming soon.</p>
+          <ul class="lang-liste">
+            <li><a href="../index.html" lang="de" hreflang="de">Deutsch</a></li>
+            <li><span class="lang-liste__aktiv" lang="en" aria-current="true">English</span></li>
+            <li><span class="lang-liste__bald"><bdi lang="es">Español</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="tr">Türkçe</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ru">Русский</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="uk">Українська</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ar" dir="rtl">العربية</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="fr">Français</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="pl">Polski</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="it">Italiano</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ro">Română</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="bg">Български</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="sr">Српски</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="hr">Hrvatski</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="bs">Bosanski</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="sl">Slovenščina</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="fa" dir="rtl">فارسی / دری</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ku">Kurdî</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="el">Ελληνικά</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="vi">Tiếng Việt</bdi><span class="lang-liste__badge">coming soon</span></span></li>
+          </ul>
+        </div>
+      </details>
+      <button class="menu-button"
+              aria-expanded="false"
+              aria-controls="nav-mobil"
+              aria-label="Open menu">
+        <span class="menu-icon-open" aria-hidden="true">&#9776;</span>
+        <span class="menu-icon-close" aria-hidden="true">&#10005;</span>
+      </button>
+    </div>
+
+    <!-- Mobile navigation -->
+    <nav id="nav-mobil" class="nav-mobil" aria-label="Main navigation (mobile)">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="../kontaktstellen.html">Help &amp; contacts</a></li>
+        <li><a href="../leitfaeden.html">Guides</a></li>
+        <li><a href="../fachinfo.html">For professionals</a></li>
+        <li><a href="../ueber-uns.html">About us</a></li>
+        <li><a href="../impressum.html">Legal notice</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main id="hauptinhalt" class="seiten-container">
+
+    <!-- Hero -->
+    <section class="abschnitt" aria-labelledby="hero-titel">
+      <h1 id="hero-titel">Quick help with digital problems</h1>
+      <p>
+        Did someone steal your password? Are you being harassed online?
+        Is your device acting strangely? Here you will find simple steps
+        you can take <strong>right now</strong>.
+      </p>
+      <p>
+        All texts are written in simple, easy-to-read language.
+        You can also have any text <strong>read aloud</strong> to you.
+      </p>
+    </section>
+
+    <!-- Browsing safely (protection from people who watch your screen) -->
+    <section class="abschnitt" aria-labelledby="sicher-titel" data-vorlesen-abschnitt>
+      <h2 id="sicher-titel" class="visually-hidden-heading">Browse without being watched</h2>
+      <details class="faq-item">
+        <summary>Are you safe? Tips for browsing without being watched</summary>
+        <div class="faq-item__antwort">
+          <ul class="inhaltsliste">
+            <li>
+              If you can, use a <strong>device that the person cannot access</strong> —
+              the person you want to protect yourself from. For example, the phone of
+              someone you trust, or a computer at the library.
+            </li>
+            <li>
+              <strong>Open a private (incognito) window:</strong> Press
+              <kbd id="kbd-inkognito">Ctrl + Shift + N</kbd> and open this page there again.
+              This leaves fewer traces on the device.
+            </li>
+            <li>
+              <strong>Delete your history:</strong> Press <kbd id="kbd-verlauf">Ctrl + Shift + Delete</kbd>
+              to open your browser's delete window. Please note: if your <em>whole</em> history is
+              suddenly gone, that can also look suspicious — if in doubt, delete only the
+              "last hour".
+            </li>
+            <li>
+              This website itself <strong>does not store anything about you</strong> — no cookies, no
+              tracking. But the visit still stays in your browser history until you delete it.
+            </li>
+            <li>
+              With the <strong>"Quick exit"</strong> button (bottom left) or by pressing
+              <strong><kbd>Esc</kbd> twice</strong>, you switch to a neutral page at once.
+            </li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <!-- Triage: What happened? -->
+    <section class="triage" aria-labelledby="triage-frage">
+      <h2 id="triage-frage" class="triage__frage">What happened?</h2>
+      <div class="triage__optionen">
+
+        <a href="../leitfaden-stalking.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128065;</span>
+          <span>Someone is watching or stalking me</span>
+        </a>
+
+        <a href="../leitfaden-account-hack.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128274;</span>
+          <span>My account was hacked</span>
+        </a>
+
+        <a href="../leitfaden-phishing-signal-whatsapp.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#9993;</span>
+          <span>I got a suspicious message</span>
+        </a>
+
+        <a href="../leitfaden-stalkerware.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128241;</span>
+          <span>My device is acting strangely</span>
+        </a>
+
+        <a href="../leitfaden-cybermobbing.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128556;</span>
+          <span>I am being harassed or threatened online</span>
+        </a>
+
+        <a href="../leitfaden-doxing.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128270;</span>
+          <span>My private data was published</span>
+        </a>
+
+        <a href="../leitfaden-handy-verlust.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128241;</span>
+          <span>My phone is gone (lost or stolen)</span>
+        </a>
+
+        <a href="../leitfaden-identitaetsdiebstahl.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#129333;</span>
+          <span>Someone is acting in my name (identity theft)</span>
+        </a>
+
+        <a href="../leitfaden-online-betrug.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128176;</span>
+          <span>I was scammed when shopping online or investing money</span>
+        </a>
+
+        <a href="../leitfaden-ransomware.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128272;</span>
+          <span>My device is locked or my files are encrypted</span>
+        </a>
+
+        <a href="../leitfaden-romance-scam.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128152;</span>
+          <span>An online contact fakes love and wants money</span>
+        </a>
+
+        <a href="../leitfaden-sim-swapping.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128246;</span>
+          <span>My phone suddenly has "no signal" and my accounts are affected</span>
+        </a>
+
+        <a href="../leitfaden-schockanruf.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128222;</span>
+          <span>A panic phone call demands money fast (grandparent/shock scam)</span>
+        </a>
+
+        <a href="../fachinfo.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128737;</span>
+          <span>I want to protect myself in advance</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Immediate help numbers -->
+    <section class="abschnitt" aria-labelledby="soforthilfe-titel">
+      <h2 id="soforthilfe-titel">Immediate help — call now</h2>
+      <p>You can reach these numbers right away. Tap a card to call directly.</p>
+
+      <div class="kontakt-liste">
+
+        <a href="tel:110" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128680;</span>
+          <div>
+            <div class="kontakt-kachel__name">Police emergency</div>
+            <div class="kontakt-kachel__nummer">110</div>
+            <div class="kontakt-kachel__info">In immediate danger — around the clock</div>
+          </div>
+        </a>
+
+        <a href="tel:116006" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#129309;</span>
+          <div>
+            <div class="kontakt-kachel__name"><span lang="de">Weisser Ring</span> — victim support</div>
+            <div class="kontakt-kachel__nummer">116 006</div>
+            <div class="kontakt-kachel__info">Every day 7 am–10 pm, free</div>
+          </div>
+        </a>
+
+        <a href="tel:08000116016" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128156;</span>
+          <div>
+            <div class="kontakt-kachel__name"><span lang="de">Hilfetelefon</span> — Violence Against Women</div>
+            <div class="kontakt-kachel__nummer">08000 116 016</div>
+            <div class="kontakt-kachel__info">Around the clock, free, 18 languages</div>
+          </div>
+        </a>
+
+        <a href="tel:03025208838" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128187;</span>
+          <div>
+            <div class="kontakt-kachel__name">HateAid — digital violence</div>
+            <div class="kontakt-kachel__nummer">030 252 088 38</div>
+            <div class="kontakt-kachel__info">Advice on online hate</div>
+          </div>
+        </a>
+
+        <a href="tel:08001110111" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128172;</span>
+          <div>
+            <div class="kontakt-kachel__name"><span lang="de">TelefonSeelsorge</span> — emotional support</div>
+            <div class="kontakt-kachel__nummer">0800 111 0 111</div>
+            <div class="kontakt-kachel__info">Around the clock, free, anonymous</div>
+          </div>
+        </a>
+
+        <a href="tel:116111" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#129505;</span>
+          <div>
+            <div class="kontakt-kachel__name"><span lang="de">Nummer gegen Kummer</span></div>
+            <div class="kontakt-kachel__nummer">116 111</div>
+            <div class="kontakt-kachel__info">For children and young people, free</div>
+          </div>
+        </a>
+
+      </div>
+
+      <p style="margin-top: var(--abstand-lg);">
+        <a href="../kontaktstellen.html" class="btn btn--sekundaer">Show all help &amp; contacts</a>
+      </p>
+    </section>
+
+    <!-- Disclaimer -->
+    <aside class="disclaimer" aria-label="Important note">
+      <p class="disclaimer__titel">Important note</p>
+      <p>
+        This is a <strong>voluntary, independent service</strong> by Novum Analytica.
+        It is <strong>not</strong> provided, funded or run by the German Federal Office for
+        Information Security (BSI). Novum Analytica takes part in the BSI's Cyber Security
+        Network (CSN), but is not part of the BSI and does not act on its behalf. The content
+        and opinions are not authorised by the BSI and do not represent an official BSI position.
+      </p>
+      <p>
+        All content is for first information only. It does not replace professional legal advice,
+        IT forensics or a police investigation. You use it at your own responsibility.
+      </p>
+      <p>
+        Content is checked for readability and clear wording with the help of AI.
+        Images and infographics may be AI-generated or AI-edited.
+        All content is originally written by human authors and is reviewed by our editors.
+      </p>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="fusszeile">
+    <div class="fusszeile__inner">
+      <ul class="fusszeile__nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="../kontaktstellen.html">Help &amp; contacts</a></li>
+        <li><a href="../leitfaeden.html">Guides</a></li>
+        <li><a href="../fachinfo.html">For professionals</a></li>
+        <li><a href="../ueber-uns.html">About us</a></li>
+        <li><a href="../impressum.html">Legal notice &amp; privacy</a></li>
+        <li><a href="https://www.youtube.com/@novumanalytica" target="_blank" rel="noopener noreferrer">YouTube &#8599;</a></li>
+      </ul>
+      <div class="fusszeile__hinweise">
+        <p>&copy; 2026 Novum Analytica GmbH. All rights reserved.</p>
+        <p>
+          This is a voluntary service. Not an official offer by the BSI.
+          Content is checked for readability with the help of AI.
+          All content is written by human authors.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-up button -->
+  <button type="button" id="scroll-top" class="scroll-top" aria-label="Scroll to top of page">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Accessibility: button (right, middle) + panel -->
+  <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Open accessibility settings">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><circle cx="12" cy="4" r="2"></circle><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01-.31-.18-.68-.28-1.06-.26-1.05.05-1.81.98-1.81 2.03V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-6.17 5c-.41 1.16-1.52 2-2.83 2-1.66 0-3-1.34-3-3 0-1.31.84-2.41 2-2.83V12.1c-2.28.46-4 2.48-4 4.9 0 2.76 2.24 5 5 5 2.42 0 4.44-1.72 4.9-4h-2.07z"></path></svg>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+    <div class="a11y-head">
+      <h2 id="a11y-title">Accessibility</h2>
+      <button type="button" id="a11y-close" class="a11y-close" aria-label="Close settings">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Seeing</h3>
+      <div class="a11y-size">
+        <span id="a11y-size-label">Text size</span>
+        <div class="a11y-size-controls">
+          <button type="button" id="a11y-size-down" class="a11y-size-btn" aria-label="Decrease text size">&#8722;</button>
+          <output id="a11y-size-val" aria-live="polite">100&nbsp;%</output>
+          <button type="button" id="a11y-size-up" class="a11y-size-btn" aria-label="Increase text size">+</button>
+        </div>
+      </div>
+      <button type="button" class="a11y-opt" data-opt="contrast" aria-pressed="false">High contrast<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="gray" aria-pressed="false">Greyscale<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="cvd" aria-pressed="false">Colour-safe palette (colour blindness)<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Reading</h3>
+      <button type="button" class="a11y-opt" data-opt="dys" aria-pressed="false">Dyslexia-friendly display<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint">Uses OpenDyslexic, a font made for people with dyslexia and hosted locally, together with more generous spacing.</p>
+      <button type="button" class="a11y-opt" data-opt="links" aria-pressed="false">Highlight links<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Interaction</h3>
+      <button type="button" class="a11y-opt" data-opt="motion" aria-pressed="false">Reduce motion<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Read aloud</h3>
+      <button type="button" class="a11y-opt" data-opt="voice" aria-pressed="false">Read aloud on click<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint" id="a11y-voice-hint">When this is on, a section is read aloud as soon as you click it. Esc stops the reading. It uses your device's own speech output — no external services.</p>
+    </div>
+
+    <button type="button" id="a11y-reset" class="a11y-reset">Reset everything</button>
+    <p class="a11y-note">Your choice is stored only locally on this device (no cookies).</p>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
