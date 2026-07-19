@@ -3,7 +3,7 @@
    Offline-Fähigkeit: Cache-first für alle Seiten und Ressourcen
    ========================================================================== */
 
-var CACHE_NAME = 'digitale-ersthilfe-v29';
+var CACHE_NAME = 'digitale-ersthilfe-v30';
 
 var DATEIEN_ZUM_CACHEN = [
   '/',
@@ -39,6 +39,25 @@ var DATEIEN_ZUM_CACHEN = [
   '/en/fachinfo.html',
   '/en/ueber-uns.html',
   '/en/impressum.html',
+  '/en/leitfaden-account-hack.html',
+  '/en/leitfaden-bildbasierte-gewalt.html',
+  '/en/leitfaden-cybermobbing.html',
+  '/en/leitfaden-digitale-trennung.html',
+  '/en/leitfaden-doxing.html',
+  '/en/leitfaden-echo-stalking.html',
+  '/en/leitfaden-handy-verlust.html',
+  '/en/leitfaden-identitaetsdiebstahl.html',
+  '/en/leitfaden-kinder-jugend.html',
+  '/en/leitfaden-online-betrug.html',
+  '/en/leitfaden-phishing-signal-whatsapp.html',
+  '/en/leitfaden-ransomware.html',
+  '/en/leitfaden-romance-scam.html',
+  '/en/leitfaden-schockanruf.html',
+  '/en/leitfaden-sextortion.html',
+  '/en/leitfaden-sim-swapping.html',
+  '/en/leitfaden-stalkerware.html',
+  '/en/leitfaden-stalking.html',
+  '/en/leitfaden-vertrauliche-beweissicherung.html',
   '/css/style.css',
   '/js/app.js',
   '/manifest.json',
