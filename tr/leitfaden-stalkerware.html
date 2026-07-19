@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telefonum gizlice mi izleniyor? Casus yazılımı (stalkerware) tanıma — Digitale Ersthilfe</title>
+  <meta name="description" content="Telefonunuzda casus yazılım (stalkerware) mı var diye şüpheleniyor musunuz? Önemli: hemen silmeyin (izleyen kişiyi uyarabilir). Önce danışmanlık ve güvenlik planı, sonra kontrol ve güvenli kaldırma.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f5f57">
+
+  <meta property="og:title" content="Telefonum gizlice mi izleniyor? Casus yazılım şüphesi — ne yapmalı?">
+  <meta property="og:description" content="Telefonunuzda casus yazılım (stalkerware) mı var diye şüpheleniyor musunuz? Önemli: hemen silmeyin (izleyen kişiyi uyarabilir). Önce danışmanlık ve güvenlik planı, sonra kontrol ve güvenli kaldırma.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="tr">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="en">
+  <meta property="og:locale:alternate" content="ru">
+  <meta property="og:locale:alternate" content="uk">
+
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" href="../assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>/* Apply accessibility settings before the first paint */
+(function(){var r=document.documentElement;try{var a=JSON.parse(localStorage.getItem('de-a11y')||'{}');['contrast','gray','cvd','dys','links','motion'].forEach(function(k){if(a[k])r.classList.add('a11y-'+k);});var s=['100%','115%','130%','150%'];if(a.size)r.style.fontSize=s[a.size]||'100%';}catch(e){}})();</script>
+
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
+
+  <!-- schema.org: HowTo (Entwurf) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "datePublished": "2026-07-12",
+    "dateModified": "2026-07-13",
+    "name": "Telefonum gizlice mi izleniyor? Casus yazılım şüphesi — ne yapmalı?",
+    "description": "Gizli bir casus uygulama (stalkerware) şüphesi: hemen silmeyin (bu, sizi izleyen kişiyi uyarabilir). Önce danışmanlık ve güvenlik planı, sonra kontrol ve güvenli kaldırma.",
+    "inLanguage": "tr",
+    "image": "https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Önce danışmanlık alın ve kanıtları saklayın — henüz hiçbir şeyi silmeyin",
+        "text": "Önce danışmanlık ve güvenlik planı; kanıtları mümkünse ikinci bir cihazla fotoğraflayın, hiçbir şeyi silmeyin."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Belirtileri kontrol edin — sakin olun ve hiçbir şeyi değiştirmeyin",
+        "text": "Belirtilere dikkat edin (pil/ısınma, yüksek veri kullanımı, tanımadığınız uygulamalar, karşı taraf çok fazla şey biliyor) — hiçbir şeyi değiştirmeyin."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Cihazı kontrol edin — Android ve iPhone ayrı ayrı",
+        "text": "Android: Play Protect, cihaz yönetimi uygulamaları, izinler. iPhone: Güvenlik Denetimi, yapılandırma profilleri, konum/aile paylaşımı, iCloud. Fiziksel takip cihazlarını da (AirTag) kontrol edin."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Güvenli kaldırma — yalnızca güvenlik planından sonra",
+        "text": "Yalnızca güvenlik planından sonra: şifreleri/iki adımlı doğrulamayı temiz bir cihazdan değiştirin; en güvenli çözüm yeni bir telefon ya da fabrika ayarlarına sıfırlama; yedekleri kontrol etmeden geri yüklemeyin."
+      }
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "Novum Analytica GmbH",
+      "url": "https://novumanalytica.com"
+    }
+  }
+  </script>
+  <!-- schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "tr",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Uygulamayı neden hemen silmemeliyim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Çünkü kaldırmak sizi izleyen kişiyi uyarabilir ve durumu daha tehlikeli hale getirebilir. Önce tavsiye alın ve bir plan yapın."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Birini böyle gizlice izlemek suç mudur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, rıza olmadan gizlice gözetlemek genel olarak suçtur (diğerlerinin yanı sıra §§ 202a, 201a, 238 StGB); hukuki değerlendirmenin bir uzmanca yapılması gerekir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Casus yazılımı kesin olarak nasıl anlarım?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kesin olarak anlamak zordur; teknik işaretler yalnızca ipuçlarıdır. Çoğu zaman en belirleyici olan, karşı tarafın çok fazla şey bilmesidir. Polis kanıtları saklayabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Casus yazılım iPhone'da da olabilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet. Özellikle yapılandırma profillerini, yabancı konum/aile paylaşımlarını ve iCloud oturumlarını kontrol edin; Güvenlik Denetimi yardımcı olur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AirTag gibi GPS takip cihazları ne olacak?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fiziksel takip cihazları da (AirTag vb.) konumunuzu ele verebilir; telefonlar çoğu zaman otomatik uyarır, Android için „Tracker Detect“ vardır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Şüphemin doğru olmasından korkuyorum. Suçlu ben miyim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır. Kimse sizi gizlice izleyemez. Sizin bir suçunuz yok ve yardım isteyebilirsiniz."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Canonical, Social & Breadcrumb -->
+  <link rel="canonical" href="https://digitale-ersthilfe.novumanalytica.com/tr/leitfaden-stalkerware.html">
+  <link rel="alternate" hreflang="de" href="https://digitale-ersthilfe.novumanalytica.com/leitfaden-stalkerware.html">
+  <link rel="alternate" hreflang="en" href="https://digitale-ersthilfe.novumanalytica.com/en/leitfaden-stalkerware.html">
+  <link rel="alternate" hreflang="ru" href="https://digitale-ersthilfe.novumanalytica.com/ru/leitfaden-stalkerware.html">
+  <link rel="alternate" hreflang="uk" href="https://digitale-ersthilfe.novumanalytica.com/uk/leitfaden-stalkerware.html">
+  <link rel="alternate" hreflang="tr" href="https://digitale-ersthilfe.novumanalytica.com/tr/leitfaden-stalkerware.html">
+  <link rel="alternate" hreflang="x-default" href="https://digitale-ersthilfe.novumanalytica.com/leitfaden-stalkerware.html">
+  <meta property="og:url" content="https://digitale-ersthilfe.novumanalytica.com/tr/leitfaden-stalkerware.html">
+  <meta property="og:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digitale Ersthilfe — Dijital şiddette hızlı yardım">
+  <meta property="og:site_name" content="Digitale Ersthilfe">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Telefonum gizlice mi izleniyor? Casus yazılım şüphesi — ne yapmalı?">
+  <meta name="twitter:description" content="Telefonunuzda casus yazılım (stalkerware) mı var diye şüpheleniyor musunuz? Önemli: hemen silmeyin (izleyen kişiyi uyarabilir). Önce danışmanlık ve güvenlik planı, sonra kontrol ve güvenli kaldırma.">
+  <meta name="twitter:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "inLanguage": "tr",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://digitale-ersthilfe.novumanalytica.com/tr/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Rehberler",
+        "item": "https://digitale-ersthilfe.novumanalytica.com/tr/leitfaeden.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Stalkerware",
+        "item": "https://digitale-ersthilfe.novumanalytica.com/tr/leitfaden-stalkerware.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#hauptinhalt">Ana içeriğe geç</a>
+  <!-- Emergency exit: switch quickly to a neutral page -->
+  <a class="schnell-verlassen" id="schnell-verlassen" href="https://www.dwd.de/" rel="nofollow noopener" aria-label="Bu sayfadan hızlıca çık ve tarafsız bir siteye geç">
+    <span class="schnell-verlassen__x" aria-hidden="true">&#10005;</span> Hızlı çık
+  </a>
+
+  <div class="notfall-banner" role="alert">
+    Acil tehlikede misiniz? Hemen <a href="tel:110">polisi arayın: 110</a>.
+  </div>
+
+  <header class="kopfzeile">
+    <div class="kopfzeile__inner">
+      <a href="index.html" class="kopfzeile__logo" aria-label="Digitale Ersthilfe — Ana sayfa">
+        <span lang="de">Digitale Ersthilfe</span>
+      </a>
+      <nav aria-label="Ana gezinme">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="kontaktstellen.html">Yardım ve İletişim</a></li>
+          <li><a href="leitfaeden.html" aria-current="page">Rehberler</a></li>
+          <li><a href="fachinfo.html">Uzmanlar için</a></li>
+          <li><a href="ueber-uns.html">Hakkımızda</a></li>
+          <li><a href="impressum.html">Yasal Bilgiler</a></li>
+        </ul>
+      </nav>
+      <!-- Language menu -->
+      <details class="lang-menu">
+        <summary class="lang-menu__toggle" aria-label="Dil seçin – şu anda Türkçe"><svg class="lang-menu__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span aria-hidden="true">TR</span></summary>
+        <div class="lang-menu__panel">
+          <p class="lang-menu__hinweis">Bu sayfa <strong>Türkçe</strong>, Almanca, İngilizce, Rusça ve Ukraynaca dillerinde mevcuttur. Diğer diller yakında.</p>
+          <ul class="lang-liste">
+            <li><a href="../leitfaden-stalkerware.html" lang="de" hreflang="de">Deutsch</a></li>
+            <li><a href="../en/leitfaden-stalkerware.html" lang="en" hreflang="en">English</a></li>
+            <li><span class="lang-liste__bald"><bdi lang="es">Español</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__aktiv" lang="tr" aria-current="true">Türkçe</span></li>
+            <li><a href="../ru/leitfaden-stalkerware.html" lang="ru" hreflang="ru">Русский</a></li>
+            <li><a href="../uk/leitfaden-stalkerware.html" lang="uk" hreflang="uk">Українська</a></li>
+            <li><span class="lang-liste__bald"><bdi lang="ar" dir="rtl">العربية</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="fr">Français</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="pl">Polski</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="it">Italiano</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ro">Română</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="bg">Български</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="sr">Српски</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="hr">Hrvatski</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="bs">Bosanski</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="sl">Slovenščina</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="fa" dir="rtl">فارسی / دری</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ku">Kurdî</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="el">Ελληνικά</bdi><span class="lang-liste__badge">yakında</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="vi">Tiếng Việt</bdi><span class="lang-liste__badge">yakında</span></span></li>
+          </ul>
+        </div>
+      </details>
+      <button class="menu-button" aria-expanded="false" aria-controls="nav-mobil" aria-label="Menüyü aç">
+        <span class="menu-icon-open" aria-hidden="true">&#9776;</span>
+        <span class="menu-icon-close" aria-hidden="true">&#10005;</span>
+      </button>
+    </div>
+    <nav id="nav-mobil" class="nav-mobil" aria-label="Ana gezinme (mobil)">
+      <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="kontaktstellen.html">Yardım ve İletişim</a></li>
+          <li><a href="leitfaeden.html" aria-current="page">Rehberler</a></li>
+          <li><a href="fachinfo.html">Uzmanlar için</a></li>
+          <li><a href="ueber-uns.html">Hakkımızda</a></li>
+          <li><a href="impressum.html">Yasal Bilgiler</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="hauptinhalt" class="seiten-container">
+
+    <section class="abschnitt" aria-labelledby="leitfaden-titel">
+      <p><a href="leitfaeden.html">&larr; Rehberlere geri dön</a></p>
+      <h1 id="leitfaden-titel">Telefonum gizlice mi izleniyor? Casus yazılım şüphesi — ne yapmalı?</h1>
+      <p class="beitrag-datum beitrag-datum--top">
+        <svg class="beitrag-datum__icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        Son kontrol: <time datetime="2026-07-12">12 Temmuz 2026</time> · güncellendi: <time datetime="2026-07-13">13 Temmuz 2026</time>
+      </p>
+      <p><strong>Kısaca:</strong> Casus yazılım (stalkerware), gizli bir casus uygulamadır. Konumunuzu, mesajlarınızı, fotoğraflarınızı ve aramalarınızı gizlice başka birine — çoğu zaman bir (eski) partnere — iletebilir. <strong>Önce en önemlisi: Hiçbir şeyi hemen silmeyin.</strong> Kaldırmak, sizi izleyen kişiyi uyarabilir ve durumu daha tehlikeli hale getirebilir. Önce danışmanlık alın ve bir güvenlik planı yapın.</p>
+      <button class="vorlesen-btn" data-vorlesen="ganzer-leitfaden" aria-pressed="false">
+        &#128264; Rehberin tamamını sesli oku
+      </button>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="hinweis-titel" data-vorlesen-abschnitt>
+      <h2 id="hinweis-titel" class="visually-hidden-heading">İçerik uyarısı</h2>
+      <div class="karte karte--info">
+        <p><strong>İçerik uyarısı:</strong> Bu telefon izleniyor olabilirse, yardımı <strong>başka, güvenli bir cihazdan</strong> arayın. Acil tehlikede: <a href="tel:110">polis 110</a>.</p>
+      </div>
+    </section>
+
+    <div class="karte karte--kritisch" role="alert">
+      <p><strong>İlk yardım:</strong></p>
+      <ul class="inhaltsliste">
+        <li><strong>Dikkat:</strong> Casus uygulamayı kaldırırsanız, şifreleri değiştirirseniz ya da kişiyi engellerseniz, <strong>sizi izleyen kişi bunu fark edebilir</strong> ve şiddeti artırabilir. Düşünerek ve yardım alarak hareket edin.</li>
+        <li><strong>Acil tehlikede: <a href="tel:110">acil çağrı 110</a>.</strong> İçgüdünüze güvenin.</li>
+        <li><strong>Şüpheniz ya da planlarınız hakkında bu telefondan konuşmayın.</strong> <strong>Güvenli, başka bir cihaz</strong> kullanın.</li>
+        <li><strong>Telefonda bir şey değiştirmeden önce danışmanlık alın</strong> (aşağıda iletişim bilgileri).</li>
+      </ul>
+    </div>
+
+    <article class="schritt" id="schritt-1" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">01</span><h2 class="schritt__titel">Önce danışmanlık alın ve kanıtları saklayın — henüz hiçbir şeyi silmeyin</h2></div>
+            <p>
+              Önce bir danışma merkeziyle konuşun („Yardıma mı ihtiyacınız var?“ bölümüne bakın). Birlikte bir
+              <strong>güvenlik planı</strong> yapın: Sizi izleyen kişinin uyarılmaması için hangi
+              sırayla ilerleyeceksiniz?
+            </p>
+            <p>
+              Olası <strong>kanıtları</strong> saklayın. Ekranı, şüpheli telefona ekran görüntüsü kaydetmek yerine, en iyisi
+              <strong>ikinci bir cihazla</strong> fotoğraflayın. Polis kanıtları usulüne uygun şekilde saklayabilir.
+            </p>
+    </article>
+
+    <article class="schritt" id="schritt-2" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">02</span><h2 class="schritt__titel">Belirtileri kontrol edin — sakin olun ve hiçbir şeyi değiştirmeyin</h2></div>
+            <p>Olası belirtiler (kesin kanıt değil, ama bir ipucu):</p>
+            <ul class="inhaltsliste">
+              <li>Pil çabuk bitiyor, telefon sık sık ısınıyor.</li>
+              <li>Veri kullanımı olağandışı derecede yüksek.</li>
+              <li>Tanımadığınız uygulamalar var.</li>
+              <li>(Eski) partner, bilemeyeceği şeyleri biliyor.</li>
+            </ul>
+            <p>En <strong>güçlü belirti</strong> çoğu zaman teknik değildir: Biri günlük hayatınız hakkında çok fazla şey biliyor.</p>
+    </article>
+
+    <article class="schritt" id="schritt-3" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">03</span><h2 class="schritt__titel">Cihazı kontrol edin — Android ve iPhone ayrı ayrı</h2></div>
+            <h3>Android</h3>
+            <ul class="inhaltsliste">
+              <li><strong>Play Protect:</strong> Play Store'u açın → profil resmi → „Play Protect“ → cihazı tara.</li>
+              <li><strong>Cihaz yönetimi uygulamaları:</strong> Ayarlar → „Güvenlik“ → „Cihaz yönetimi uygulamaları“. Tanımadığınız kayıtlar bir uyarı işaretidir. Casus uygulamalar çoğu zaman „erişilebilirlik hizmeti“ gibi görünür.</li>
+              <li><strong>Uygulama listesini ve izinleri</strong> gözden geçirin (konum, mikrofon, mesajlar).</li>
+            </ul>
+            <h3>iPhone (iOS)</h3>
+            <ul class="inhaltsliste">
+              <li><strong>Güvenlik Denetimi:</strong> Ayarlar → „Gizlilik ve Güvenlik“ → „Güvenlik Denetimi“ (iOS 16 ve üzeri).</li>
+              <li><strong>Yapılandırma profilleri/cihaz yönetimi:</strong> Ayarlar → „Genel“ → „VPN ve Cihaz Yönetimi“. Tanımadığınız profilleri kontrol edin.</li>
+              <li><strong>Konum ve aile paylaşımlarını</strong> „Bul“ (Wo ist?) içinde kontrol edin; <strong>iCloud</strong>: başka bir cihazda oturum açılmış mı?</li>
+            </ul>
+            <p><strong>Gizli takip cihazlarını da unutmayın</strong> (örn. AirTag): Telefonlar çoğu zaman otomatik uyarır; Android için „Tracker Detect“ uygulaması vardır. Çantanızı, arabanızı ve ceketinizi kontrol edin.</p>
+    </article>
+
+    <article class="schritt" id="schritt-4" data-vorlesen-abschnitt>
+      <div class="schritt__kopf"><span class="schritt__nummer" aria-hidden="true">04</span><h2 class="schritt__titel">Güvenli kaldırma — yalnızca güvenlik planından sonra</h2></div>
+            <ul class="inhaltsliste">
+              <li><strong>Şifreleri ve iki adımlı doğrulamayı değiştirin — temiz, başka bir cihazdan.</strong> Önce e-posta, bulut, internet bankacılığı, sosyal ağlar; kurtarma bilgilerini de kontrol edin.</li>
+              <li><strong>En güvenli yöntem:</strong> yeni bir telefon — neredeyse aynı derecede iyi olanı <strong>fabrika ayarlarına sıfırlamadır</strong>.</li>
+              <li><strong>Yedeklere dikkat:</strong> Verileri eski bir yedekten kontrol etmeden geri yüklemeyin — yoksa uygulama tekrar gelebilir.</li>
+              <li>Bir <strong>antivirüs uygulaması</strong> casus yazılımı gösterebilir, ancak her zaman her şeyi bulamaz.</li>
+            </ul>
+    </article>
+
+    <!-- Checkliste zum Abhaken -->
+    <section class="abschnitt" aria-labelledby="checkliste-titel">
+      <h2 id="checkliste-titel">İşaretlemeli kontrol listesi</h2>
+      <p>
+        Bu liste en önemli adımları özetler. Ekranda işaretleyebilir
+        veya yazdırabilirsiniz. <strong>Hiçbir şey kaydedilmez</strong> — sayfayı yeniden yüklediğinizde
+        liste tekrar boş olur.
+      </p>
+
+      <h3>Önce güvenlik</h3>
+      <ul class="checkliste">
+        <li><label><input type="checkbox"> Mümkünse, yardım aramak için <strong>güvenli, başka bir cihaz</strong> kullandım.</label></li>
+        <li><label><input type="checkbox"> Bir <strong>danışma merkeziyle</strong> iletişime geçtim ve bir <strong>güvenlik planı</strong> konuştum (kaldırmak, sizi izleyen kişiyi uyarabilir).</label></li>
+        <li><label><input type="checkbox"> Acil tehlikede <strong>polisi (110)</strong> aradım.</label></li>
+      </ul>
+
+      <h3>Belirtileri kontrol et</h3>
+      <p class="a11y-hint">Not: Casus yazılım bu belirtiler <strong>hiç olmadan da</strong> çalışabilir. İçgüdünüze güvenin.</p>
+      <ul class="checkliste">
+        <li><label><input type="checkbox"> Pil çabuk bitiyor ya da cihaz sık sık ısınıyor</label></li>
+        <li><label><input type="checkbox"> Olağandışı derecede yüksek veri kullanımı</label></li>
+        <li><label><input type="checkbox"> Tanımadığınız uygulamalar ya da tuhaf bildirimler</label></li>
+        <li><label><input type="checkbox"> Açıklayamadığım kadar yüksek ekran süresi</label></li>
+        <li><label><input type="checkbox"> Karşı taraf, bilemeyeceği şeyleri biliyor</label></li>
+        <li><label><input type="checkbox"> (iPhone) Ben etkinleştirmediğim halde iCloud yedeklemesi açık</label></li>
+      </ul>
+
+      <h3>Belgele</h3>
+      <ul class="checkliste">
+        <li><label><input type="checkbox"> Bir <strong>olay günlüğü</strong> tutuyorum (tarih, saat, ne olduğu).</label></li>
+        <li><label><input type="checkbox"> Kanıtları bir <strong>ikinci cihazla</strong> saklıyorum (şüpheli cihazda ekran görüntüsü almak yerine fotoğraflayarak).</label></li>
+      </ul>
+
+      <h3>Cihazı kontrol et</h3>
+      <ul class="checkliste">
+        <li><label><input type="checkbox"> <strong>Android:</strong> Play Protect taraması; cihaz yönetimi uygulamaları ve izinler kontrol edildi</label></li>
+        <li><label><input type="checkbox"> <strong>iPhone:</strong> Güvenlik Denetimi; yapılandırma profilleri (VPN ve Cihaz Yönetimi); konum ve aile paylaşımları; iCloud oturumları</label></li>
+        <li><label><input type="checkbox"> Çantada, arabada ve cekette <strong>fiziksel takip cihazlarına</strong> (AirTag vb.) dikkat edildi</label></li>
+      </ul>
+
+      <h3>Güvenli kaldırma — yalnızca güvenlik planından sonra</h3>
+      <ul class="checkliste">
+        <li><label><input type="checkbox"> Şifreler ve iki adımlı koruma <strong>temiz bir cihazdan</strong> değiştirildi (önce e-posta, bulut, internet bankacılığı, sosyal ağlar)</label></li>
+        <li><label><input type="checkbox"> En güvenli çözüm seçildi: <strong>yeni cihaz</strong> ya da <strong>fabrika ayarlarına sıfırlama</strong> (verileri eski bir yedekten kontrol etmeden geri yüklemeyin)</label></li>
+      </ul>
+
+      <h3>Önlem al</h3>
+      <ul class="checkliste">
+        <li><label><input type="checkbox"> <strong>Ekran kilidi</strong> (PIN/şifre, parmak izi ya da yüz), kısa süre sonra otomatik kilit</label></li>
+        <li><label><input type="checkbox"> <strong>Güçlü, benzersiz şifreler</strong> + şifre yöneticisi + iki adımlı koruma</label></li>
+        <li><label><input type="checkbox"> Cihazı yalnızca <strong>güvendiğiniz kişilere</strong> bırakın</label></li>
+      </ul>
+
+      <p class="a11y-hint">
+        Bu kontrol listesi <a href="https://stopstalkerware.org/de/" target="_blank" rel="noopener noreferrer">Coalition Against Stalkerware &#8599;</a>
+        şablonuna dayanır ve Almanya'daki duruma uyarlanarak genişletilmiştir.
+      </p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="faq-titel" data-vorlesen-abschnitt>
+      <h2 id="faq-titel">Sık Sorulan Sorular</h2>
+      <details class="faq-item">
+        <summary>Uygulamayı neden hemen silmemeliyim?</summary>
+        <div class="faq-item__antwort"><p>Çünkü sizi izleyen kişi, uygulamanın gittiğini fark edebilir. Bu onu öfkelendirebilir ve durumu daha tehlikeli hale getirebilir. Önce tavsiye alın ve bir plan yapın.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Birini böyle gizlice izlemek suç mudur?</summary>
+        <div class="faq-item__antwort"><p>Evet, rıza olmadan gizlice gözetlemek Almanya'da genel olarak suçtur (buna örneğin §§ <a href="https://www.gesetze-im-internet.de/stgb/__202a.html" target="_blank" rel="noopener noreferrer">202a</a>, <a href="https://www.gesetze-im-internet.de/stgb/__201a.html" target="_blank" rel="noopener noreferrer">201a</a> ve <a href="https://www.gesetze-im-internet.de/stgb/__238.html" target="_blank" rel="noopener noreferrer">238</a> <span lang="de">StGB</span> dahildir). Kesin hukuki değerlendirmenin bir uzmanca yapılması gerekir.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Casus yazılımı kesin olarak nasıl anlarım?</summary>
+        <div class="faq-item__antwort"><p>Sıradan kullanıcılar için kesin olarak anlamak zordur. Pil, ısınma ya da tanımadığınız uygulamalar yalnızca ipuçlarıdır. Çoğu zaman en belirleyici olan, karşı tarafın sizin hakkınızda çok fazla şey bilmesidir. Şüphe durumunda kanıtların saklanmasında polis yardımcı olur.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Casus yazılım iPhone'da da olabilir mi?</summary>
+        <div class="faq-item__antwort"><p>Evet. Özellikle tanımadığınız yapılandırma profillerine, yabancı konum ve aile paylaşımlarına ve iCloud hesabınızın başka bir cihazda oturum açıp açmadığına dikkat edin. „Güvenlik Denetimi“ yardımcı olur.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>AirTag gibi GPS takip cihazları ne olacak?</summary>
+        <div class="faq-item__antwort"><p>Çantanızdaki ya da arabanızdaki küçük takip cihazları da konumunuzu ele verebilir. Telefonunuz çoğu zaman yabancı takip cihazlarına karşı otomatik olarak uyarır. Android için „Tracker Detect“ uygulaması vardır.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Şüphemin doğru olmasından korkuyorum. Suçlu ben miyim?</summary>
+        <div class="faq-item__antwort"><p>Hayır. Kimsenin sizi gizlice izlemeye hakkı yoktur. Sizin bir suçunuz yok ve yardım isteyebilirsiniz.</p></div>
+      </details>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="hilfe-titel" data-vorlesen-abschnitt>
+      <h2 id="hilfe-titel">Yardıma mı ihtiyacınız var?</h2>
+      <ul class="inhaltsliste">
+        <li><strong>Polis acil hattı: <a href="tel:110">110</a></strong> — acil tehlikede</li>
+        <li><strong><a href="https://www.hilfetelefon.de" target="_blank" rel="noopener noreferrer"><span lang="de">Hilfetelefon „Gewalt gegen Frauen“</span>&nbsp;&#8599;</a>: <a href="tel:116016">116 016</a></strong> — ücretsiz, gece gündüz, anonim</li>
+        <li><strong><a href="https://weisser-ring.de" target="_blank" rel="noopener noreferrer"><span lang="de">Weisser Ring</span>&nbsp;&#8599;</a> — mağdur hattı: <a href="tel:116006">116 006</a></strong> — ücretsiz, her gün 07.00–22.00</li>
+        <li><strong><span lang="de">TelefonSeelsorge</span>: <a href="tel:08001110111">0800 111 0 111</a></strong> — ücretsiz, gece gündüz</li>
+        <li><strong>Coalition Against Stalkerware:</strong> <a href="https://stopstalkerware.org/de/" target="_blank" rel="noopener noreferrer">stopstalkerware.org &#8599;</a> · Yerinde danışmanlık için <a href="https://www.frauen-gegen-gewalt.de" target="_blank" rel="noopener noreferrer">bff (frauen-gegen-gewalt.de) &#8599;</a></li>
+      </ul>
+      <p style="margin-top: var(--abstand-lg);">
+        <a href="kontaktstellen.html" class="btn btn--sekundaer">Tüm yardım ve iletişim noktalarını göster</a>
+      </p>
+    </section>
+
+    <section class="abschnitt" aria-labelledby="verwandte-titel">
+      <h2 id="verwandte-titel">İlgili rehberler</h2>
+      <ul class="inhaltsliste verwandte-liste">
+        <li><a href="leitfaden-stalking.html">Takip (stalking)</a></li>
+        <li><a href="leitfaden-echo-stalking.html">Amazon Echo ile gözetleme</a></li>
+        <li><a href="leitfaden-digitale-trennung.html">Dijital ayrılık</a></li>
+      </ul>
+    </section>
+
+    <div class="beitrag-datum beitrag-datum--fuss" aria-label="Bu yazının güncelliği">
+      <p>
+        <strong>İçerik son kontrol:</strong> <time datetime="2026-07-12">12 Temmuz 2026</time><br>
+        <strong>İçerik son güncelleme:</strong> <time datetime="2026-07-13">13 Temmuz 2026</time>
+      </p>
+      <p class="beitrag-datum__hinweis">Rehberlerimizi; hukuki bilgilerin, telefon numaralarının ve bağlantıların güncelliği açısından düzenli olarak kontrol ederiz. Tüm web sitesinin durumunu <a href="ueber-uns.html#aktualitaet">Hakkımızda</a> bölümünde bulabilirsiniz.</p>
+    </div>
+
+    <aside class="disclaimer" aria-label="Önemli not">
+      <p class="disclaimer__titel">Önemli not</p>
+      <p>
+        Bu, <strong>gönüllü ve bağımsız bir hizmettir</strong>. Tüm içerikler ilk
+        bilgilendirme amaçlıdır ve profesyonel hukuki danışmanlığın, IT adli incelemesinin,
+        psikolojik desteğin ya da polis soruşturmasının yerini tutmaz. Kullanım kendi sorumluluğunuzdadır.
+      </p>
+      <p>
+        <span lang="de">Novum Analytica</span>, BSI'nin Siber Güvenlik Ağı'na (CSN) katılır, ancak BSI'nin
+        bir parçası değildir ve onun adına hareket etmez. İçerik ve görüşler BSI tarafından
+        onaylanmamıştır ve BSI'nin resmi görüşünü yansıtmaz.
+      </p>
+      <p>
+        İçerikler, yapay zeka destekli yöntemlerle okunabilirlik açısından kontrol edilir. Bütün içerikler
+        özgün olarak insan yazarlar tarafından yazılır ve editörlerce gözden geçirilir.
+      </p>
+    </aside>
+
+  </main>
+
+  <footer class="fusszeile">
+    <div class="fusszeile__inner">
+      <ul class="fusszeile__nav">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="kontaktstellen.html">Yardım ve İletişim</a></li>
+        <li><a href="leitfaeden.html">Rehberler</a></li>
+        <li><a href="fachinfo.html">Uzmanlar için</a></li>
+        <li><a href="ueber-uns.html">Hakkımızda</a></li>
+        <li><a href="impressum.html">Yasal Bilgiler ve Gizlilik</a></li>
+        <li><a href="https://www.youtube.com/@novumanalytica" target="_blank" rel="noopener noreferrer">YouTube &#8599;</a></li>
+      </ul>
+      <div class="fusszeile__hinweise">
+        <p>&copy; 2026 Novum Analytica GmbH. Tüm hakları saklıdır.</p>
+        <p>
+          Bu, gönüllü bir hizmettir. BSI'nin resmi bir sunumu değildir.
+          İçerikler, yapay zeka desteğiyle okunabilirlik açısından kontrol edilir.
+          Bütün içerikler insan yazarlar tarafından yazılır.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-up-Button -->
+  <button type="button" id="scroll-top" class="scroll-top" aria-label="Sayfanın başına dön">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Accessibility: button (right, middle) + panel -->
+  <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Erişilebilirlik ayarlarını aç">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><circle cx="12" cy="4" r="2"></circle><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01-.31-.18-.68-.28-1.06-.26-1.05.05-1.81.98-1.81 2.03V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-6.17 5c-.41 1.16-1.52 2-2.83 2-1.66 0-3-1.34-3-3 0-1.31.84-2.41 2-2.83V12.1c-2.28.46-4 2.48-4 4.9 0 2.76 2.24 5 5 5 2.42 0 4.44-1.72 4.9-4h-2.07z"></path></svg>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+    <div class="a11y-head">
+      <h2 id="a11y-title">Erişilebilirlik</h2>
+      <button type="button" id="a11y-close" class="a11y-close" aria-label="Ayarları kapat">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Görme</h3>
+      <div class="a11y-size">
+        <span id="a11y-size-label">Yazı boyutu</span>
+        <div class="a11y-size-controls">
+          <button type="button" id="a11y-size-down" class="a11y-size-btn" aria-label="Yazı boyutunu küçült">&#8722;</button>
+          <output id="a11y-size-val" aria-live="polite">100&nbsp;%</output>
+          <button type="button" id="a11y-size-up" class="a11y-size-btn" aria-label="Yazı boyutunu büyüt">+</button>
+        </div>
+      </div>
+      <button type="button" class="a11y-opt" data-opt="contrast" aria-pressed="false">Yüksek kontrast<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="gray" aria-pressed="false">Gri tonlama<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="cvd" aria-pressed="false">Renk körlüğüne uygun palet<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Okuma</h3>
+      <button type="button" class="a11y-opt" data-opt="dys" aria-pressed="false">Disleksiye uygun görünüm<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint">Disleksili kişiler için geliştirilen ve yerel olarak eklenen OpenDyslexic yazı tipini ve daha geniş boşlukları kullanır.</p>
+      <button type="button" class="a11y-opt" data-opt="links" aria-pressed="false">Bağlantıları vurgula<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Kullanım</h3>
+      <button type="button" class="a11y-opt" data-opt="motion" aria-pressed="false">Animasyonları azalt<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Sesli okuma</h3>
+      <button type="button" class="a11y-opt" data-opt="voice" aria-pressed="false">Tıklayınca sesli oku<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint" id="a11y-voice-hint">Bu işlev açıkken, bir metin bölümüne tıkladığınızda o bölüm sesli okunur. Esc okumayı durdurur. Cihazınızın kendi ses çıkışı kullanılır — dış hizmet yoktur.</p>
+    </div>
+
+    <button type="button" id="a11y-reset" class="a11y-reset">Her şeyi sıfırla</button>
+    <p class="a11y-note">Seçiminiz yalnızca bu cihazda yerel olarak saklanır (çerez yok).</p>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
