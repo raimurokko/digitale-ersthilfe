@@ -165,7 +165,15 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
   waren ohnehin schon verlinkt.
 - [ ] **Leichte Sprache** (formal): eigene, streng vereinfachte Fassung je Leitfaden
   (ein Gedanke pro Satz, Worterklärungen, Bilder).
-- [ ] **Sprachversionen**: EN zuerst, dann TR/AR/RU/UK (`hreflang`, Sprachumschalter).
+- [~] **Sprachversionen**: **Sprachumschalter-Komponente + Gerüst gebaut (19.07.2026)** nach
+  Novum-Vorlage (`<details class="lang-menu">` im Header aller Seiten, DE aktiv, übrige Sprachen
+  sichtbar als „in Vorbereitung" — keine toten Links, noch kein `hreflang`, das kommt je Sprache
+  beim Freischalten). **Sprachset:** DE · EN · ES · TR · RU · UK · AR · FR · PL · IT · RO · BG ·
+  SR/HR/BS · SL · **Farsi/Dari · Kurmanji · Griechisch · Vietnamesisch**. **Offen (redaktionell):**
+  die eigentlichen Übersetzungen — **je Sprache in deren vereinfachter/einfacher Sprachstufe**
+  (z. B. „simplified English"), analog zur einfachen deutschen Sprache; maschinelle Übersetzung für
+  Sicherheits-/Rechtstexte ungeeignet. EN zuerst. Beim Freischalten einer Sprache: Ordner `xx/`,
+  `hreflang` ergänzen, RTL (`dir="rtl"`) für AR/FA, Umschalter-Eintrag von Span auf Link umstellen.
 - [ ] **PDF-Merkblatt/Einzeiler** pro Leitfaden (druck-/aushangfähig; wichtig für ältere
   Zielgruppen, z. B. Schockanruf/Enkeltrick).
 - [ ] **Vorlese-Audio/Podcast-Fassung** je Leitfaden (Audiodatei zusätzlich zum Browser-Vorlesen).
@@ -246,6 +254,13 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
 - [ ] Nach Go-Live **Sitemap in Google Search Console** und Bing Webmaster Tools einreichen.
 
 ## 🟢 P3 — Politur & Technik
+
+- [x] **A11y-Panel: Option „Farbsichere Palette (CVD)" ergänzt (19.07.2026)** — letzte fehlende
+  Option aus dem Novum-Barrierefreiheits-Standard (A.3). Verschiebt „Erfolg" von Grün auf Blau
+  (klar von „kritisch"/Rot trennbar bei Rot-Grün-Schwäche), „Warnung" auf Gold; Marke (Teal)
+  bleibt. Alle Textfarben rechnerisch auf ≥ 4,5:1 geprüft (`html.a11y-cvd`, hell + dunkel).
+  Umgesetzt an den drei Pflegestellen (Inline-Head-Script, `js/app.js` `A11Y_FLAGS`, `css/style.css`)
+  auf allen 25 Seiten; Zustand persistiert in `localStorage 'de-a11y'`.
 
 - [ ] 👤 **Postfach `security@novumanalytica.com`** einrichten/routen (in `security.txt` als
   Kontakt hinterlegt); `Expires`-Datum jährlich erneuern.

@@ -179,6 +179,26 @@ html.a11y-gray main,
 html.a11y-gray .kopfzeile,
 html.a11y-gray .fusszeile { filter: grayscale(1); }
 
+/* --- Barrierefreiheit: Farbsichere Palette (Farbfehlsichtigkeit / CVD) ---
+   Erfolg wird von Grün auf Blau verschoben, damit „positiv/OK" bei Rot-Grün-
+   Schwäche eindeutig von „kritisch" (rot) unterscheidbar ist; Warnung auf
+   kräftiges Gold. Marke (Teal/Akzent) bleibt. Alle Textfarben gegen Weiß und
+   die hellen Flächen auf ≥ 4,5:1 geprüft. */
+html.a11y-cvd {
+  --farbe-erfolg: #15577f;
+  --farbe-erfolg-hell: #dbe8f2;
+  --farbe-warnung: #7a5200;
+  --farbe-warnung-hell: #f4e7c9;
+}
+@media (prefers-color-scheme: dark) {
+  html.a11y-cvd {
+    --farbe-erfolg: #78c0e8;
+    --farbe-erfolg-hell: #10314a;
+    --farbe-warnung: #e0b34a;
+    --farbe-warnung-hell: #3a2a05;
+  }
+}
+
 /* --- Barrierefreiheit: Dyslexie-freundlich (OpenDyslexic + großzügigere Abstände) --- */
 html.a11y-dys body {
   font-family: 'OpenDyslexic', var(--schrift-text);
@@ -387,8 +407,82 @@ strong {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--abstand-sm);
   max-width: var(--breite-max-breit);
   margin: 0 auto;
+}
+/* Logo links, restliche Kopf-Elemente (Nav + Sprachauswahl + Menü) rechts gruppieren */
+.kopfzeile__logo { margin-right: auto; }
+
+/* ==========================================================================
+   Sprachauswahl (Gerüst — Deutsch aktiv, weitere Sprachen in Vorbereitung)
+   ========================================================================== */
+.lang-menu { position: relative; }
+.lang-menu__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--touch-min);
+  padding: 0 var(--abstand-md);
+  background: none;
+  border: 2px solid var(--farbe-rand);
+  border-radius: var(--rund-md);
+  color: var(--farbe-text);
+  font-family: var(--schrift-text);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  list-style: none;
+}
+.lang-menu__toggle::-webkit-details-marker { display: none; }
+.lang-menu__toggle::marker { content: ""; }
+.lang-menu__toggle:hover,
+.lang-menu[open] .lang-menu__toggle {
+  background: var(--farbe-oberflaeche-sekundaer);
+  border-color: var(--farbe-primaer);
+}
+.lang-menu__icon { display: block; flex-shrink: 0; }
+.lang-menu__panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 240px;
+  max-height: min(70vh, 460px);
+  overflow-y: auto;
+  padding: var(--abstand-sm);
+  background: var(--farbe-oberflaeche);
+  border: 1px solid var(--farbe-rand);
+  border-radius: var(--rund-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+  z-index: 60;
+}
+.lang-menu__hinweis {
+  margin: 0.25rem 0.375rem 0.5rem;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--farbe-text-sekundaer);
+}
+.lang-liste { list-style: none; margin: 0; padding: 0; }
+.lang-liste__aktiv,
+.lang-liste__bald {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--abstand-md);
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--rund-sm);
+  font-size: var(--text-sm);
+}
+.lang-liste__aktiv { color: var(--farbe-primaer); font-weight: 700; }
+.lang-liste__bald { color: var(--farbe-text-sekundaer); }
+.lang-liste__badge {
+  flex-shrink: 0;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--farbe-text-sekundaer);
+  opacity: 0.8;
 }
 
 .kopfzeile__logo {

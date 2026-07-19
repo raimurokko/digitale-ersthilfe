@@ -184,7 +184,7 @@
      -------------------------------------------------------------------------- */
 
   var A11Y_KEY = 'de-a11y';
-  var A11Y_FLAGS = ['contrast', 'gray', 'dys', 'links', 'motion'];
+  var A11Y_FLAGS = ['contrast', 'gray', 'cvd', 'dys', 'links', 'motion'];
   var A11Y_SIZES = ['100%', '115%', '130%', '150%'];
 
   function initBarrierefreiheit() {
@@ -460,6 +460,25 @@
   }
 
   /* --------------------------------------------------------------------------
+     Sprachauswahl — schließt bei Klick außerhalb und mit Esc. Das Menü ist ein
+     natives <details> und funktioniert auch ganz ohne JavaScript.
+     -------------------------------------------------------------------------- */
+  function initSprachmenu() {
+    var langMenu = document.querySelector('.lang-menu');
+    if (!langMenu) return;
+    document.addEventListener('click', function (e) {
+      if (langMenu.open && !langMenu.contains(e.target)) langMenu.open = false;
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && langMenu.open) {
+        langMenu.open = false;
+        var s = langMenu.querySelector('summary');
+        if (s) s.focus();
+      }
+    });
+  }
+
+  /* --------------------------------------------------------------------------
      9. Initialisierung
      -------------------------------------------------------------------------- */
 
@@ -467,6 +486,7 @@
     initSchnellVerlassen();
     initSicherSurfen();
     initNavigation();
+    initSprachmenu();
     initVorlesen();
     initBarrierefreiheit();
     initFortschritt();

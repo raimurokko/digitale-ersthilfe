@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
   <script>/* Barrierefreiheits-Einstellungen vor dem ersten Paint anwenden */
-(function(){var r=document.documentElement;try{var a=JSON.parse(localStorage.getItem('de-a11y')||'{}');['contrast','gray','dys','links','motion'].forEach(function(k){if(a[k])r.classList.add('a11y-'+k);});var s=['100%','115%','130%','150%'];if(a.size)r.style.fontSize=s[a.size]||'100%';}catch(e){}})();</script>
+(function(){var r=document.documentElement;try{var a=JSON.parse(localStorage.getItem('de-a11y')||'{}');['contrast','gray','cvd','dys','links','motion'].forEach(function(k){if(a[k])r.classList.add('a11y-'+k);});var s=['100%','115%','130%','150%'];if(a.size)r.style.fontSize=s[a.size]||'100%';}catch(e){}})();</script>
 
 
   <script type="application/ld+json">
@@ -88,6 +88,35 @@
           <li><a href="impressum.html">Impressum</a></li>
         </ul>
       </nav>
+      <!-- Sprachauswahl (Gerüst: DE aktiv, weitere Sprachen in Vorbereitung) -->
+      <details class="lang-menu">
+        <summary class="lang-menu__toggle" aria-label="Sprache wählen – aktuell Deutsch"><svg class="lang-menu__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span aria-hidden="true">DE</span></summary>
+        <div class="lang-menu__panel">
+          <p class="lang-menu__hinweis">Aktuell steht die Seite auf <strong>Deutsch</strong> zur Verfügung. Weitere Sprachen sind in Vorbereitung.</p>
+          <ul class="lang-liste">
+            <li><span class="lang-liste__aktiv" lang="de" aria-current="true">Deutsch</span></li>
+            <li><span class="lang-liste__bald"><bdi lang="en">English</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="es">Español</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="tr">Türkçe</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ru">Русский</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="uk">Українська</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ar" dir="rtl">العربية</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="fr">Français</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="pl">Polski</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="it">Italiano</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ro">Română</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="bg">Български</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="sr">Српски</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="hr">Hrvatski</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="bs">Bosanski</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="sl">Slovenščina</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="fa" dir="rtl">فارسی / دری</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ku">Kurdî</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="el">Ελληνικά</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="vi">Tiếng Việt</bdi><span class="lang-liste__badge">in Vorbereitung</span></span></li>
+          </ul>
+        </div>
+      </details>
       <button class="menu-button" aria-expanded="false" aria-controls="nav-mobil" aria-label="Menü öffnen">
         <span class="menu-icon-open" aria-hidden="true">&#9776;</span>
         <span class="menu-icon-close" aria-hidden="true">&#10005;</span>
@@ -693,6 +722,7 @@
       </div>
       <button type="button" class="a11y-opt" data-opt="contrast" aria-pressed="false">Hoher Kontrast<span class="a11y-switch" aria-hidden="true"></span></button>
       <button type="button" class="a11y-opt" data-opt="gray" aria-pressed="false">Graustufen<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="cvd" aria-pressed="false">Farbsichere Palette (Farbfehlsichtigkeit)<span class="a11y-switch" aria-hidden="true"></span></button>
     </div>
 
     <div class="a11y-group">
