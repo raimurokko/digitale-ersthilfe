@@ -28,7 +28,7 @@ Requests** (DSGVO: keine CDNs, keine Cookies, keine Tracker; Fonts lokal).
 | `kontaktstellen.html`, `fachinfo.html`, `ueber-uns.html`, `impressum.html` | weitere Seiten |
 | `css/style.css` | gesamtes Design-System (Tokens `--farbe-*`, Dark Mode, A11y-Modi, Print) |
 | `js/app.js` | Vanilla-JS (IIFE): Nav, Vorlesen, **A11y-Panel**, **Schnell-verlassen**, **Scroll-up**, **Video-Fassade**, PWA |
-| `sw.js` | Service Worker (Offline). **Cache-Version bei CSS/JS/Seiten-Änderungen hochzählen** (aktuell `v28`) |
+| `sw.js` | Service Worker (Offline). **Cache-Version bei CSS/JS/Seiten-Änderungen hochzählen** (aktuell `v30`) |
 | `robots.txt`, `sitemap.xml`, `llms.txt`, `security.txt`, `.well-known/` | Crawler/SEO/AEO/Security |
 | `assets/fonts/` | Inter, Plus Jakarta Sans, **OpenDyslexic** (woff2, lokal) + OFL-Lizenz |
 | `docs/leitfaden-auftrag.md` | **Recherche-/Schreib-Auftrag für neue Leitfäden** (Prompt-Vorlage) |
@@ -62,8 +62,8 @@ am Ende, `.beitrag-datum`); der Website-weite Stand steht auf `ueber-uns.html#ak
 · **A11y-Panel** (Button rechts mittig: Textgröße, Hoher Kontrast, Graustufen, **Farbsichere Palette (CVD)**,
 **Dyslexie/OpenDyslexic**, Links hervorheben, Animationen reduzieren, Vorlesen) · **Scroll-up** (unten rechts) ·
 **Schnell verlassen** (unten links → `dwd.de` via `location.replace`) · **YouTube-Video-Fassade**
-(Click-to-Load, `youtube-nocookie`) · **FAQ** (sichtbar + `FAQPage`-Schema) · **Sprachumschalter** (Header, Gerüst: DE aktiv, 19 weitere
-Sprachen „in Vorbereitung" — Details/Sprachset in BACKLOG.md).
+(Click-to-Load, `youtube-nocookie`) · **FAQ** (sichtbar + `FAQPage`-Schema) · **Sprachumschalter** (Header; **Englisch vollständig live** in `en/` — 25 Seiten;
+übrige Sprachen „in Vorbereitung". RU/UK/PL/TR folgen. Details/Prozess in BACKLOG.md).
 
 ## Konventionen (unbedingt beachten)
 
@@ -80,7 +80,7 @@ Sprachen „in Vorbereitung" — Details/Sprachset in BACKLOG.md).
   auf der Startseite verknüpfen.
 - **A11y-Modus hinzufügen:** an DREI Stellen pflegen — Inline-`<head>`-Script (jede Seite),
   `js/app.js` (`A11Y_FLAGS`) und `css/style.css` (`html.a11y-*`). Zustand: `localStorage 'de-a11y'`.
-- **Nach CSS/JS-/Seiten-Änderung:** SW-`CACHE_NAME` hochzählen (returning users; aktuell `v28`).
+- **Nach CSS/JS-/Seiten-Änderung:** SW-`CACHE_NAME` hochzählen (returning users; aktuell `v30`).
   Lokaler Browser-Cache ist beim Testen zäh; per curl gegen den lokalen Server prüft man den
   echten Auslieferungsstand (umgeht den SW).
 - **Links:** Nur **sichtbaren** Text verlinken — **kein `<a>` in JSON-LD-Schema-Strings** (macht

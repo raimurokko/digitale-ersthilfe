@@ -165,15 +165,21 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
   waren ohnehin schon verlinkt.
 - [ ] **Leichte Sprache** (formal): eigene, streng vereinfachte Fassung je Leitfaden
   (ein Gedanke pro Satz, Worterklärungen, Bilder).
-- [~] **Sprachversionen**: **Sprachumschalter-Komponente + Gerüst gebaut (19.07.2026)** nach
-  Novum-Vorlage (`<details class="lang-menu">` im Header aller Seiten, DE aktiv, übrige Sprachen
-  sichtbar als „in Vorbereitung" — keine toten Links, noch kein `hreflang`, das kommt je Sprache
-  beim Freischalten). **Sprachset:** DE · EN · ES · TR · RU · UK · AR · FR · PL · IT · RO · BG ·
-  SR/HR/BS · SL · **Farsi/Dari · Kurmanji · Griechisch · Vietnamesisch**. **Offen (redaktionell):**
-  die eigentlichen Übersetzungen — **je Sprache in deren vereinfachter/einfacher Sprachstufe**
-  (z. B. „simplified English"), analog zur einfachen deutschen Sprache; maschinelle Übersetzung für
-  Sicherheits-/Rechtstexte ungeeignet. EN zuerst. Beim Freischalten einer Sprache: Ordner `xx/`,
-  `hreflang` ergänzen, RTL (`dir="rtl"`) für AR/FA, Umschalter-Eintrag von Span auf Link umstellen.
+- [~] **Sprachversionen** (in Arbeit): Umschalter-Gerüst (19.07.2026) + **Englisch VOLLSTÄNDIG
+  live (19.07.2026)** — alle 25 Seiten in `en/` (simplified English), beidseitig verdrahtet
+  (`hreflang`, Umschalter DE↔EN), in `sitemap.xml` und SW-Offline-Cache (v30). Marke bleibt deutsch
+  („Digitale Ersthilfe"), Notrufe/§§/`datetime`/Eigennamen (`lang="de"`) unverändert.
+  **Sprachset gesamt:** DE · **EN ✅** · ES · TR · RU · UK · AR · FR · PL · IT · RO · BG · SR/HR/BS ·
+  SL · Farsi/Dari · Kurmanji · Griechisch · Vietnamesisch.
+  **Als Nächstes (bestätigt): RU → UK → PL → TR** nach demselben Muster (je 25 Seiten).
+  **Prozess (eingespielt):** pro Sprache Ordner `xx/`; Startseite `xx/index.html` zuerst (definiert
+  das Chrome), dann 5 statische + 19 Leitfäden; Chrome 1:1 übernehmen, nur Inhalt übersetzen;
+  Assets `../`; interne Links `xx/`-intern; Deutsch-Umschalter → `../<Seite>.html`; deutsche Seiten
+  „<Sprache>" von Span auf Link + `hreflang`; SW-Cache + Sitemap + Version++. Specs liegen im
+  Scratchpad (`uebersetzung-spec-en*.md`) als Vorlage. **RTL (`dir="rtl"`) für AR/FA** noch offen.
+  **Wichtig: KI-Übersetzungen — muttersprachliche Kontrolle vor „final" (v. a. RU/UK/TR).**
+- [x] **Leichte/einfache Sprache je Sprache**: umgesetzt für EN (simplified English); gilt als
+  Vorgabe für alle weiteren Sprachen (Register der jeweiligen Sprache).
 - [ ] **PDF-Merkblatt/Einzeiler** pro Leitfaden (druck-/aushangfähig; wichtig für ältere
   Zielgruppen, z. B. Schockanruf/Enkeltrick).
 - [ ] **Vorlese-Audio/Podcast-Fassung** je Leitfaden (Audiodatei zusätzlich zum Browser-Vorlesen).
