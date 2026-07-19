@@ -3,23 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digitale Ersthilfe — Quick help with digital violence</title>
-  <meta name="description" content="Quick help with digital violence, stalking, hacking and online scams. Simple, easy-to-read guides for people affected. A voluntary service by Novum Analytica.">
+  <title>Guides — Digitale Ersthilfe</title>
+  <meta name="description" content="All step-by-step guides from Digitale Ersthilfe at a glance: hacked account, stalking, surveillance through Amazon Echo, phishing on Signal and WhatsApp, confidential evidence collection.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f5f57">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Digitale Ersthilfe — Quick help with digital violence">
-  <meta property="og:description" content="Quick help with digital violence, stalking, hacking and online scams. Simple, easy-to-read guides for people affected.">
+  <meta property="og:title" content="Guides — Digitale Ersthilfe">
+  <meta property="og:description" content="All step-by-step guides at a glance. Simple language, read aloud, usable offline.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en">
   <meta property="og:locale:alternate" content="de_DE">
 
-  <!-- PWA -->
   <link rel="manifest" href="../manifest.json">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
   <!-- Favicon & App-Icons -->
   <link rel="icon" href="../assets/icons/icon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -28,93 +23,71 @@
   <script>/* Apply accessibility settings before the first paint */
 (function(){var r=document.documentElement;try{var a=JSON.parse(localStorage.getItem('de-a11y')||'{}');['contrast','gray','cvd','dys','links','motion'].forEach(function(k){if(a[k])r.classList.add('a11y-'+k);});var s=['100%','115%','130%','150%'];if(a.size)r.style.fontSize=s[a.size]||'100%';}catch(e){}})();</script>
 
-  <!-- schema.org: WebSite -->
+
+  <!-- schema.org: guide collection -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Digitale Ersthilfe",
-    "url": "https://digitale-ersthilfe.novumanalytica.com/en/",
-    "description": "Quick help with digital violence, stalking, hacking and online scams.",
+    "@type": "CollectionPage",
+    "name": "Guides — Digitale Ersthilfe",
+    "description": "Step-by-step guides for people affected by digital violence.",
     "inLanguage": "en",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Novum Analytica GmbH",
-      "url": "https://novumanalytica.com",
-      "sameAs": ["https://www.youtube.com/@novumanalytica"],
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://digitale-ersthilfe.novumanalytica.com/assets/icons/icon-512.png",
-        "width": 512,
-        "height": 512
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "digitale-ersthilfe@novumanalytica.com",
-        "areaServed": "DE",
-        "availableLanguage": ["German", "English"]
-      }
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "My account was hacked", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-account-hack.html" },
+        { "@type": "ListItem", "position": 2, "name": "Stalking — what to do?", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-stalking.html" },
+        { "@type": "ListItem", "position": 3, "name": "Spotting surveillance through Amazon Echo", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-echo-stalking.html" },
+        { "@type": "ListItem", "position": 4, "name": "Phishing on Signal and WhatsApp", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-phishing-signal-whatsapp.html" },
+        { "@type": "ListItem", "position": 5, "name": "Confidential evidence collection after violence", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-vertrauliche-beweissicherung.html" },
+        { "@type": "ListItem", "position": 6, "name": "Intimate images shared or deepfake", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-bildbasierte-gewalt.html" },
+        { "@type": "ListItem", "position": 7, "name": "Sextortion — blackmail with nude images", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-sextortion.html" },
+        { "@type": "ListItem", "position": 8, "name": "Stalkerware — secret phone surveillance", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-stalkerware.html" },
+        { "@type": "ListItem", "position": 9, "name": "Digital separation", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-digitale-trennung.html" },
+        { "@type": "ListItem", "position": 10, "name": "Cyberbullying and online hate", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-cybermobbing.html" },
+        { "@type": "ListItem", "position": 11, "name": "Children & teens: cyber grooming and cyberbullying", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-kinder-jugend.html" },
+        { "@type": "ListItem", "position": 12, "name": "Doxing — private data published", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-doxing.html" },
+        { "@type": "ListItem", "position": 13, "name": "Phone lost or stolen", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-handy-verlust.html" },
+        { "@type": "ListItem", "position": 14, "name": "Identity theft", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-identitaetsdiebstahl.html" },
+        { "@type": "ListItem", "position": 15, "name": "Online scams — money gone", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-online-betrug.html" },
+        { "@type": "ListItem", "position": 16, "name": "Ransomware — device locked or files encrypted", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-ransomware.html" },
+        { "@type": "ListItem", "position": 17, "name": "Romance scam — fraud with fake love", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-romance-scam.html" },
+        { "@type": "ListItem", "position": 18, "name": "SIM swapping — phone number taken over", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-sim-swapping.html" },
+        { "@type": "ListItem", "position": 19, "name": "Panic phone call with an AI voice (grandparent scam 2.0)", "url": "https://digitale-ersthilfe.novumanalytica.com/leitfaden-schockanruf.html" }
+      ]
     }
   }
   </script>
-
-  <!-- schema.org: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "inLanguage": "en",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What should I do if my online account was hacked?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Change your password right away. Turn on two-factor authentication. Check whether unknown devices are signed in. Report it to the police online (Online-Wache)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What should I do about digital stalking or surveillance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Save evidence before you change any device. Write down what happened, with date and time. Contact the police or a support service like HateAid or Weisser Ring."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What should I do about a suspicious email or message?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Do not click any links. Do not open attachments. Check the sender address closely. Report the message as spam or phishing."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Canonical, language alternates, social & performance -->
-  <link rel="canonical" href="https://digitale-ersthilfe.novumanalytica.com/en/">
-  <link rel="alternate" hreflang="de" href="https://digitale-ersthilfe.novumanalytica.com/">
-  <link rel="alternate" hreflang="en" href="https://digitale-ersthilfe.novumanalytica.com/en/">
-  <link rel="alternate" hreflang="x-default" href="https://digitale-ersthilfe.novumanalytica.com/">
-  <meta property="og:url" content="https://digitale-ersthilfe.novumanalytica.com/en/">
+  <!-- Canonical, Social & Performance -->
+  <link rel="canonical" href="https://digitale-ersthilfe.novumanalytica.com/en/leitfaeden.html">
+  <link rel="alternate" hreflang="de" href="https://digitale-ersthilfe.novumanalytica.com/leitfaeden.html">
+  <link rel="alternate" hreflang="en" href="https://digitale-ersthilfe.novumanalytica.com/en/leitfaeden.html">
+  <link rel="alternate" hreflang="x-default" href="https://digitale-ersthilfe.novumanalytica.com/leitfaeden.html">
+  <meta property="og:url" content="https://digitale-ersthilfe.novumanalytica.com/en/leitfaeden.html">
   <meta property="og:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Digitale Ersthilfe — Quick help with digital violence">
   <meta property="og:site_name" content="Digitale Ersthilfe">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Digitale Ersthilfe — Quick help with digital violence">
-  <meta name="twitter:description" content="Quick help with digital violence, stalking, hacking and online scams. Simple, easy-to-read guides for people affected.">
+  <meta name="twitter:title" content="Guides — Digitale Ersthilfe">
+  <meta name="twitter:description" content="All step-by-step guides at a glance. Simple language, read aloud, usable offline.">
   <meta name="twitter:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://digitale-ersthilfe.novumanalytica.com/en/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://digitale-ersthilfe.novumanalytica.com/en/leitfaeden.html" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Skip navigation -->
   <a class="skip-link" href="#hauptinhalt">Skip to main content</a>
   <!-- Emergency exit: switch quickly to a neutral page -->
   <a class="schnell-verlassen" id="schnell-verlassen" href="https://www.dwd.de/" rel="nofollow noopener" aria-label="Leave this page quickly and switch to a neutral website">
@@ -136,9 +109,9 @@
       <!-- Desktop navigation -->
       <nav aria-label="Main navigation">
         <ul class="nav-desktop">
-          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="kontaktstellen.html">Help &amp; contacts</a></li>
-          <li><a href="leitfaeden.html">Guides</a></li>
+          <li><a href="leitfaeden.html" aria-current="page">Guides</a></li>
           <li><a href="fachinfo.html">For professionals</a></li>
           <li><a href="ueber-uns.html">About us</a></li>
           <li><a href="impressum.html">Legal notice</a></li>
@@ -151,7 +124,7 @@
         <div class="lang-menu__panel">
           <p class="lang-menu__hinweis">This page is available in <strong>English</strong> and German. More languages are coming soon.</p>
           <ul class="lang-liste">
-            <li><a href="../index.html" lang="de" hreflang="de">Deutsch</a></li>
+            <li><a href="../leitfaeden.html" lang="de" hreflang="de">Deutsch</a></li>
             <li><span class="lang-liste__aktiv" lang="en" aria-current="true">English</span></li>
             <li><span class="lang-liste__bald"><bdi lang="es">Español</bdi><span class="lang-liste__badge">coming soon</span></span></li>
             <li><span class="lang-liste__bald"><bdi lang="tr">Türkçe</bdi><span class="lang-liste__badge">coming soon</span></span></li>
@@ -186,9 +159,9 @@
     <!-- Mobile navigation -->
     <nav id="nav-mobil" class="nav-mobil" aria-label="Main navigation (mobile)">
       <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="kontaktstellen.html">Help &amp; contacts</a></li>
-        <li><a href="leitfaeden.html">Guides</a></li>
+        <li><a href="leitfaeden.html" aria-current="page">Guides</a></li>
         <li><a href="fachinfo.html">For professionals</a></li>
         <li><a href="ueber-uns.html">About us</a></li>
         <li><a href="impressum.html">Legal notice</a></li>
@@ -196,225 +169,191 @@
     </nav>
   </header>
 
-  <!-- Main content -->
   <main id="hauptinhalt" class="seiten-container">
 
-    <!-- Hero -->
-    <section class="abschnitt" aria-labelledby="hero-titel">
-      <h1 id="hero-titel">Quick help with digital problems</h1>
+    <section class="abschnitt" aria-labelledby="seiten-titel">
+      <h1 id="seiten-titel">Guides</h1>
       <p>
-        Did someone steal your password? Are you being harassed online?
-        Is your device acting strangely? Here you will find simple steps
-        you can take <strong>right now</strong>.
-      </p>
-      <p>
-        All texts are written in simple, easy-to-read language.
+        Here you will find all guides at a glance. Each guide explains
+        in <strong>simple language</strong>, step by step, what you can do.
         You can also have any text <strong>read aloud</strong> to you.
       </p>
     </section>
 
-    <!-- Browsing safely (protection from people who watch your screen) -->
-    <section class="abschnitt" aria-labelledby="sicher-titel" data-vorlesen-abschnitt>
-      <h2 id="sicher-titel" class="visually-hidden-heading">Browse without being watched</h2>
-      <details class="faq-item">
-        <summary>Are you safe? Tips for browsing without being watched</summary>
-        <div class="faq-item__antwort">
-          <ul class="inhaltsliste">
-            <li>
-              If you can, use a <strong>device that the person cannot access</strong> —
-              the person you want to protect yourself from. For example, the phone of
-              someone you trust, or a computer at the library.
-            </li>
-            <li>
-              <strong>Open a private (incognito) window:</strong> Press
-              <kbd id="kbd-inkognito">Ctrl + Shift + N</kbd> and open this page there again.
-              This leaves fewer traces on the device.
-            </li>
-            <li>
-              <strong>Delete your history:</strong> Press <kbd id="kbd-verlauf">Ctrl + Shift + Delete</kbd>
-              to open your browser's delete window. Please note: if your <em>whole</em> history is
-              suddenly gone, that can also look suspicious — if in doubt, delete only the
-              "last hour".
-            </li>
-            <li>
-              This website itself <strong>does not store anything about you</strong> — no cookies, no
-              tracking. But the visit still stays in your browser history until you delete it.
-            </li>
-            <li>
-              With the <strong>"Quick exit"</strong> button (bottom left) or by pressing
-              <strong><kbd>Esc</kbd> twice</strong>, you switch to a neutral page at once.
-            </li>
-          </ul>
-        </div>
-      </details>
-    </section>
-
-    <!-- Triage: What happened? -->
-    <section class="triage" aria-labelledby="triage-frage">
-      <h2 id="triage-frage" class="triage__frage">What happened?</h2>
-      <div class="triage__optionen">
-
-        <a href="../leitfaden-stalking.html" class="triage__button">
-          <span class="triage__button-icon" aria-hidden="true">&#128065;</span>
-          <span>Someone is watching or stalking me</span>
-        </a>
+    <section class="abschnitt" aria-labelledby="liste-titel">
+      <h2 id="liste-titel" class="visually-hidden-heading">All guides</h2>
+      <div class="triage__optionen triage__optionen--breit">
 
         <a href="../leitfaden-account-hack.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#128274;</span>
-          <span>My account was hacked</span>
+          <span class="triage__button-text">
+            <strong>My account was hacked</strong>
+            <span class="triage__button-info">Password gone or strange sign-ins? Here is how to get your account back and make it safe.</span>
+          </span>
+        </a>
+
+        <a href="../leitfaden-stalking.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128065;</span>
+          <span class="triage__button-text">
+            <strong>Stalking — what to do?</strong>
+            <span class="triage__button-info">Are you being followed, watched or threatened? Save evidence, ask for protection, report it.</span>
+          </span>
+        </a>
+
+        <a href="../leitfaden-echo-stalking.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128266;</span>
+          <span class="triage__button-text">
+            <strong>Surveillance through Amazon Echo</strong>
+            <span class="triage__button-info">Do you think an Echo or Alexa is used to listen in? Spot it and save evidence.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-phishing-signal-whatsapp.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#9993;</span>
-          <span>I got a suspicious message</span>
+          <span class="triage__button-text">
+            <strong>Phishing on Signal and WhatsApp</strong>
+            <span class="triage__button-info">Suspicious QR codes or messages? Spot the attack and stop it.</span>
+          </span>
+        </a>
+
+        <a href="../leitfaden-vertrauliche-beweissicherung.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128737;</span>
+          <span class="triage__button-text">
+            <strong>Confidential evidence collection after violence</strong>
+            <span class="triage__button-info">Have a doctor secure traces after violence — confidentially, even without reporting it right away.</span>
+          </span>
+        </a>
+
+        <a href="../leitfaden-bildbasierte-gewalt.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128247;</span>
+          <span class="triage__button-text">
+            <strong>Intimate images shared or deepfake</strong>
+            <span class="triage__button-info">Intimate images shared without consent or faked? Get them blocked, save evidence, get advice.</span>
+          </span>
+        </a>
+
+        <a href="../leitfaden-sextortion.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128184;</span>
+          <span class="triage__button-text">
+            <strong>Sextortion — blackmail with nude images</strong>
+            <span class="triage__button-info">Someone threatens you with intimate images and demands money? Do not pay, save evidence, report it.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-stalkerware.html" class="triage__button">
-          <span class="triage__button-icon" aria-hidden="true">&#128241;</span>
-          <span>My device is acting strangely</span>
+          <span class="triage__button-icon" aria-hidden="true">&#128225;</span>
+          <span class="triage__button-text">
+            <strong>Stalkerware — secret phone surveillance</strong>
+            <span class="triage__button-info">Do you think a spy app is watching your phone? Get advice first, then check and remove it safely.</span>
+          </span>
+        </a>
+
+        <a href="../leitfaden-digitale-trennung.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#128148;</span>
+          <span class="triage__button-text">
+            <strong>Digital separation</strong>
+            <span class="triage__button-info">After a break-up, make your accounts, location and devices safe — in a safe order.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-cybermobbing.html" class="triage__button">
-          <span class="triage__button-icon" aria-hidden="true">&#128556;</span>
-          <span>I am being harassed or threatened online</span>
+          <span class="triage__button-icon" aria-hidden="true">&#128172;</span>
+          <span class="triage__button-text">
+            <strong>Cyberbullying and online hate</strong>
+            <span class="triage__button-info">Insulted, threatened or shamed online? Save evidence, report it, and get help.</span>
+          </span>
+        </a>
+
+        <a href="../leitfaden-kinder-jugend.html" class="triage__button">
+          <span class="triage__button-icon" aria-hidden="true">&#129490;</span>
+          <span class="triage__button-text">
+            <strong>Children &amp; teens: cyber grooming</strong>
+            <span class="triage__button-info">Cyber grooming or bullying? For parents and teens: stay calm, save evidence, report it, get help.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-doxing.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#128270;</span>
-          <span>My private data was published</span>
+          <span class="triage__button-text">
+            <strong>Doxing — private data published</strong>
+            <span class="triage__button-info">Private data (address, photos) published without permission? Save evidence, get it deleted, report it.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-handy-verlust.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#128241;</span>
-          <span>My phone is gone (lost or stolen)</span>
+          <span class="triage__button-text">
+            <strong>Phone lost or stolen</strong>
+            <span class="triage__button-info">Phone gone? Lock and locate it from afar, block the SIM, make your accounts safe, report it.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-identitaetsdiebstahl.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#129333;</span>
-          <span>Someone is acting in my name (identity theft)</span>
+          <span class="triage__button-text">
+            <strong>Identity theft</strong>
+            <span class="triage__button-info">Someone acts in your name or a fake profile pretends to be you? Report it, fight off demands, report it to the police.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-online-betrug.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#128176;</span>
-          <span>I was scammed when shopping online or investing money</span>
+          <span class="triage__button-text">
+            <strong>Online scams — money gone</strong>
+            <span class="triage__button-info">Fake shop, goods never delivered or investment scam? Stop the payment, get your money back, report it.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-ransomware.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#128272;</span>
-          <span>My device is locked or my files are encrypted</span>
+          <span class="triage__button-text">
+            <strong>Ransomware — device locked/encrypted</strong>
+            <span class="triage__button-info">Blackmail trojan? Disconnect from the network, do not pay, identify the ransomware, restore from a backup.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-romance-scam.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#128152;</span>
-          <span>An online contact fakes love and wants money</span>
+          <span class="triage__button-text">
+            <strong>Romance scam — fake love</strong>
+            <span class="triage__button-info">Someone from the internet pretends to love you and asks for money? Stop contact and payments, report it, get help.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-sim-swapping.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#128246;</span>
-          <span>My phone suddenly has "no signal" and my accounts are affected</span>
+          <span class="triage__button-text">
+            <strong>SIM swapping — phone number taken over</strong>
+            <span class="triage__button-info">Suddenly "no signal" and strange logins? Contact your provider, protect your bank and accounts, change 2FA.</span>
+          </span>
         </a>
 
         <a href="../leitfaden-schockanruf.html" class="triage__button">
           <span class="triage__button-icon" aria-hidden="true">&#128222;</span>
-          <span>A panic phone call demands money fast (grandparent/shock scam)</span>
-        </a>
-
-        <a href="fachinfo.html" class="triage__button">
-          <span class="triage__button-icon" aria-hidden="true">&#128737;</span>
-          <span>I want to protect myself in advance</span>
+          <span class="triage__button-text">
+            <strong>Panic phone call with an AI voice (grandparent scam 2.0)</strong>
+            <span class="triage__button-info">A panic call demands money, supposedly from a relative or the police? Hang up, call back, hand over nothing.</span>
+          </span>
         </a>
 
       </div>
     </section>
 
-    <!-- Immediate help numbers -->
-    <section class="abschnitt" aria-labelledby="soforthilfe-titel">
-      <h2 id="soforthilfe-titel">Immediate help — call now</h2>
-      <p>You can reach these numbers right away. Tap a card to call directly.</p>
-
-      <div class="kontakt-liste">
-
-        <a href="tel:110" class="kontakt-kachel">
-          <span class="kontakt-kachel__icon" aria-hidden="true">&#128680;</span>
-          <div>
-            <div class="kontakt-kachel__name">Police emergency</div>
-            <div class="kontakt-kachel__nummer">110</div>
-            <div class="kontakt-kachel__info">In immediate danger — around the clock</div>
-          </div>
-        </a>
-
-        <a href="tel:116006" class="kontakt-kachel">
-          <span class="kontakt-kachel__icon" aria-hidden="true">&#129309;</span>
-          <div>
-            <div class="kontakt-kachel__name"><span lang="de">Weisser Ring</span> — victim support</div>
-            <div class="kontakt-kachel__nummer">116 006</div>
-            <div class="kontakt-kachel__info">Every day 7 am–10 pm, free</div>
-          </div>
-        </a>
-
-        <a href="tel:08000116016" class="kontakt-kachel">
-          <span class="kontakt-kachel__icon" aria-hidden="true">&#128156;</span>
-          <div>
-            <div class="kontakt-kachel__name"><span lang="de">Hilfetelefon</span> — Violence Against Women</div>
-            <div class="kontakt-kachel__nummer">08000 116 016</div>
-            <div class="kontakt-kachel__info">Around the clock, free, 18 languages</div>
-          </div>
-        </a>
-
-        <a href="tel:03025208838" class="kontakt-kachel">
-          <span class="kontakt-kachel__icon" aria-hidden="true">&#128187;</span>
-          <div>
-            <div class="kontakt-kachel__name">HateAid — digital violence</div>
-            <div class="kontakt-kachel__nummer">030 252 088 38</div>
-            <div class="kontakt-kachel__info">Advice on online hate</div>
-          </div>
-        </a>
-
-        <a href="tel:08001110111" class="kontakt-kachel">
-          <span class="kontakt-kachel__icon" aria-hidden="true">&#128172;</span>
-          <div>
-            <div class="kontakt-kachel__name"><span lang="de">TelefonSeelsorge</span> — emotional support</div>
-            <div class="kontakt-kachel__nummer">0800 111 0 111</div>
-            <div class="kontakt-kachel__info">Around the clock, free, anonymous</div>
-          </div>
-        </a>
-
-        <a href="tel:116111" class="kontakt-kachel">
-          <span class="kontakt-kachel__icon" aria-hidden="true">&#129505;</span>
-          <div>
-            <div class="kontakt-kachel__name"><span lang="de">Nummer gegen Kummer</span></div>
-            <div class="kontakt-kachel__nummer">116 111</div>
-            <div class="kontakt-kachel__info">For children and young people, free</div>
-          </div>
-        </a>
-
-      </div>
-
-      <p style="margin-top: var(--abstand-lg);">
-        <a href="kontaktstellen.html" class="btn btn--sekundaer">Show all help &amp; contacts</a>
+    <section class="abschnitt" aria-labelledby="weitere-titel">
+      <h2 id="weitere-titel">Can't find the right one?</h2>
+      <p>
+        On the home page, the question <strong>"What happened?"</strong> helps you
+        quickly find the right guide or the right contact point.
+      </p>
+      <p>
+        <a href="index.html" class="btn btn--primaer">Go to immediate help on the home page</a>
+      </p>
+      <p>
+        More guides are coming soon. Professionals will find extra
+        materials in the section
+        <a href="fachinfo.html">For professionals</a>.
       </p>
     </section>
-
-    <!-- Disclaimer -->
-    <aside class="disclaimer" aria-label="Important note">
-      <p class="disclaimer__titel">Important note</p>
-      <p>
-        This is a <strong>voluntary, independent service</strong> by Novum Analytica.
-        It is <strong>not</strong> provided, funded or run by the German Federal Office for
-        Information Security (BSI). Novum Analytica takes part in the BSI's Cyber Security
-        Network (CSN), but is not part of the BSI and does not act on its behalf. The content
-        and opinions are not authorised by the BSI and do not represent an official BSI position.
-      </p>
-      <p>
-        All content is for first information only. It does not replace professional legal advice,
-        IT forensics or a police investigation. You use it at your own responsibility.
-      </p>
-      <p>
-        Content is checked for readability and clear wording with the help of AI.
-        Images and infographics may be AI-generated or AI-edited.
-        All content is originally written by human authors and is reviewed by our editors.
-      </p>
-    </aside>
 
   </main>
 
