@@ -171,7 +171,7 @@ Kryptowallet-Diebstahl · Fake-Gewinnspiele/Abo-Fallen.
   („Digitale Ersthilfe"), Notrufe/§§/`datetime`/Eigennamen (`lang="de"`) unverändert.
   **Sprachset gesamt:** DE · **EN ✅** · ES · TR · RU · UK · AR · FR · PL · IT · RO · BG · SR/HR/BS ·
   SL · Farsi/Dari · Kurmanji · Griechisch · Vietnamesisch.
-  **Als Nächstes (bestätigt): RU → UK → PL → TR** nach demselben Muster (je 25 Seiten).
+  **Live: DE · EN · RU · UK** (je 25 Seiten, alle 4 gegenseitig im Umschalter verlinkt, hreflang, SW v32, Sitemap). **Als Nächstes: PL → TR** (bestätigt), dann übriges Sprachset.
   **Prozess (eingespielt):** pro Sprache Ordner `xx/`; Startseite `xx/index.html` zuerst (definiert
   das Chrome), dann 5 statische + 19 Leitfäden; Chrome 1:1 übernehmen, nur Inhalt übersetzen;
   Assets `../`; interne Links `xx/`-intern; Deutsch-Umschalter → `../<Seite>.html`; deutsche Seiten
