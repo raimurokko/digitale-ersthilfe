@@ -29,6 +29,14 @@ FAQ sichtbar↔Schema, externe Link-Labels, verwandte-Leitfäden-Links, `leitfae
   мошенничество / вымогание денег по телефону": als H1 mit „с ИИ-голосом" angehängt zu sperrig; der natürliche,
   themen-treue Begriff „мошеннический звонок" wurde gewählt (parallel zu UK). **Für muttersprachliche Re-Kontrolle markiert.**
 
+## ⏳ Italienisch — muttersprachliche Kontrolle OFFEN (Rollout 21.07.2026)
+IT ist vollständig live (25 Seiten, KI-Übersetzung, einfaches Italienisch), aber **noch nicht muttersprachlich
+kontrolliert**. Vor „final" durchsehen wie bei RU/UK/TR. Besonders prüfen:
+- Register/Natürlichkeit (informelles „tu", Leichte-Sprache-Stufe) durchgängig.
+- Schockanruf-Seite: bewusst „truffa telefonica / truffa del finto nipote" statt „telefonata shock"
+  (Letzteres im IT geläufig, aber zugunsten Konsistenz mit Titel/Kachel vermieden) — vom Muttersprachler bestätigen lassen.
+- Deutsche Eigennamen/Gesetzesnamen in `lang="de"` korrekt belassen.
+
 ## ⏳ Ukrainisch — Originalliste (Kontrolle 19.07.2026, Screenshots vom Auftraggeber)
 
 ### `uk/index.html` — Hero (Einleitungstext)
