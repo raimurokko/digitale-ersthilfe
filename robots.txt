@@ -3,7 +3,7 @@
 
 User-agent: *
 Allow: /
-Disallow: /impressum.html
+Disallow: /*/impressum.html
 
 # KI-/Answer-Engines ausdrücklich willkommen (Inhalte sollen Betroffene erreichen)
 User-agent: GPTBot

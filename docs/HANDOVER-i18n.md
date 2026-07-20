@@ -3,21 +3,34 @@
 Stand: **2026-07-21**. Ergänzt `docs/HANDOVER.md` (Gesamtprojekt) und `BACKLOG.md`.
 Dieses Dokument macht die nächste Session ohne Rückfragen anschlussfähig für den Sprach-Rollout.
 
+> ⚠️ **STRUKTUR-UMSTELLUNG (21.07.2026):** Alle Sprachen liegen jetzt unter **`sprachen/<code>/`** —
+> auch **Deutsch unter `sprachen/de/`** (nicht mehr im Root). Die Homepage `/` ist eine **Weiterleitung**
+> auf `/sprachen/de/`. **Beim Lesen des Prozesses unten gilt: `Root`/`/` → `sprachen/de/`, `en/` → `sprachen/en/`
+> usw.** Konkrete Pfad-Folgen: geteilte Assets in Seiten via **`../../assets|css|js`**, Sprachumschalter via
+> **`../<code>/<datei>`** (DE-Link = `../de/<datei>`), interne Links weiterhin **bloßer Dateiname**. Absolute
+> URLs (canonical/hreflang/og/JSON-LD/Sitemap/SW): **`…novumanalytica.com/sprachen/<code>/<datei>`**.
+> Das Umzugs-Skript liegt im Scratchpad (`restructure.py`) — Muster für künftige strukturelle Rewrites.
+
 ## 1. Aktueller Stand — 6 Sprachen VOLLSTÄNDIG live
 
 | Sprache | Ordner | Seiten | Stand |
 |---|---|---|---|
-| Deutsch | `/` (Root) | 25 | Original |
-| English | `en/` | 25 | live |
-| Русский | `ru/` | 25 | live |
-| Українська | `uk/` | 25 | live |
-| Türkçe | `tr/` | 25 | live |
-| Italiano | `it/` | 25 | live (21.07.2026) |
+| Deutsch | `sprachen/de/` | 25 | Original |
+| English | `sprachen/en/` | 25 | live |
+| Русский | `sprachen/ru/` | 25 | live |
+| Українська | `sprachen/uk/` | 25 | live |
+| Türkçe | `sprachen/tr/` | 25 | live |
+| Italiano | `sprachen/it/` | 25 | live (21.07.2026) |
 
-**150 Seiten**, alle 6 Sprachen **gegenseitig im Umschalter verlinkt**, **vollständiges reziprokes
-`hreflang`-Netz** (de/en/ru/uk/tr/it + x-default auf ALLEN 150 Seiten — am 21.07. projektweit repariert,
-siehe unten), `og:locale:alternate` vollständig, `sitemap.xml` (144 `<loc>`; `*/impressum.html` als noindex
-NICHT enthalten), Service-Worker **v36** (alle Seiten offline). Alles committet + gepusht.
+**150 Seiten** (+ Root-Weiterleitung `index.html`), alle 6 Sprachen **gegenseitig im Umschalter verlinkt**,
+**vollständiges reziprokes `hreflang`-Netz** (de/en/ru/uk/tr/it + x-default auf ALLEN 150 Seiten mit
+`…/sprachen/<code>/…`-URLs), `og:locale:alternate` vollständig, `sitemap.xml` (144 `<loc>`; `*/impressum.html`
+als noindex NICHT enthalten), Service-Worker **v37** (Scope `/`, alle Seiten offline). Auf Branch
+`restructure/sprachen-ordner` (Merge nach Freigabe).
+
+**EN-Bugfix nebenbei (21.07.):** Die EN-Hub-Seiten (index/leitfaeden/fachinfo/kontaktstellen) verlinkten
+Leitfäden fälschlich per `../leitfaden-*.html` → zeigte vor dem Umzug auf die **deutschen** Root-Guides
+(falsche Sprache), nach dem Umzug 404. Auf bloße Dateinamen korrigiert (Konvention der anderen Sprachen).
 
 Jede Sprache = **1 Startseite + 5 statische Seiten + 19 Leitfäden**. Dateinamen sind
 in allen Ordnern identisch (`index.html`, `kontaktstellen.html`, `leitfaeden.html`, `fachinfo.html`,

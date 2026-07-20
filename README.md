@@ -129,11 +129,14 @@ python3 -m http.server 8137
 
 ```
 .
-├── index.html, leitfaeden.html, kontaktstellen.html, fachinfo.html, …
-├── leitfaden-*.html            # alle Leitfäden
-├── css/style.css               # Design-System + @font-face
+├── index.html                  # Root: Weiterleitung auf /sprachen/de/ (+ Sprachauswahl-Fallback)
+├── sprachen/                   # alle Sprachfassungen (Ordner = URL-Pfad)
+│   ├── de/                     # Deutsch (Original) — index.html, leitfaeden.html, leitfaden-*.html, …
+│   ├── en/  ru/  uk/           # weitere Sprachen, je 25 Seiten, identische Dateinamen
+│   └── tr/  it/                #   (Home + 5 statische Seiten + 19 Leitfäden)
+├── css/style.css               # Design-System + @font-face (von allen Sprachen geteilt)
 ├── js/app.js                   # Vanilla JS (Nav, Vorlesen, A11y, Schnell-verlassen, Video-Fassade, PWA)
-├── sw.js, manifest.json        # PWA
+├── sw.js, manifest.json        # PWA (SW-Scope „/", cacht alle Sprachen)
 ├── robots.txt, sitemap.xml     # Crawler / Suchmaschinen
 ├── llms.txt                    # kuratierte Inhaltskarte für LLMs (llmstxt.org)
 ├── security.txt                # RFC 9116 (auch unter .well-known/)
@@ -146,6 +149,12 @@ python3 -m http.server 8137
 │   └── og-image.jpg            # Social-/LLM-Vorschaubild
 └── docs/                       # Link-/Tool-/Materialien-Listen + leitfaden-auftrag.md
 ```
+
+> **Hinweis (21.07.2026):** Alle Sprachen liegen unter `sprachen/<code>/` (auch Deutsch unter
+> `sprachen/de/`); die öffentliche Homepage `/` leitet auf `/sprachen/de/` weiter. Interne Links
+> innerhalb einer Sprache sind bloße Dateinamen, geteilte Assets via `../../`, der Sprachumschalter
+> via `../<code>/`. Bei einer neuen Sprache **das head-hreflang-Netz auf allen Seiten mitziehen**
+> (siehe `docs/HANDOVER-i18n.md`).
 
 ## Materialien
 

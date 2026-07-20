@@ -452,7 +452,7 @@
   function initPWA() {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('sw.js').catch(function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () {
           // Service Worker konnte nicht registriert werden — kein Problem
         });
       });

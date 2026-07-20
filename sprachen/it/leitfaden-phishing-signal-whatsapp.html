@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riconoscere e contrastare il phishing su Signal e WhatsApp — Digitale Ersthilfe</title>
+  <meta name="description" content="Come riconosco il phishing tramite codice QR su Signal e WhatsApp? Guida passo passo: controlla i dispositivi collegati, metti in sicurezza l'account, salva le prove, sporgi denuncia. Lingua semplice.">
+  <meta name="theme-color" content="#0f5f57">
+
+  <meta property="og:title" content="Phishing su Signal e WhatsApp — Digitale Ersthilfe">
+  <meta property="og:description" content="Guida passo passo in caso di sospetto phishing tramite codice QR e account di chat compromessi.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="it">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="en">
+  <meta property="og:locale:alternate" content="ru">
+  <meta property="og:locale:alternate" content="uk">
+  <meta property="og:locale:alternate" content="tr">
+
+  <link rel="manifest" href="../../manifest.json">
+  <!-- Favicon & App-Icons -->
+  <link rel="icon" href="../../assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>/* Apply accessibility settings before the first paint */
+(function(){var r=document.documentElement;try{var a=JSON.parse(localStorage.getItem('de-a11y')||'{}');['contrast','gray','cvd','dys','links','motion'].forEach(function(k){if(a[k])r.classList.add('a11y-'+k);});var s=['100%','115%','130%','150%'];if(a.size)r.style.fontSize=s[a.size]||'100%';}catch(e){}})();</script>
+
+
+  <!-- schema.org: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-13",
+    "image": "https://digitale-ersthilfe.novumanalytica.com/assets/images/phishing-erkennen.jpg",
+    "name": "Riconoscere e contrastare il phishing su Signal e WhatsApp",
+    "description": "Guida passo passo per le persone colpite in caso di phishing tramite codice QR e account di messaggistica compromessi su Signal e WhatsApp.",
+    "inLanguage": "it",
+    "totalTime": "PT20M",
+    "tool": [
+      {"@type": "HowToTool", "name": "Smartphone con Signal o WhatsApp"},
+      {"@type": "HowToTool", "name": "Connessione a internet"},
+      {"@type": "HowToTool", "name": "Carta e penna o app per note"}
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Riconoscere l'attacco",
+        "text": "Fai attenzione a codici QR inattesi nelle chat, a presunte verifiche di sicurezza, a falsi inviti a gruppi o a messaggi che ti chiedono di scansionare un codice. Non fidarti di nessun codice QR ricevuto in un messaggio — anche se il mittente sembra conosciuto."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Prendere misure immediate",
+        "text": "Controlla in Signal sotto Impostazioni > Dispositivi collegati e in WhatsApp sotto Impostazioni > Dispositivi collegati se sono attive sessioni sconosciute. Chiudi subito ogni sessione sconosciuta. Poi attiva il blocco di registrazione (Signal) o la verifica in due passaggi (WhatsApp)."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Salvare le prove",
+        "text": "Fai degli screenshot del codice QR dannoso, del messaggio, del profilo del mittente e dell'orario. Annota il numero di telefono o il nome utente del mittente. Conserva gli screenshot fuori dall'app coinvolta."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Segnalare e sporgere denuncia",
+        "text": "Segnala l'episodio al BSI (linea per i cittadini 0800 274 1000) e sporgi denuncia tramite il commissariato online della polizia (Online-Wache). Segnala inoltre l'abuso dell'account nell'app (Signal: Segnala e blocca; WhatsApp: Segnala contatto)."
+      }
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "Novum Analytica GmbH",
+      "url": "https://novumanalytica.com"
+    }
+  }
+  </script>
+
+  <!-- schema.org: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "image": "https://digitale-ersthilfe.novumanalytica.com/assets/images/phishing-erkennen.jpg",
+    "headline": "Riconoscere e contrastare il phishing su Signal e WhatsApp",
+    "description": "Guida per le persone colpite in caso di sospetto phishing tramite codice QR e account di messaggistica compromessi.",
+    "inLanguage": "it",
+    "author": {
+      "@type": "Organization",
+      "name": "Novum Analytica GmbH"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Novum Analytica GmbH"
+    },
+    "datePublished": "2026-03-15",
+    "dateModified": "2026-04-14"
+  }
+  </script>
+
+  <!-- schema.org: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "it",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Che cos'è il phishing tramite codice QR su Signal e WhatsApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gli aggressori inviano un codice QR che sembra un invito di sicurezza o di gruppo. Chi scansiona il codice collega di nascosto il proprio account a un dispositivo degli aggressori. Gli aggressori leggono così tutti i nuovi messaggi — senza che la vittima se ne accorga."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Come faccio a capire se il mio account è stato compromesso?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apri in Signal Impostazioni > Dispositivi collegati o in WhatsApp Impostazioni > Dispositivi collegati. Se è elencato un dispositivo che non conosci, il tuo account è coinvolto. Interrompi subito la connessione."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cosa fare se ho già scansionato il codice QR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Chiudi la sessione sconosciuta nelle impostazioni dell'app, attiva funzioni di sicurezza aggiuntive (blocco di registrazione su Signal, verifica in due passaggi su WhatsApp), informa i tuoi contatti e sporgi denuncia."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- schema.org: VideoObject — wird ergänzt, sobald das Video mit fester
+       YouTube-Watch-URL (embedUrl/contentUrl) verfügbar ist. Siehe BACKLOG. -->
+  <!-- Canonical, Social & Performance -->
+  <link rel="canonical" href="https://digitale-ersthilfe.novumanalytica.com/sprachen/it/leitfaden-phishing-signal-whatsapp.html">
+  <link rel="alternate" hreflang="de" href="https://digitale-ersthilfe.novumanalytica.com/sprachen/de/leitfaden-phishing-signal-whatsapp.html">
+  <link rel="alternate" hreflang="en" href="https://digitale-ersthilfe.novumanalytica.com/sprachen/en/leitfaden-phishing-signal-whatsapp.html">
+  <link rel="alternate" hreflang="ru" href="https://digitale-ersthilfe.novumanalytica.com/sprachen/ru/leitfaden-phishing-signal-whatsapp.html">
+  <link rel="alternate" hreflang="uk" href="https://digitale-ersthilfe.novumanalytica.com/sprachen/uk/leitfaden-phishing-signal-whatsapp.html">
+  <link rel="alternate" hreflang="tr" href="https://digitale-ersthilfe.novumanalytica.com/sprachen/tr/leitfaden-phishing-signal-whatsapp.html">
+  <link rel="alternate" hreflang="it" href="https://digitale-ersthilfe.novumanalytica.com/sprachen/it/leitfaden-phishing-signal-whatsapp.html">
+  <link rel="alternate" hreflang="x-default" href="https://digitale-ersthilfe.novumanalytica.com/sprachen/de/leitfaden-phishing-signal-whatsapp.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:url" content="https://digitale-ersthilfe.novumanalytica.com/sprachen/it/leitfaden-phishing-signal-whatsapp.html">
+  <meta property="og:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digitale Ersthilfe — Primo soccorso in caso di violenza digitale">
+  <meta property="og:site_name" content="Digitale Ersthilfe">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phishing su Signal e WhatsApp — Digitale Ersthilfe">
+  <meta name="twitter:description" content="Guida passo passo in caso di sospetto phishing tramite codice QR e account di chat compromessi.">
+  <meta name="twitter:image" content="https://digitale-ersthilfe.novumanalytica.com/assets/og-image.jpg">
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/plus-jakarta-sans-latin.woff2" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://digitale-ersthilfe.novumanalytica.com/sprachen/it/" },
+      { "@type": "ListItem", "position": 2, "name": "Guide", "item": "https://digitale-ersthilfe.novumanalytica.com/sprachen/it/leitfaeden.html" },
+      { "@type": "ListItem", "position": 3, "name": "Phishing su Signal e WhatsApp", "item": "https://digitale-ersthilfe.novumanalytica.com/sprachen/it/leitfaden-phishing-signal-whatsapp.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#hauptinhalt">Vai al contenuto principale</a>
+  <!-- Emergency exit: switch quickly to a neutral page -->
+  <a class="schnell-verlassen" id="schnell-verlassen" href="https://www.dwd.de/" rel="nofollow noopener" aria-label="Lascia rapidamente questa pagina e passa a un sito neutro">
+    <span class="schnell-verlassen__x" aria-hidden="true">&#10005;</span> Uscita rapida
+  </a>
+
+  <!-- Emergency banner -->
+  <div class="notfall-banner" role="alert">
+    In pericolo immediato? Chiama subito la <a href="tel:110">polizia: 110</a>.
+  </div>
+
+  <!-- Header -->
+  <header class="kopfzeile">
+    <div class="kopfzeile__inner">
+      <a href="index.html" class="kopfzeile__logo" aria-label="Digitale Ersthilfe — Pagina iniziale">
+        <span lang="de">Digitale Ersthilfe</span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kontaktstellen.html">Aiuto e contatti</a></li>
+          <li><a href="leitfaeden.html" aria-current="page">Guide</a></li>
+          <li><a href="fachinfo.html">Per professionisti</a></li>
+          <li><a href="ueber-uns.html">Chi siamo</a></li>
+          <li><a href="impressum.html">Note legali</a></li>
+        </ul>
+      </nav>
+      <!-- Language menu -->
+      <details class="lang-menu">
+        <summary class="lang-menu__toggle" aria-label="Scegli lingua – attualmente italiano"><svg class="lang-menu__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span aria-hidden="true">IT</span></summary>
+        <div class="lang-menu__panel">
+          <p class="lang-menu__hinweis">Questa pagina è disponibile in <strong>italiano</strong>, tedesco, inglese, russo, ucraino e turco. Altre lingue sono in arrivo.</p>
+          <ul class="lang-liste">
+            <li><a href="../de/leitfaden-phishing-signal-whatsapp.html" lang="de" hreflang="de">Deutsch</a></li>
+            <li><a href="../en/leitfaden-phishing-signal-whatsapp.html" lang="en" hreflang="en">English</a></li>
+            <li><span class="lang-liste__bald"><bdi lang="es">Español</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><a href="../tr/leitfaden-phishing-signal-whatsapp.html" lang="tr" hreflang="tr">Türkçe</a></li>
+            <li><a href="../ru/leitfaden-phishing-signal-whatsapp.html" lang="ru" hreflang="ru">Русский</a></li>
+            <li><a href="../uk/leitfaden-phishing-signal-whatsapp.html" lang="uk" hreflang="uk">Українська</a></li>
+            <li><span class="lang-liste__bald"><bdi lang="ar" dir="rtl">العربية</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="fr">Français</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="pl">Polski</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__aktiv" lang="it" aria-current="true">Italiano</span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ro">Română</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="bg">Български</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="sr">Српски</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="hr">Hrvatski</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="bs">Bosanski</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="sl">Slovenščina</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="fa" dir="rtl">فارسی / دری</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="ku">Kurdî</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="el">Ελληνικά</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+            <li><span class="lang-liste__bald"><bdi lang="vi">Tiếng Việt</bdi><span class="lang-liste__badge">in arrivo</span></span></li>
+          </ul>
+        </div>
+      </details>
+      <button class="menu-button" aria-expanded="false" aria-controls="nav-mobil" aria-label="Apri menu">
+        <span class="menu-icon-open" aria-hidden="true">&#9776;</span>
+        <span class="menu-icon-close" aria-hidden="true">&#10005;</span>
+      </button>
+    </div>
+    <nav id="nav-mobil" class="nav-mobil" aria-label="Navigazione principale (mobile)">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kontaktstellen.html">Aiuto e contatti</a></li>
+        <li><a href="leitfaeden.html" aria-current="page">Guide</a></li>
+        <li><a href="fachinfo.html">Per professionisti</a></li>
+        <li><a href="ueber-uns.html">Chi siamo</a></li>
+        <li><a href="impressum.html">Note legali</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="hauptinhalt" class="seiten-container">
+
+    <!-- Zusammenfassung für AEO / Featured Snippets -->
+    <section class="abschnitt" aria-labelledby="leitfaden-titel">
+      <p><a href="index.html">&larr; Torna alla pagina iniziale</a></p>
+      <h1 id="leitfaden-titel">Riconoscere e contrastare il phishing su Signal e WhatsApp</h1>
+      <p class="beitrag-datum beitrag-datum--top">
+        <svg class="beitrag-datum__icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        Ultima verifica: <time datetime="2026-07-12">12 luglio 2026</time> · aggiornato: <time datetime="2026-07-13">13 luglio 2026</time>
+      </p>
+      <p>
+        <strong>In breve:</strong> Gli aggressori inviano un codice QR
+        tramite un messaggio. Chi lo scansiona collega di nascosto il
+        proprio account a un dispositivo estraneo. Questa guida mostra
+        in 4 passaggi come riconoscere l'attacco, salvare il tuo account,
+        conservare le prove e sporgere denuncia.
+      </p>
+      <p>
+        <strong>Contesto:</strong> Questo metodo viene usato soprattutto
+        da aggressori statali provenienti dalla Russia
+        (<span lang="en">«Star Blizzard» / «Coldriver»</span>) contro
+        attivisti, giornalisti, diplomatici e personale militare. Ma la
+        tecnica funziona contro chiunque usi Signal o WhatsApp.
+      </p>
+
+      <button class="vorlesen-btn" data-vorlesen="ganzer-leitfaden" aria-pressed="false">
+        &#128264; Leggi ad alta voce tutta la guida
+      </button>
+    </section>
+
+    <!-- Fortschrittsanzeige -->
+    <div class="fortschritt" role="progressbar" aria-label="Avanzamento nella guida" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4">
+      <div class="fortschritt__segment" data-schritt="1"></div>
+      <div class="fortschritt__segment" data-schritt="2"></div>
+      <div class="fortschritt__segment" data-schritt="3"></div>
+      <div class="fortschritt__segment" data-schritt="4"></div>
+    </div>
+
+    <!-- Wichtige Warnung -->
+    <div class="karte karte--kritisch" role="alert">
+      <p><strong>Importante — Leggi prima questo:</strong></p>
+      <ul class="inhaltsliste">
+        <li>
+          <strong>Non scansionare mai un codice QR</strong> ricevuto in
+          un messaggio inatteso — nemmeno da contatti conosciuti.
+          Prima chiama la persona e chiedi conferma.
+        </li>
+        <li>
+          <strong>Non cancellare subito il messaggio.</strong>
+          Fai prima uno screenshot. Il messaggio è una prova importante.
+        </li>
+        <li>
+          <strong>La tua sicurezza viene prima di tutto.</strong>
+          Se ti senti minacciato, rivolgiti alla
+          <a href="tel:110">polizia (110)</a> o a un
+          <a href="kontaktstellen.html">centro di consulenza</a>.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Phase 1: Angriff erkennen -->
+    <article class="schritt" id="schritt-1" data-vorlesen-abschnitt>
+      <div class="schritt__kopf">
+        <span class="schritt__nummer" aria-hidden="true">01</span>
+        <h2 class="schritt__titel">Riconoscere l'attacco</h2>
+      </div>
+
+      <button class="vorlesen-btn" data-vorlesen="schritt-1" aria-pressed="false">
+        &#128264; Leggi ad alta voce questa sezione
+      </button>
+
+      <p>
+        Gli aggressori sfruttano una normale funzione delle app di
+        messaggistica: Signal e WhatsApp permettono di usare un account
+        anche su un ulteriore dispositivo. Per farlo si scansiona un
+        codice QR. Gli aggressori inviano un codice QR falso e sperano
+        che tu lo scansioni.
+      </p>
+
+      <h3>Camuffamenti tipici:</h3>
+      <ul class="inhaltsliste">
+        <li>
+          <strong>Presunta verifica di sicurezza:</strong>
+          Un messaggio dice che devi «confermare» o «verificare» il tuo
+          account, altrimenti verrà bloccato.
+        </li>
+        <li>
+          <strong>Falso invito a un gruppo:</strong>
+          Un presunto link di invito porta a un sito con un codice QR.
+          Il sito sembra Signal o WhatsApp.
+        </li>
+        <li>
+          <strong>Messaggio da contatti conosciuti:</strong>
+          Un account già compromesso inoltra il codice QR ai propri
+          contatti. Il mittente sembra affidabile.
+        </li>
+        <li>
+          <strong>Urgenza e pressione:</strong>
+          «Solo oggi», «Altrimenti perdi l'account», «Importante — agisci
+          subito». I fornitori seri non lavorano mai con la pressione del
+          tempo.
+        </li>
+      </ul>
+
+      <div class="karte karte--warnung">
+        <p>
+          <strong>Regola da ricordare:</strong> Signal e WhatsApp non ti
+          inviano <strong>mai</strong> un codice QR da scansionare in una
+          chat. Se vuoi collegare un ulteriore dispositivo, sei
+          <strong>tu</strong> a generare il codice QR nelle impostazioni.
+        </p>
+      </div>
+    </article>
+
+    <!-- Phase 2: Sofortmaßnahmen -->
+    <article class="schritt" id="schritt-2" data-vorlesen-abschnitt>
+      <div class="schritt__kopf">
+        <span class="schritt__nummer" aria-hidden="true">02</span>
+        <h2 class="schritt__titel">Prendere misure immediate</h2>
+      </div>
+
+      <button class="vorlesen-btn" data-vorlesen="schritt-2" aria-pressed="false">
+        &#128264; Leggi ad alta voce questa sezione
+      </button>
+
+      <p>
+        Controlla ora se un dispositivo estraneo è collegato al tuo
+        account. Bastano pochi secondi.
+      </p>
+
+      <h3>Su Signal:</h3>
+      <ul class="inhaltsliste">
+        <li>Apri Signal.</li>
+        <li>Tocca in alto a sinistra la tua immagine del profilo.</li>
+        <li>Scegli <strong>Impostazioni</strong>.</li>
+        <li>Tocca <strong>Dispositivi collegati</strong>.</li>
+        <li>
+          Controlla ogni dispositivo elencato. Non conosci il dispositivo?
+          Tocca il dispositivo e scegli <strong>Rimuovi</strong>.
+        </li>
+      </ul>
+
+      <h3>Su WhatsApp:</h3>
+      <ul class="inhaltsliste">
+        <li>Apri WhatsApp.</li>
+        <li>Tocca <strong>Impostazioni</strong> (in basso a destra).</li>
+        <li>Scegli <strong>Dispositivi collegati</strong>.</li>
+        <li>
+          Tocca ogni dispositivo sconosciuto e poi
+          <strong>Disconnetti</strong>.
+        </li>
+      </ul>
+
+      <h3>Ulteriore protezione:</h3>
+      <ul class="inhaltsliste">
+        <li>
+          <strong>Signal:</strong> Impostazioni &rarr; Account &rarr;
+          attiva il <strong>blocco di registrazione</strong>.
+          Imposta un PIN che conosci solo tu.
+        </li>
+        <li>
+          <strong>WhatsApp:</strong> Impostazioni &rarr; Account &rarr;
+          attiva la <strong>verifica in due passaggi</strong>.
+          Imposta un PIN di sei cifre.
+        </li>
+        <li>
+          <strong>Aggiorna telefono e app:</strong>
+          Installa tutti gli aggiornamenti disponibili.
+        </li>
+      </ul>
+
+      <div class="karte karte--erfolg">
+        <p>
+          <strong>Buono a sapersi:</strong> Una volta chiusa la sessione
+          estranea, l'aggressore non può più leggere i nuovi messaggi.
+          Ma i messaggi già letti possono comunque restare nella sua
+          copia.
+        </p>
+      </div>
+    </article>
+
+    <!-- Phase 3: Beweise sichern -->
+    <article class="schritt" id="schritt-3" data-vorlesen-abschnitt>
+      <div class="schritt__kopf">
+        <span class="schritt__nummer" aria-hidden="true">03</span>
+        <h2 class="schritt__titel">Salvare le prove</h2>
+      </div>
+
+      <button class="vorlesen-btn" data-vorlesen="schritt-3" aria-pressed="false">
+        &#128264; Leggi ad alta voce questa sezione
+      </button>
+
+      <p>
+        Per la denuncia alla polizia le prove sono decisive.
+        Metti al sicuro tutto ciò che hai ancora.
+      </p>
+
+      <h3>Cosa dovresti documentare:</h3>
+      <ul class="inhaltsliste">
+        <li>
+          <strong>Screenshot del messaggio dannoso</strong>
+          con il codice QR.
+        </li>
+        <li>
+          <strong>Screenshot del profilo del mittente</strong>
+          (nome, numero di telefono, immagine del profilo, orario).
+        </li>
+        <li>
+          <strong>Screenshot dei dispositivi collegati</strong>
+          prima di rimuoverli: nome del dispositivo, sistema operativo,
+          ultima attività.
+        </li>
+        <li>
+          <strong>Registro dei tempi:</strong>
+          Quando è arrivato il messaggio? Quando hai (eventualmente)
+          scansionato il codice? Quando hai chiuso la sessione?
+        </li>
+      </ul>
+
+      <div class="karte karte--warnung">
+        <p>
+          <strong>Importante:</strong> Conserva tutti gli screenshot
+          <strong>fuori</strong> dall'app coinvolta — per esempio in uno
+          spazio cloud con una password propria oppure su una chiavetta
+          USB.
+        </p>
+      </div>
+    </article>
+
+    <!-- Phase 4: Melden und anzeigen -->
+    <article class="schritt" id="schritt-4" data-vorlesen-abschnitt>
+      <div class="schritt__kopf">
+        <span class="schritt__nummer" aria-hidden="true">04</span>
+        <h2 class="schritt__titel">Segnalare e sporgere denuncia</h2>
+      </div>
+
+      <button class="vorlesen-btn" data-vorlesen="schritt-4" aria-pressed="false">
+        &#128264; Leggi ad alta voce questa sezione
+      </button>
+
+      <p>
+        Ora si tratta di rendere ufficiale il reato. Questo protegge
+        altre persone e aiuta le autorità a riconoscere lo schema.
+      </p>
+
+      <h3>Sporgere denuncia:</h3>
+      <ul class="inhaltsliste">
+        <li>
+          Usa il
+          <a href="https://portal.onlinewache.polizei.de/de/" target="_blank" rel="noopener noreferrer">commissariato online della polizia (<span lang="de">Online-Wache</span>)</a>
+          oppure recati a un posto di polizia.
+        </li>
+        <li>
+          Indica come reato: <strong>accesso illecito ai dati
+          (<span lang="de"><a href="https://www.gesetze-im-internet.de/stgb/__202a.html" target="_blank" rel="noopener noreferrer">§ 202a StGB</a></span>)</strong> e <strong>frode informatica
+          (<span lang="de"><a href="https://www.gesetze-im-internet.de/stgb/__263a.html" target="_blank" rel="noopener noreferrer">§ 263a StGB</a></span>)</strong>.
+        </li>
+        <li>
+          Porta con te tutti gli screenshot e il registro dei tempi.
+        </li>
+      </ul>
+
+      <h3>Informare il <span lang="de">BSI</span>:</h3>
+      <ul class="inhaltsliste">
+        <li>
+          <a href="tel:0800274100"><span lang="de">BSI</span> — linea per i cittadini: 0800 274 1000</a>
+          (gratuita, lun–ven 8–18).
+        </li>
+        <li>
+          Il <span lang="de">BSI</span> raccoglie i dati sugli attacchi e
+          può darti consulenza tecnica.
+        </li>
+      </ul>
+
+      <h3>Segnalare nell'app:</h3>
+      <ul class="inhaltsliste">
+        <li>
+          <strong>Signal:</strong> Nella chat tieni premuto a lungo sul
+          messaggio &rarr; <strong>Segnala e blocca</strong>.
+        </li>
+        <li>
+          <strong>WhatsApp:</strong> Nella chat tocca il mittente
+          &rarr; scorri in basso &rarr; <strong>Segnala contatto</strong>.
+        </li>
+      </ul>
+
+      <h3>Avvisare i contatti:</h3>
+      <ul class="inhaltsliste">
+        <li>
+          Se il tuo account è stato compromesso, gli aggressori possono
+          aver inoltrato il messaggio ai tuoi contatti. Informa attivamente
+          i contatti più stretti — meglio con una telefonata.
+        </li>
+      </ul>
+
+      <div class="karte karte--info">
+        <p>
+          <strong>Gruppi particolarmente esposti:</strong>
+          Se lavori come giornalista, attivista, collaboratore di
+          un'organizzazione umanitaria (ONG), in un ente pubblico o
+          nell'esercito, segnala l'episodio anche al Punto di contatto
+          centrale per il cybercrime
+          (<span lang="de">Zentrale Ansprechstelle Cybercrime</span>, ZAC)
+          del tuo Land e alla tua sicurezza informatica interna.
+        </p>
+      </div>
+    </article>
+
+    <!-- Hintergrund -->
+    <section class="abschnitt" aria-labelledby="hintergrund-titel" data-vorlesen-abschnitt>
+      <h2 id="hintergrund-titel">Contesto: come funziona tecnicamente questo metodo?</h2>
+
+      <button class="vorlesen-btn" data-vorlesen="hintergrund" aria-pressed="false">
+        &#128264; Leggi ad alta voce questa sezione
+      </button>
+
+      <p>
+        Signal e WhatsApp permettono che un account funzioni su più
+        dispositivi contemporaneamente — per esempio smartphone e laptop.
+        Per questo esiste la funzione <strong>«Dispositivi collegati»</strong>
+        (<span lang="de">Signal: „Gekoppelte Geräte"</span>) o
+        <strong>«Dispositivi collegati»</strong>
+        (<span lang="de">WhatsApp: „Verknüpfte Geräte"</span>). Chi vuole
+        collegare un nuovo dispositivo genera un codice QR nell'app.
+        L'altro dispositivo scansiona il codice — e a quel punto è
+        collegato all'account.
+      </p>
+      <p>
+        Gli aggressori fanno esattamente questo: generano un codice QR sul
+        <strong>loro</strong> dispositivo e te lo inviano — confezionato
+        come avviso di sicurezza o invito. Se scansioni il codice, colleghi
+        il tuo account al dispositivo degli aggressori. Gli aggressori
+        leggono così tutti i nuovi messaggi.
+      </p>
+      <p>
+        Il servizio d'intelligence olandese <span lang="de">AIVD</span> e il
+        <span lang="de">BND</span> hanno osservato questa tecnica soprattutto
+        presso attori statali russi. Ma viene anche copiata da gruppi
+        criminali.
+      </p>
+    </section>
+
+    <!-- Infografiken -->
+    <section class="abschnitt" aria-labelledby="infografik-titel">
+      <h2 id="infografik-titel">Infografiche</h2>
+      <p>
+        Due infografiche riassumono i punti più importanti.
+        Puoi condividere liberamente le immagini (TLP:CLEAR).
+      </p>
+
+      <figure>
+        <img src="../../assets/images/phishing-erkennen.jpg" width="1400" height="781" loading="lazy"
+             alt="Infografica: come riconoscere il phishing su Signal e WhatsApp. Vengono mostrati codici QR sospetti, messaggi con pressione temporale e falsi inviti.">
+        <figcaption>Segni per riconoscere il phishing tramite codice QR.</figcaption>
+        <details>
+          <summary>Versione testuale dell'infografica</summary>
+          <p>
+            Segnali d'allarme: 1) Codice QR in un messaggio inatteso.
+            2) Invito ad agire immediatamente. 3) Minaccia di blocco
+            dell'account. 4) Messaggio da un contatto conosciuto che
+            normalmente non invia mai messaggi del genere. 5) Link che
+            porta a un sito con un codice QR.
+          </p>
+        </details>
+      </figure>
+
+      <figure>
+        <img src="../../assets/images/phishing-schutz.jpg" width="1400" height="781" loading="lazy"
+             alt="Infografica: come proteggerti dal phishing su Signal e WhatsApp. Vengono mostrati i passaggi controllare i dispositivi collegati, attivare il PIN e installare gli aggiornamenti.">
+        <figcaption>Misure di protezione contro il phishing tramite codice QR.</figcaption>
+        <details>
+          <summary>Versione testuale dell'infografica</summary>
+          <p>
+            Passaggi di protezione: 1) Controlla i dispositivi collegati
+            nelle impostazioni dell'app. 2) Chiudi le sessioni sconosciute.
+            3) Attiva il blocco di registrazione (Signal) o la verifica in
+            due passaggi (WhatsApp). 4) Mantieni aggiornati app e sistema
+            operativo. 5) Non scansionare mai codici QR ricevuti nei
+            messaggi di chat.
+          </p>
+        </details>
+      </figure>
+    </section>
+
+    <!-- Video -->
+    <section class="abschnitt" aria-labelledby="video-titel">
+      <h2 id="video-titel">Video esplicativo</h2>
+      <p>
+        In un breve video spieghiamo l'attacco e le misure di protezione.
+        Il video si trova sul nostro canale YouTube.
+      </p>
+      <p class="hinweis-extern">
+        <strong>Non viene caricato nulla da YouTube</strong> finché non
+        tocchi «Guarda il video». Aprendolo valgono le condizioni sulla
+        privacy di YouTube (Google&nbsp;LLC).
+      </p>
+      <a class="video-fassade"
+         href="https://www.youtube.com/@novumanalytica"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Guarda il video esplicativo su YouTube: truffa di phishing su Signal e WhatsApp (apre YouTube in una nuova scheda)">
+        <img src="../../assets/images/phishing-erkennen.jpg" width="1400" height="781" loading="lazy" alt="">
+        <span class="video-fassade__play" aria-hidden="true">&#9654;</span>
+        <span class="video-fassade__label">Guarda il video su YouTube</span>
+      </a>
+    </section>
+
+    <!-- Aktuelle Warnungen (Verbraucherzentrale) -->
+    <section class="abschnitt" aria-labelledby="warnungen-titel" data-vorlesen-abschnitt>
+      <h2 id="warnungen-titel">Avvisi di phishing aggiornati</h2>
+      <div class="karte karte--info">
+        <p>
+          La <strong><span lang="de">Verbraucherzentrale</span></strong> (centro tedesco per i consumatori)
+          raccoglie di continuo nel <strong><span lang="de">Phishing-Radar</span></strong>
+          i metodi di truffa aggiornati — quali email e SMS falsi sono
+          attualmente in circolazione. Dare un'occhiata lì aiuta a riconoscere presto i nuovi metodi.
+        </p>
+        <p>
+          <a href="https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/phishingradar-aktuelle-warnungen-6059" target="_blank" rel="noopener noreferrer" class="btn btn--sekundaer">
+            Vai al <span lang="de">Phishing-Radar</span> della <span lang="de">Verbraucherzentrale</span> &#8599;
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Kontaktstellen am Ende -->
+    <section class="abschnitt" aria-labelledby="hilfe-titel">
+      <h2 id="hilfe-titel">Hai bisogno di aiuto?</h2>
+      <p>Questi enti possono aiutarti subito. Tocca per chiamare.</p>
+      <div class="kontakt-liste">
+        <a href="tel:0800274100" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128274;</span>
+          <div>
+            <div class="kontakt-kachel__name"><span lang="de">BSI</span> — linea per i cittadini</div>
+            <div class="kontakt-kachel__nummer">0800 274 1000</div>
+            <div class="kontakt-kachel__info">Lun–ven 8–18, gratuita</div>
+          </div>
+        </a>
+        <a href="tel:110" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128680;</span>
+          <div>
+            <div class="kontakt-kachel__name">Numero d'emergenza della polizia</div>
+            <div class="kontakt-kachel__nummer">110</div>
+            <div class="kontakt-kachel__info">In caso di pericolo immediato — 24 ore su 24</div>
+          </div>
+        </a>
+        <a href="tel:03025208838" class="kontakt-kachel">
+          <span class="kontakt-kachel__icon" aria-hidden="true">&#128225;</span>
+          <div>
+            <div class="kontakt-kachel__name">HateAid — violenza digitale</div>
+            <div class="kontakt-kachel__nummer">030 252 088 38</div>
+            <div class="kontakt-kachel__info">Consulenza in caso di violenza digitale</div>
+          </div>
+        </a>
+      </div>
+      <p style="margin-top: var(--abstand-lg);">
+        <a href="kontaktstellen.html" class="btn btn--sekundaer">Mostra tutti gli aiuti e i contatti</a>
+      </p>
+    </section>
+
+    <!-- Materialien zum Herunterladen -->
+    <section class="abschnitt" aria-labelledby="material-titel">
+      <h2 id="material-titel">Materiali da scaricare e condividere</h2>
+      <p>
+        Il documento originale e le infografiche sono <strong>TLP:CLEAR</strong> —
+        possono essere condivisi liberamente. Le raccolte di materiali (su GitHub e Codeberg) sono ancora
+        in preparazione; il video esplicativo lo trovi già su YouTube.
+      </p>
+
+      <span class="material-karte material-karte--geplant" aria-label="Guida PDF su GitHub — in preparazione">
+        <span class="material-karte__icon" aria-hidden="true">&#128462;</span>
+        <span class="material-karte__text">
+          <span class="material-karte__name">Guida PDF: phishing Signal / WhatsApp</span>
+          <span class="material-karte__detail">PDF, circa 9,4 MB — TLP:CLEAR</span>
+        </span>
+        <span class="material-karte__badge">in preparazione</span>
+      </span>
+
+      <span class="material-karte material-karte--geplant" aria-label="Materiali sul phishing su GitHub — in preparazione">
+        <span class="material-karte__icon" aria-hidden="true">&#128736;</span>
+        <span class="material-karte__text">
+          <span class="material-karte__name">GitHub — Tutti i materiali sul phishing</span>
+          <span class="material-karte__detail">PDF (DE + NL), video, 2 infografiche</span>
+        </span>
+        <span class="material-karte__badge">in preparazione</span>
+      </span>
+
+      <span class="material-karte material-karte--geplant" aria-label="Materiali sul phishing su Codeberg — in preparazione">
+        <span class="material-karte__icon" aria-hidden="true">&#128736;</span>
+        <span class="material-karte__text">
+          <span class="material-karte__name">Codeberg — Repository mirror</span>
+          <span class="material-karte__detail">Contenuto identico, piattaforma alternativa</span>
+        </span>
+        <span class="material-karte__badge">in preparazione</span>
+      </span>
+
+      <a href="https://www.youtube.com/@novumanalytica" target="_blank" rel="noopener noreferrer" class="material-karte" aria-label="Video esplicativo su YouTube">
+        <span class="material-karte__icon" aria-hidden="true">&#127909;</span>
+        <span class="material-karte__text">
+          <span class="material-karte__name">YouTube — Video esplicativo</span>
+          <span class="material-karte__detail">Truffa di phishing su Signal e WhatsApp</span>
+        </span>
+        <span class="material-karte__extern" aria-hidden="true">&#8599;</span>
+      </a>
+
+      <p style="margin-top: var(--abstand-lg);">
+        <a href="fachinfo.html#phishing" class="btn btn--sekundaer">
+          Informazioni tecniche per soccorritori e operatori
+        </a>
+      </p>
+    </section>
+
+    <!-- Quellenhinweis -->
+    <section class="abschnitt" aria-labelledby="verwandte-titel">
+      <h2 id="verwandte-titel">Guide correlate</h2>
+      <ul class="inhaltsliste verwandte-liste">
+        <li><a href="leitfaden-account-hack.html">Account violato</a></li>
+        <li><a href="leitfaden-online-betrug.html">Truffa online</a></li>
+        <li><a href="leitfaden-sim-swapping.html">SIM-swapping</a></li>
+      </ul>
+    </section>
+
+    <div class="beitrag-datum beitrag-datum--fuss" aria-label="Attualità di questo articolo">
+      <p>
+        <strong>Contenuto verificato l'ultima volta:</strong> <time datetime="2026-07-12">12 luglio 2026</time><br>
+        <strong>Contenuto aggiornato l'ultima volta:</strong> <time datetime="2026-07-13">13 luglio 2026</time>
+      </p>
+      <p class="beitrag-datum__hinweis">Verifichiamo regolarmente le nostre guide per l'attualità di dati legali, numeri di telefono e riferimenti. Lo stato dell'intero sito lo trovi in <a href="ueber-uns.html#aktualitaet">Chi&nbsp;siamo</a>.</p>
+    </div>
+
+    <aside class="disclaimer" aria-label="Fonte">
+      <p class="disclaimer__titel">Fonte</p>
+      <p>
+        Questa guida si basa sul documento
+        <em>„Phishing Signal / WhatsApp"</em> (TLP:CLEAR, marzo 2026)
+        di <span lang="de">Novum Analytica</span>, realizzato nell'ambito
+        dell'iniziativa <span lang="de">Digitale Ersthilfe</span> della Rete
+        per la sicurezza informatica (CSN). La base tecnica è la
+        pubblicazione del Centro nazionale olandese per la sicurezza
+        informatica (NCSC-NL) del marzo 2026.
+      </p>
+      <p>
+        Questo è un <strong>servizio volontario e indipendente</strong>.
+        Non è fornito, finanziato o gestito dal <span lang="de">BSI</span>. <span lang="de">Novum Analytica</span> partecipa alla Rete per la sicurezza informatica (CSN) del <span lang="de">BSI</span>, ma non fa parte del <span lang="de">BSI</span> e non agisce per suo conto. I contenuti e le opinioni non sono autorizzati dal <span lang="de">BSI</span> e non rappresentano una posizione ufficiale del <span lang="de">BSI</span>. Tutti i contenuti servono come prima
+        informazione e non sostituiscono una consulenza legale o le indagini della polizia.
+      </p>
+      <p>
+        I contenuti vengono verificati per leggibilità ed espressione con procedimenti assistiti dall'intelligenza artificiale.
+        Le immagini e le infografiche possono essere generate o rielaborate dall'intelligenza artificiale.
+        Tutti i contenuti hanno autori originariamente umani
+        e vengono riletti dalla redazione.
+      </p>
+    </aside>
+
+  </main>
+
+  <footer class="fusszeile">
+    <div class="fusszeile__inner">
+      <ul class="fusszeile__nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kontaktstellen.html">Aiuto e contatti</a></li>
+        <li><a href="leitfaeden.html">Guide</a></li>
+        <li><a href="fachinfo.html">Per professionisti</a></li>
+        <li><a href="ueber-uns.html">Chi siamo</a></li>
+        <li><a href="impressum.html">Note legali e privacy</a></li>
+        <li><a href="https://www.youtube.com/@novumanalytica" target="_blank" rel="noopener noreferrer">YouTube &#8599;</a></li>
+      </ul>
+      <div class="fusszeile__hinweise">
+        <p>&copy; 2026 Novum Analytica GmbH. Tutti i diritti riservati.</p>
+        <p>
+          Servizio volontario. Non è un'offerta ufficiale del <span lang="de">BSI</span>.
+          I contenuti vengono verificati per leggibilità con l'aiuto dell'intelligenza artificiale.
+          Tutti i contenuti hanno autori umani.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-up-Button -->
+  <button type="button" id="scroll-top" class="scroll-top" aria-label="Scorri all'inizio della pagina">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Barrierefreiheit: Button (rechts mittig) + Panel -->
+  <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Apri le impostazioni di accessibilità">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><circle cx="12" cy="4" r="2"></circle><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01-.31-.18-.68-.28-1.06-.26-1.05.05-1.81.98-1.81 2.03V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-6.17 5c-.41 1.16-1.52 2-2.83 2-1.66 0-3-1.34-3-3 0-1.31.84-2.41 2-2.83V12.1c-2.28.46-4 2.48-4 4.9 0 2.76 2.24 5 5 5 2.42 0 4.44-1.72 4.9-4h-2.07z"></path></svg>
+  </button>
+
+  <div id="a11y-panel" class="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+    <div class="a11y-head">
+      <h2 id="a11y-title">Accessibilità</h2>
+      <button type="button" id="a11y-close" class="a11y-close" aria-label="Chiudi le impostazioni">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Vista</h3>
+      <div class="a11y-size">
+        <span id="a11y-size-label">Dimensione del testo</span>
+        <div class="a11y-size-controls">
+          <button type="button" id="a11y-size-down" class="a11y-size-btn" aria-label="Riduci la dimensione del testo">&#8722;</button>
+          <output id="a11y-size-val" aria-live="polite">100&nbsp;%</output>
+          <button type="button" id="a11y-size-up" class="a11y-size-btn" aria-label="Aumenta la dimensione del testo">+</button>
+        </div>
+      </div>
+      <button type="button" class="a11y-opt" data-opt="contrast" aria-pressed="false">Contrasto elevato<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="gray" aria-pressed="false">Scala di grigi<span class="a11y-switch" aria-hidden="true"></span></button>
+      <button type="button" class="a11y-opt" data-opt="cvd" aria-pressed="false">Palette per daltonici (deficit della visione dei colori)<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Lettura</h3>
+      <button type="button" class="a11y-opt" data-opt="dys" aria-pressed="false">Visualizzazione adatta alla dislessia<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint">Usa OpenDyslexic, un font pensato per le persone con dislessia e caricato localmente, insieme a spaziature più ampie.</p>
+      <button type="button" class="a11y-opt" data-opt="links" aria-pressed="false">Evidenzia i link<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Interazione</h3>
+      <button type="button" class="a11y-opt" data-opt="motion" aria-pressed="false">Riduci le animazioni<span class="a11y-switch" aria-hidden="true"></span></button>
+    </div>
+
+    <div class="a11y-group">
+      <h3>Lettura ad alta voce</h3>
+      <button type="button" class="a11y-opt" data-opt="voice" aria-pressed="false">Leggi ad alta voce al clic<span class="a11y-switch" aria-hidden="true"></span></button>
+      <p class="a11y-hint" id="a11y-voice-hint">Quando è attiva, una sezione viene letta ad alta voce non appena la clicchi. Esc interrompe la lettura. Usa la sintesi vocale del tuo dispositivo — nessun servizio esterno.</p>
+    </div>
+
+    <button type="button" id="a11y-reset" class="a11y-reset">Reimposta tutto</button>
+    <p class="a11y-note">La tua scelta viene salvata solo localmente su questo dispositivo (senza cookie).</p>
+  </div>
+
+  <script src="../../js/app.js"></script>
+</body>
+</html>
