@@ -1,9 +1,9 @@
 # Handover — Mehrsprachigkeit (Sprach-Rollout)
 
-Stand: **2026-07-19**. Ergänzt `docs/HANDOVER.md` (Gesamtprojekt) und `BACKLOG.md`.
+Stand: **2026-07-21**. Ergänzt `docs/HANDOVER.md` (Gesamtprojekt) und `BACKLOG.md`.
 Dieses Dokument macht die nächste Session ohne Rückfragen anschlussfähig für den Sprach-Rollout.
 
-## 1. Aktueller Stand — 5 Sprachen VOLLSTÄNDIG live
+## 1. Aktueller Stand — 6 Sprachen VOLLSTÄNDIG live
 
 | Sprache | Ordner | Seiten | Stand |
 |---|---|---|---|
@@ -12,24 +12,31 @@ Dieses Dokument macht die nächste Session ohne Rückfragen anschlussfähig für
 | Русский | `ru/` | 25 | live |
 | Українська | `uk/` | 25 | live |
 | Türkçe | `tr/` | 25 | live |
+| Italiano | `it/` | 25 | live (21.07.2026) |
 
-**125 Seiten**, alle 5 Sprachen **gegenseitig im Umschalter verlinkt**, vollständiges `hreflang`-Netz,
-`sitemap.xml` (120 `<loc>`), Service-Worker **v33** (alle Seiten offline). Alles committet + gepusht (HEAD `35762f0`).
+**150 Seiten**, alle 6 Sprachen **gegenseitig im Umschalter verlinkt**, **vollständiges reziprokes
+`hreflang`-Netz** (de/en/ru/uk/tr/it + x-default auf ALLEN 150 Seiten — am 21.07. projektweit repariert,
+siehe unten), `og:locale:alternate` vollständig, `sitemap.xml` (144 `<loc>`; `*/impressum.html` als noindex
+NICHT enthalten), Service-Worker **v36** (alle Seiten offline). Alles committet + gepusht.
 
-Jede Sprache = **1 Startseite (Chrome-Pilot) + 5 statische Seiten + 19 Leitfäden**. Dateinamen sind
+Jede Sprache = **1 Startseite + 5 statische Seiten + 19 Leitfäden**. Dateinamen sind
 in allen Ordnern identisch (`index.html`, `kontaktstellen.html`, `leitfaeden.html`, `fachinfo.html`,
 `ueber-uns.html`, `impressum.html`, `leitfaden-*.html`).
 
-## 2. UNMITTELBAR OFFEN: Italienisch (IT) fertigstellen
+### hreflang-Netz-Reparatur (21.07.2026)
+Beim IT-Rollout entdeckt: der head-`<link rel="alternate">`-Block war auf **jeder** Seite auf ihren
+Erstell-Sprachstand eingefroren (DE-Unterseiten hatten 0 Alternates); nur der sichtbare Umschalter war
+vollständig. Deterministisch per Skript repariert — **alle 150 Seiten** haben jetzt den vollen reziproken
+hreflang-Satz + komplettes `og:locale:alternate`. Für neue Sprachen gilt ab jetzt: den head-Block **auf allen
+bestehenden Seiten** mitziehen (nicht nur eine Zeile anhängen), sonst wächst das Loch wieder.
 
-**`it/index.html` existiert bereits** (Chrome-Pilot, committet). **Die 24 übrigen IT-Seiten fehlen** und
-IT ist **noch nicht verdrahtet** („Italiano" steht auf allen anderen Seiten noch als „in Vorbereitung"-Span).
-Grund: Der TR-Batch lief zuerst; danach wurde das **Session-Limit** erreicht (Reset Mitternacht Europe/Berlin) —
-der IT-Batch wurde nicht mehr gestartet. Sobald Subagenten wieder gehen: IT nach dem Prozess (§3) fertig machen.
+## 2. Italienisch (IT) — ERLEDIGT (21.07.2026)
 
-Hinweis: `it/index.html` ist eine gültige Seite, aber ihre internen Links (Triage/Nav) zeigen auf noch
-nicht existierende `it/`-Seiten (404 bei Direktaufruf von `/it/`). Kein Problem, da nirgends verlinkt — löst
-sich mit dem IT-Batch.
+IT ist vollständig live: 25 Seiten (via Subagenten aus deutscher Quelle übersetzt, IT-Chrome aus
+`it/index.html`, Verdrahtung gespiegelt von `tr/`), im Umschalter aller Sprachen verlinkt, hreflang/SW/Sitemap
+ergänzt. **Sprachhinweis Schockanruf:** im Italienischen als „truffa telefonica / truffa del finto nipote"
+gerendert (nicht wörtlich; „telefonata shock" wäre im IT zwar geläufig, wurde aber zugunsten der Konsistenz
+mit dem Seitentitel vermieden). **Wie alle KI-Übersetzungen: muttersprachliche Kontrolle vor „final" offen.**
 
 ## 3. PROZESS pro Sprache (eingespielt, reproduzierbar)
 
@@ -107,7 +114,7 @@ angleichen). Danach 1 Browser-Check der Startseite. **Dann committen + pushen.**
 
 ## 5. Roadmap restliche Sprachen (bestätigtes Sprachset)
 
-Reihenfolge zuletzt: **… TR ✅, IT (Pilot da, Rest offen)**. Danach aus dem Set:
+Reihenfolge zuletzt: **… TR ✅, IT ✅**. Danach aus dem Set:
 **ES · AR · FR · PL · RO · BG · SR/HR/BS · SL · Farsi/Dari · Kurmanji · Griechisch · Vietnamesisch.**
 
 - **RTL noch ungelöst:** **Arabisch (ar)** und **Farsi/Dari (fa)** brauchen `dir="rtl"` + CSS-Prüfung des Layouts
@@ -125,6 +132,6 @@ projektweit für RU/UK/TR (bestehendes Rollout-Loch, nur OG-Hint, hreflang-Verbu
 
 ## 6. Verweise
 - Gesamtprojekt: `docs/HANDOVER.md` · offene Punkte/Prioritäten: `BACKLOG.md` (Abschnitt „Sprachversionen").
-- SW-Version aktuell **v35**; nach jeder Sprach-Runde hochzählen.
+- SW-Version aktuell **v36**; nach jeder Sprach-Runde hochzählen.
 - Die Übersetzungs-Specs dieser Session lagen im Scratchpad (`uebersetzung-spec-{en,ru,uk,tr,it}.md`) und sind
   **session-flüchtig** — der vollständige Prozess steht oben in §3, neue Sprach-Specs daraus ableiten.

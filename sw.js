@@ -3,7 +3,7 @@
    Offline-Fähigkeit: Cache-first für alle Seiten und Ressourcen
    ========================================================================== */
 
-var CACHE_NAME = 'digitale-ersthilfe-v35';
+var CACHE_NAME = 'digitale-ersthilfe-v36';
 
 var DATEIEN_ZUM_CACHEN = [
   '/',
@@ -136,6 +136,32 @@ var DATEIEN_ZUM_CACHEN = [
   '/tr/leitfaden-stalkerware.html',
   '/tr/leitfaden-stalking.html',
   '/tr/leitfaden-vertrauliche-beweissicherung.html',
+  '/it/',
+  '/it/index.html',
+  '/it/kontaktstellen.html',
+  '/it/leitfaeden.html',
+  '/it/fachinfo.html',
+  '/it/ueber-uns.html',
+  '/it/impressum.html',
+  '/it/leitfaden-account-hack.html',
+  '/it/leitfaden-bildbasierte-gewalt.html',
+  '/it/leitfaden-cybermobbing.html',
+  '/it/leitfaden-digitale-trennung.html',
+  '/it/leitfaden-doxing.html',
+  '/it/leitfaden-echo-stalking.html',
+  '/it/leitfaden-handy-verlust.html',
+  '/it/leitfaden-identitaetsdiebstahl.html',
+  '/it/leitfaden-kinder-jugend.html',
+  '/it/leitfaden-online-betrug.html',
+  '/it/leitfaden-phishing-signal-whatsapp.html',
+  '/it/leitfaden-ransomware.html',
+  '/it/leitfaden-romance-scam.html',
+  '/it/leitfaden-schockanruf.html',
+  '/it/leitfaden-sextortion.html',
+  '/it/leitfaden-sim-swapping.html',
+  '/it/leitfaden-stalkerware.html',
+  '/it/leitfaden-stalking.html',
+  '/it/leitfaden-vertrauliche-beweissicherung.html',
   '/css/style.css',
   '/js/app.js',
   '/manifest.json',
