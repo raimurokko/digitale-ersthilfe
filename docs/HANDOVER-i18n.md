@@ -115,6 +115,12 @@ Reihenfolge zuletzt: **… TR ✅, IT (Pilot da, Rest offen)**. Danach aus dem S
 - Die **Verdrahtung wächst**: jede neue Sprache muss auf **allen** bereits existierenden Sprachordnern als Link
   ergänzt werden (Skript in §3C skaliert automatisch, wenn man die Ordnerliste erweitert).
 
+## 5b. Muttersprachliche Korrekturen (OFFEN)
+Aus der Kontrolle liegen **UK-Korrekturen** vor (Hero-Text, mehrere Triage-Buttons, „TelefonSeelsorge —
+психологічна підтримка", und eine durchgängige Begriffs-Überarbeitung „шоковий дзвінок"/„шоковый звонок" in
+`uk/`- **und** `ru/leitfaden-schockanruf.html`). **Exakte Ist-/Soll-Liste: `docs/uebersetzung-korrekturen.md`** —
+vor dem IT-Batch oder danach abarbeiten, dann SW einmal hochzählen. RU-Korrektur ist bereits erledigt.
+
 ## 6. Verweise
 - Gesamtprojekt: `docs/HANDOVER.md` · offene Punkte/Prioritäten: `BACKLOG.md` (Abschnitt „Sprachversionen").
 - SW-Version aktuell **v33**; nach jeder Sprach-Runde hochzählen.
