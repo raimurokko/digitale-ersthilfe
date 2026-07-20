@@ -12,7 +12,24 @@ jeweilige Sprachdatei ändern (die anderen Sprachen haben eigene Formulierungen)
 
 ---
 
-## ⏳ Ukrainisch — OFFEN (Kontrolle 19.07.2026, Screenshots vom Auftraggeber)
+## ✅ Ukrainisch — ERLEDIGT (21.07.2026)
+Alle unten gelisteten UK-Punkte eingearbeitet: Hero (beide Absätze), 7 Triage-Buttons, TelefonSeelsorge
+„душевна/душевної підтримки" → „психологічна/психологічної підтримки" (alle Vorkommen in `uk/`: index,
+kontaktstellen 4×, stalkerware, romance-scam 4×, doxing, digitale-trennung, schockanruf), sowie die
+Schockanruf-Begriffsüberarbeitung (siehe unten). SW auf v35.
+
+> Hinweis: „душевному навантаженні" (cybermobbing) und „душевних кризах" (kontaktstellen-Beschreibung) blieben
+> bewusst unverändert — das ist „seelische Belastung/Krise", nicht die TelefonSeelsorge-Bezeichnung.
+
+## ✅ Schockanruf-Begriff (UK + RU) — ERLEDIGT (21.07.2026)
+Calque „шоковий дзвінок"/„шоковый звонок" durchgängig ersetzt (Titel, H1, og/twitter, HowTo, Breadcrumb,
+FAQ sichtbar↔Schema, externe Link-Labels, verwandte-Leitfäden-Links, `leitfaeden.html`-Kacheln, index-Triage):
+- **UK → „шахрайський дзвінок"** (betrügerischer Anruf); index-Triage = reviewer-Vorgabe „Шахраї телефонують і вимагають гроші".
+- **RU → „мошеннический звонок"**. **Abweichung von der reviewer-Vorschlagsformulierung** „Телефонное
+  мошенничество / вымогание денег по телефону": als H1 mit „с ИИ-голосом" angehängt zu sperrig; der natürliche,
+  themen-treue Begriff „мошеннический звонок" wurde gewählt (parallel zu UK). **Für muttersprachliche Re-Kontrolle markiert.**
+
+## ⏳ Ukrainisch — Originalliste (Kontrolle 19.07.2026, Screenshots vom Auftraggeber)
 
 ### `uk/index.html` — Hero (Einleitungstext)
 - **Absatz 1** — Ist:

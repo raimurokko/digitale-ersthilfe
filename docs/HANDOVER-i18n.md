@@ -115,14 +115,16 @@ Reihenfolge zuletzt: **… TR ✅, IT (Pilot da, Rest offen)**. Danach aus dem S
 - Die **Verdrahtung wächst**: jede neue Sprache muss auf **allen** bereits existierenden Sprachordnern als Link
   ergänzt werden (Skript in §3C skaliert automatisch, wenn man die Ordnerliste erweitert).
 
-## 5b. Muttersprachliche Korrekturen (OFFEN)
-Aus der Kontrolle liegen **UK-Korrekturen** vor (Hero-Text, mehrere Triage-Buttons, „TelefonSeelsorge —
-психологічна підтримка", und eine durchgängige Begriffs-Überarbeitung „шоковий дзвінок"/„шоковый звонок" in
-`uk/`- **und** `ru/leitfaden-schockanruf.html`). **Exakte Ist-/Soll-Liste: `docs/uebersetzung-korrekturen.md`** —
-vor dem IT-Batch oder danach abarbeiten, dann SW einmal hochzählen. RU-Korrektur ist bereits erledigt.
+## 5b. Muttersprachliche Korrekturen (ERLEDIGT 21.07.2026)
+RU-Stalking-Korrektur, **UK-Korrekturen** (Hero, 7 Triage-Buttons, TelefonSeelsorge „психологічна підтримка"
+durchgängig) und die **Schockanruf-Begriffsüberarbeitung** in `uk/` **und** `ru/leitfaden-schockanruf.html`
+(Calque → „шахрайський дзвінок"/„мошеннический звонок") sind eingearbeitet, SW auf **v35**.
+Details + eine für Re-Kontrolle markierte RU-Formulierungs-Abweichung: `docs/uebersetzung-korrekturen.md`.
+**Offen:** muttersprachliche Re-Kontrolle der RU-Schockanruf-Formulierung; `og:locale:alternate` fehlt
+projektweit für RU/UK/TR (bestehendes Rollout-Loch, nur OG-Hint, hreflang-Verbund ist vollständig).
 
 ## 6. Verweise
 - Gesamtprojekt: `docs/HANDOVER.md` · offene Punkte/Prioritäten: `BACKLOG.md` (Abschnitt „Sprachversionen").
-- SW-Version aktuell **v33**; nach jeder Sprach-Runde hochzählen.
+- SW-Version aktuell **v35**; nach jeder Sprach-Runde hochzählen.
 - Die Übersetzungs-Specs dieser Session lagen im Scratchpad (`uebersetzung-spec-{en,ru,uk,tr,it}.md`) und sind
   **session-flüchtig** — der vollständige Prozess steht oben in §3, neue Sprach-Specs daraus ableiten.
