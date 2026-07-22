@@ -13,14 +13,27 @@ Dieses Dokument macht die nächste Session ohne Rückfragen anschlussfähig für
 
 ## 1. Aktueller Stand — 6 Sprachen VOLLSTÄNDIG live
 
-| Sprache | Ordner | Seiten | Stand |
+| Sprache | Ordner | Seiten | Ursprung & Review-Status (Stand 21.07.2026) |
 |---|---|---|---|
-| Deutsch | `sprachen/de/` | 25 | Original |
-| English | `sprachen/en/` | 25 | live |
-| Русский | `sprachen/ru/` | 25 | live |
-| Українська | `sprachen/uk/` | 25 | live |
-| Türkçe | `sprachen/tr/` | 25 | live |
-| Italiano | `sprachen/it/` | 25 | live (21.07.2026) |
+| Deutsch | `sprachen/de/` | 25 | **Original**, menschlich verfasst |
+| English | `sprachen/en/` | 25 | maschinell übersetzt, **von Muttersprachler:in geprüft** |
+| Русский | `sprachen/ru/` | 25 | maschinell übersetzt, **von Muttersprachler:in geprüft** |
+| Українська | `sprachen/uk/` | 25 | maschinell übersetzt, **von Muttersprachler:in geprüft** |
+| Türkçe | `sprachen/tr/` | 25 | maschinell übersetzt, **Prüfung ausstehend (pending)** |
+| Italiano | `sprachen/it/` | 25 | maschinell übersetzt, **von Muttersprachler:in geprüft** |
+
+### KI/Mensch-Kennzeichnung (21.07.2026, SW v38)
+Auftraggeber-Vorgabe: DE menschlich; EN/RU/UK/IT maschinell + muttersprachlich geprüft; TR maschinell + pending.
+Umgesetzt auf allen 150 Seiten:
+- **Metadaten:** `<meta name="translation-status" content="…">` je Seite — DE „original, human-authored";
+  geprüfte Sprachen „machine-translated from de; reviewed by native speaker"; TR „… pending native-speaker review".
+- **Sichtbarer Content:** in Disclaimer-Kasten **und** Fußzeile je Sprache ein ehrlicher Satz („diese Fassung
+  maschinell aus dem Deutschen übersetzt, geprüft von Muttersprachler:in bzw. **noch nicht** geprüft (TR);
+  im Zweifel gilt das deutsche Original"). Die früher pauschale (für Übersetzungen unzutreffende) Aussage
+  „alle Inhalte von menschlichen Autoren" wurde entfernt/auf das **deutsche Original** bezogen — auch in
+  `impressum.html` und `ueber-uns.html` (dort stand ein verstärkter Autoren-/Redaktions-Claim im Body).
+- **Bei TR-Freigabe / künftigen Sprachen:** Meta-Wert + sichtbare Notiz von „pending" auf „reviewed" umstellen
+  (Skript-Muster: Scratchpad `kennzeichnung2.py`; Disclaimer-/Footer-Texte sind je Sprache mehrvariantig).
 
 **150 Seiten** (+ Root-Weiterleitung `index.html`), alle 6 Sprachen **gegenseitig im Umschalter verlinkt**,
 **vollständiges reziprokes `hreflang`-Netz** (de/en/ru/uk/tr/it + x-default auf ALLEN 150 Seiten mit
