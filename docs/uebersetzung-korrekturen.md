@@ -8,8 +8,8 @@
 Auf allen Seiten als `<meta name="translation-status">` + sichtbarer Hinweis (Disclaimer + Fußzeile,
 Impressum + Über-uns) gekennzeichnet (SW v38). **Wenn TR muttersprachlich geprüft ist:** in `sprachen/tr/`
 den Meta-Wert und den Hinweistext von „pending" auf „reviewed/geprüft" umstellen (analog EN/RU/UK/IT).
-Hinweis: Die IT-Seiten und die RU/UK-Schockanruf-Umformulierung entstanden am 21.07. per KI — falls die
-muttersprachliche Kontrolle genau diese Änderungen noch nicht gesehen hat, vor „reviewed" kurz gegenprüfen.
+Bestätigt (Auftraggeber, 21.07.2026): EN/RU/UK/IT wurden muttersprachlich gegengelesen und die vorgegebenen
+Korrekturen per KI umgesetzt → „reviewed by native speaker" trifft zu. Nur **TR** ist noch „pending".
 
 ---
 
